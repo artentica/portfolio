@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>Blueprint: Responsive Multi-Column Form</title>
+		<meta name="description" content="Blueprint: Blueprint: Responsive Multi-Column Form" />
+		<meta name="keywords" content="responsive form, inputs, html5, responsive, multi-column, fluid, media query, template" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="../favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/default.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<script src="js/modernizr.custom.js"></script>
+		
+		<!-- A TRIER-->
+		<link rel="stylesheet" type="text/css" href="css/icons.css" />
+		<link rel="stylesheet" type="text/css" href="css/style5.css" />
+		<script src="js/modernizr.custom.js"></script>
+		
+		
+	</head>
+	<body>
+		<div class="container">
+				
+			<div class="main">
+				<form class="cbp-mc-form" method="POST" action="mailto:vincent.riouallon@isen.fr?subject=Stage"  enctype="text/plain">
+					<div class="cbp-mc-column">
+						<label for="first_name">Prénom</label>
+	  					<input type="text" id="first_name" name="Prenom" placeholder="Jonathan">
+	  					<label for="last_name">Nom</label>
+	  					<input type="text" id="last_name" name="Nom" placeholder="Doe">
+	  				</div>
+						
+	  				<div class="cbp-mc-column">
+	  					<label for="society">Société</label>
+						<input type="text" id="society" name="Société" placeholder="Winpixies">
+						<label for="email">Adresse email</label>
+	  					<input type="text" id="email" name="Adresse email" placeholder="jon@doe.com">
+						<label for="phone">Numéro de téléphone</label>
+	  					<input type="text" id="phone" name="Numéro téléphone" placeholder="06 29 31 78 01">
+	  				</div>
+					
+	  				<div class="cbp-mc-column">
+	  					<label for="message">Message</label>
+	  					<textarea id="message" name="Message"></textarea>
+	  				</div>
+	  				<div class="cbp-mc-submit-wrap"><input class="cbp-mc-submit" type="submit" value="Envoyer" /></div>
+					<% include menu.html %>
+				</form>
+			</div>
+		</div>
+	</body>
+	<script src="js/classie.js"></script>
+	<script src="js/borderMenu.js"></script>
+</html>
