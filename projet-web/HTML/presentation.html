@@ -1,0 +1,219 @@
+<!DOCTYPE HTML>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" media="(max-width:800px)" href="../CSS/mobile.css" />
+<link rel="stylesheet" type="text/css" media="(min-width:800px)" href="../CSS/style.css" />
+<link rel="stylesheet" type="text/css"  href="../CSS/form.css"/>
+<link href="../themes/1/slider.css" rel="stylesheet" type="text/css" />
+
+<div class="rub">
+    <script src="../themes/jquery-1.7.1.min.js" type="text/javascript"></script>
+    <script src="../themes/1/jquery-slider.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../jquery.js"></script>
+    <script type="text/javascript" src="../JS/deroulant.js"></script>
+
+
+
+    <h1>Mairie de Lyon</h1>
+
+    <div>
+
+        <fieldset id="googlemap">
+            <legend>Trouver la mairie</legend>
+            <iframe width="420" height="315" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.fr/maps?f=q&amp;source=s_q&amp;hl=fr&amp;geocode=&amp;q=1+Place+de+la+Com%C3%A9die+Lyon&amp;aq=&amp;sll=45.768331,4.835873&amp;sspn=0.003398,0.010568&amp;t=h&amp;ie=UTF8&amp;hq=&amp;hnear=1+Place+de+la+Com%C3%A9die,+Lyon,+Rh%C3%B4ne,+Rh%C3%B4ne-Alpes&amp;ll=45.76769,4.835371&amp;spn=0.006795,0.021136&amp;z=14&amp;output=embed"></iframe><br />
+        </fieldset>
+    </div>
+    
+    <fieldset id="videoyoutube">
+        <legend>Vidéo de présentation</legend>
+        <iframe width="420" height="315" 
+            src="http://www.youtube.com/embed/WvYOfi6LdDo" 
+            frameborder="0">
+        </iframe>
+    </fieldset>
+
+    <fieldset>
+        <legend>Jumelage</legend>
+        <table id="jum">
+            <caption>La ville de Lyon est jumelée avec différentes villes</caption>
+            <tr>
+                <td>Barcelonne<br/>
+                    <img title="Drapeau de Barcelonne" alt="Drapeau de Barcelonne" src="../images/lang/es.gif" />
+                </td>
+                <td>En 2004, une Charte de coopération Barcelone-Lyon-Turin est signée dans le domaine du développement économique.
+                    Il s’agit de développer des initiatives communes en matière de promotion économique internationale, entrepreneuriat 
+                    et création d’entreprises, biotechnologies, gastronomie et agroalimentaire, tourisme et culture.
+                </td>
+            </tr>
+            <tr>
+                <td>Turin<br/>
+                    <img title="Drapeau de Turin" alt="Drapeau de Turin" src="../images/lang/it.gif" />
+                </td>
+                <td>Turin est également une ville très active dans le réseau LUCI initié en partenariat avec la Ville de Lyon.
+                </td>
+            </tr>
+            <tr>
+                <td>Göteborg<br/>
+                    <img title="Drapeau de Göteborg" alt="Drapeau de Göteborg" src="../images/lang/su.gif" />
+                </td>
+                <td>Pas d’accord de partenariat officiel, mais une volonté commune de rapprochement.
+                    Les secteurs concernés sont aussi divers que la Gastronomie, la Lumière, les Universités, la Mode et création.
+                    L'on favorise les échanges d’expériences entre administrations.
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+
+    <fieldset>
+        <legend class="actuvu">Actualités</legend>
+        <div class="actuvu">
+            <table id="acturec">
+                <tr>
+                    <td><a href="bluely.html"><img title="Plus de détail sur Bluely" alt="Image d'une voiture bluely" src="../images/slider/bluely.png" /></a>
+                        <p>Un moyen de transport simple et respectueux de l'environnement</p>
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="croix_rouge.html"><img title="Plus de détail sur les action de la Croix-rouge" alt="Image de Adriana Karembeu pour la Croix-rouge" src="../images/slider/croix-rouge.jpg" /></a>
+                        <p>Etre solidaire et soutenir la Croix-rouge</p>
+                    </td>
+                </tr>
+            </table>
+            <button id="but-actu">Afficher plus d'actualités</button>
+            <script>
+                $("button").click(function () {
+                $('#toggle').show( "slide");
+                });
+            </script>
+            <noscript>
+                Vous ne pouvez pas voir ce contenu a cause de votre navigateur, nous vous conseillons d'en changer le plus rapidement possible.
+            </noscript>
+        </div>
+        <div id="toggle">
+            <div class="div2">
+                    <div id="mcts1">
+                        <a href="bluely.html"><img title="Plus de détail sur Bluely" alt="Image d'une voiture Bluely" src="../images/slider/bluely.png" /></a>
+                        <a href="bluely.html"><img title="Plus de détail sur Bluely" alt="Image d'une voiture Bluely" src="../images/slider/bluely1.jpg" /></a>
+                        <a href="croix_rouge.html"><img title="Plus de détail sur les action de la Croix-rouge" alt="Image de Adriana Karembeu pour la Croix-rouge" src="../images/slider/croix-rouge.jpg" /></a>
+                        <a href="don_du_sang.html"><img title="Plus de détail sur le Don du Sang" alt="Logo du Don du Sang" src="../images/slider/dondusang.jpg" /></a>
+                        <a href="tour_de_france.html"><img title="Plus de détail sur le tour de France à Lyon" alt="Logo Tour de France" src="../images/slider/tour_de_france.jpg" /></a>
+                       
+                    </div>
+            </div>
+        </div>
+    </fieldset>
+
+    <fieldset id="hist">
+
+        <legend>L'histoire de Lyon en bref</legend>
+        <p>Lyon et sa région offrent une qualité de vie hors du commun. Les habitants et les touristes apprécient
+            cette ville d'art et de culture, à travers son histoire et son patrimoine très riche, ses nombreux événements
+            culturels et artistiques, ses magnifiques espaces de loisirs, comme le célèbre Parc de la Tête d'Or et
+            l'aménagement remarquable des berges du Rhône. Sans oublier la proximité avec la nature, la région du Beaujolais,
+            les montagnes des Alpes, sommet de l'Europe, et les plus grands domaines de ski du monde.
+        </p>
+        <p id="cliqueicone">
+            <strong>Cliquez sur les icônes pour plus de précisions</strong>
+        </p>
+
+        <div class="ligne">
+            <img class="iconehistoire" title="Un brin d'histoire" alt="icone chrono" src="../images/icone_temps.png"/>
+            <img class="iconegeo" title="Un brin de géographie" alt="icone france" src="../images/icone_geo.png"/>
+            <img  class="iconetransport" title="Un brin de transport" alt="icone bus" src="../images/icone_bus.png"/>
+        </div>
+
+        <div class="ligne">
+            <div class="submenuhistoire">
+
+                <p>En résumé : Lyon a été fondé en -43 par les Romains, mais le site était occupé par les Gaulois depuis -600 environ. Elle se développe
+                    rapidement et devient la capitale de la Gaule en -27. A son apogée, au deuxième siècle, la ville a un rôle important dans l’Empire
+                    et constitue la fierté des empereurs, qui y séjourne régulièrement. Elle régresse en même temps que l’Empire Romain.</p>
+                <img alt="Lugdunum" src="../images/lugdunum.jpg" height="574" width="790"/>
+                <p class="legend">Lugdunum au 2ème siècle.</p>
+
+                <p><br/>C’est Charlemagne qui va rendre à Lyon un peu de sa vitalité d’antan. Mais c’est pendant la Renaissance que Lyon va connaître son
+                    second âge d’or. Elle devient la capitale économique de la France et la capitale financière de l’Europe. Elle devient un grand
+                    centre culturel. François 1er envisage même d’y transférer sa capitale.</p>
+                <img alt="Lyon renaissance" src="../images/lyon2.jpg" height="504" width="724"/>
+                <p class="legend">Lyon en 1550, à la Renaissance.</p>
+
+                <p><br/>Pendant la Révolution, les jacobins de Paris vont tuer des milliers de Lyonnais et tenter de rayer Lyon de la carte. Mais
+                    Napoléon Bonaparte passera par Lyon, la rebâtira et lui rendra son lustre d’antan en dopant l’industrie de la soie,
+                    spécialité locale. Napoléon se lie de passion pour Lyon et ses habitants. Lui aussi envisage d’y transférer sa capitale.</p>
+                <img alt="Lyon de Napoléon" src="../images/lyon_napoleon.jpg" height="500" width="382">
+                <p class="legend">Le livre de Ronald Zins décrit bien les liens qui unissent Lyon et Napoléon.</p>
+
+                <p><br/>Durant la Seconde Guerre mondiale, Lyon est le centre de la Résistance. Charles de Gaulle l’a qualifiée de "capitale de la résistance".
+                    Aujourd’hui, Lyon continue son ascension vers un probable nouvel âge d’or.</p>
+                <img alt="Lyon à présent" src="../images/lyon_futur.jpg" height="322" width="650">
+                <p class="legend">Lyon continue son ascension et ambitionne de concurrencer les grandes métropoles européennes.</p>
+            </div>
+
+            <div class="submenugeo">
+
+                <p>La ville peut se targuer de plusieurs spécificités géographiques : située à mi-chemin entre mer
+                    et montagne, elle est surplombée de deux collines (Fourvière et la Croix-Rousse) et traversée par deux
+                    cours d’eau (le Rhône et son affluent la Saône), qui confluent même à Lyon. Cette situation exceptionnelle
+                    au confluent des deux cours d'eau, confère à la ville sa particularité physique : sa presqu’île.<br/>
+                    Un projet urbain majeur concerne l’extrémité sud de cette presqu’île, longtemps dédiée à l’industrie et aux
+                    transports : le projet Lyon Confluence. L’objectif est de révéler la beauté des paysages fluviaux et
+                    de désenclaver ce territoire pour créer un nouveau quartier, où cohabitent bureaux, commerces et habitations,
+                    tous réunis dans un projet exemplaire en matière de développement durable.</p> 
+                <img id="region" alt="Région de Lyon" src="../images/carte_region.png"/>
+                <div id="departement_div"><img id="departement" alt="Département de Lyon" src="../images/carte_departement.png"/>
+                </div>
+            </div>
+
+            <div class="submenutransport">
+                <p>Face aux enjeux climatiques mondiaux, la question de la mobilité est devenue une préoccupation majeure pour les métropoles.
+                Véritables alternatives à la voiture individuelle, les modes doux (vélos, rollers, piétons et trottinettes) sont 100% non motorisés et
+                non polluants. En lien étroit avec les transports collectifs (bus, tramway, train, métro), le covoiturage, l'autopartage, ces nouveaux
+                modes de transport replacent l'homme au centre de l'espace public.</p> 
+                <a href="http://www.tcl.fr/"><img id="transport" alt="plan transport en commun lyon" src="../images/lyon_bus.jpg"/></a>
+            </div>
+
+        </div>      <!-- Fin de .ligne-->
+    </fieldset> 
+</div>              <!-- Fin de rub -->
+
+<div class="second_nav" > 
+    <ul> 
+        <li><a class="menulien" href="#googlemap">Présentation</a>
+            <div>
+                <h5>Présentation de la ville</h5>
+                <p>Courte vidéo présentant la ville et carte avec localisation de la mairie</p> 
+            </div> 
+        </li>
+        <li><a class="menulien" href="#jum">Jumelage</a>
+            <div> 
+                <h5>Jumelage de la ville</h5>
+                <p>Les liens tissés</p>
+            </div>
+        </li>
+        <li><a class="menulien" href="#actuvu">Actualités</a>
+            <div> 
+                <h5>Les news du Rhône</h5>
+                <p>Les dernières nouveautés de Lyon</p>
+            </div>
+        </li>    
+        <li><a class="menulien" href="#hist">L' Histoire</a>
+            <div> 
+                <h5>L'histoire de la ville</h5>
+                <p>Quelques mots pour vous conter son aventure</p>
+            </div>
+        </li>
+    </ul>
+</div>          <!-- Fin second_nav -->
+
+<footer>
+    <p>Copyright ISEN 2013
+        <a href="../index.html?p=5">Mentions légales</a>
+        <a href="http://jigsaw.w3.org/css-validator/check/referer">
+            <img style="border:0;width:88px;height:31px"
+                src="http://jigsaw.w3.org/css-validator/images/vcss"
+                alt="CSS Valide !" />
+        </a>
+        <img alt="html5" title="html5" id="html5" src="../images/html_valid.png"/>
+    </p>
+</footer>

@@ -1,0 +1,75 @@
+h2{
+text-align:center;
+text-decoration: underline;
+text-shadow: 1px 1px 1px grey;
+color: #a7a7a7;
+font-size:2.5rem;
+}
+
+#profil{
+position:fixed;
+width:16%;
+height:100%;
+background: linear-gradient( to right, #494D52,#30383D);
+font-size:1.2em;
+color:#4e5358;
+text-shadow:0px -1px 0px rgba(0,0,0,0.5);
+}
+
+header{
+width:100%;
+}
+
+#liste_menu a:link{
+color:#959aa0;
+text-decoration: none;
+}
+
+#liste_menu a:visited{
+color: grey;
+}
+
+#liste_menu ul  li{
+color:#959aa0;
+padding-top:7%;
+}
+
+#liste_menu ul{
+padding-left: 5px;
+}
+
+#en-tete{
+height:200px;
+text-align:center;
+margin-top: 20px;
+}
+
+#en-tete p{
+padding-left: 3%;
+height:180px;
+padding-top: 12px;
+margin-top: 0px;
+}
+
+body{
+font-family:"ciclesemi","Trebuchet MS",sans-serif;
+background-color: #f2f2f2;
+margin:0px;
+}
+
+#page{
+z-index:1;
+float:right;
+width:84%;
+font-size:1.1em;
+border:3px solid white;
+border:0px;
+}
+
+#page p{
+margin-left: 15px;
+}
+
+legend{
+	text-decoration: underline;
+}
