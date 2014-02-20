@@ -1,5 +1,4 @@
 figure {
-  margin: 0 0 20px;
   text-align: center;
 }
 
@@ -8,3 +7,34 @@ figure {
 margin-left: -123px;
 margin-top: 27px;
 }
+
+@media screen and (min-width: 769px) {
+    .col-sm-4{
+    float: left;
+    background-color: red;
+    margin: 40px;
+  }
+}
+
+@media screen and (min-width: 316px) and (max-width: 545px) { 
+    .col-sm-4{
+    	width: 50%;
+    	background-color: black;
+  	}
+}
+
+@media only screen and (max-width: 230px) {
+  .col-sm-4{
+    float: left;
+    
+    margin: 40px;
+  }
+}
+
+
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+ 

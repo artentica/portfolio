@@ -17,8 +17,9 @@ background: radial-gradient(#9698ed, #3531ff);
 }
 
 .container {
-	padding: 80px;
+	padding: 40px;
 	padding-right: 10px;
+	padding-top: 10px;
 }
 
 .bt-menu {
