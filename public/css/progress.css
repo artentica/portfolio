@@ -8,26 +8,29 @@ margin-left: -123px;
 margin-top: 27px;
 }
 
-@media screen and (min-width: 769px) {
-    .col-sm-4{
-    float: left;
-    background-color: red;
-    margin: 40px;
-  }
-}
 
-@media screen and (min-width: 316px) and (max-width: 545px) { 
+
+@media screen and (min-width: 1001px) { 
     .col-sm-4{
-    	width: 50%;
-    	background-color: black;
+    	width: 25%;
   	}
 }
 
-@media only screen and (max-width: 230px) {
+@media screen and (min-width: 701px) and (max-width: 1000px) { 
+    .col-sm-4{
+    	width: 33.333333333333%;
+  	}
+}
+
+@media screen and (min-width: 500px) and (max-width: 700px) { 
+    .col-sm-4{
+    	width: 50%;
+  	}
+}
+
+@media only screen and (max-width: 500px) {
   .col-sm-4{
-    float: left;
-    
-    margin: 40px;
+    width: 100%;
   }
 }
 
@@ -37,4 +40,6 @@ margin-top: 27px;
   margin-left: -15px;
 }
 
- 
+ .col-sm-4{
+    	float: left;
+  	}
