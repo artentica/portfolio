@@ -3,7 +3,7 @@ figure {
 }
 
 .img_skills{
-	position: absolute;
+  position: absolute;
 margin-left: -123px;
 margin-top: 27px;
 }
@@ -12,27 +12,28 @@ margin-top: 27px;
 
 @media screen and (min-width: 1001px) { 
     .col-sm-4{
-    	width: 25%;
-  	}
+      width: 25%;
+    }
 }
 
 @media screen and (min-width: 701px) and (max-width: 1000px) { 
     .col-sm-4{
-    	width: 33.333333333333%;
-  	}
+      width: 33.333333333333%;
+    }
 }
 
 @media screen and (min-width: 500px) and (max-width: 700px) { 
     .col-sm-4{
-    	width: 50%;
-  	}
+      width: 50%;
+    }
 }
 
-@media only screen and (max-width: 500px) {
+@media screen and (max-width: 500px) {
   .col-sm-4{
     width: 100%;
   }
 }
+
 
 
 .row {
@@ -41,5 +42,5 @@ margin-top: 27px;
 }
 
  .col-sm-4{
-    	float: left;
-  	}
+      float: left;
+    }
