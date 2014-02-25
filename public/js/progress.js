@@ -1,6 +1,6 @@
 var options = {
   //segmentShowStroke: false,
-  percentageInnerCutout: 70,
+  percentageInnerCutout: 0,
   //animation: true,
   animationEasing: 'easeOutQuint',
   //animateRotate: false,
