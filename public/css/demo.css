@@ -22,7 +22,10 @@ a:focus {
 
 .codrops-header {
 	position: relative;
-	margin: 0 auto;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: 40px;
 	/*max-width: 60%;*/
 	text-align: center;
 }
@@ -133,8 +136,27 @@ a:focus {
 	}
 	.codrops-header {
 		position: relative;
-		margin: 0 auto;
+		margin-top: 0px;
+		margin-right: auto;
+		margin-bottom: 0px;
+		margin-left: 40px;
 		height: auto;
 		max-width: 100%;
+	}
+}
+
+@media only all and (max-width: 510px) {
+
+	#gp{
+
+		display: none;
+	}
+}
+
+@media only all and (min-width: 510px) {
+
+	#bgp{
+
+		display: none;
 	}
 }
