@@ -6,6 +6,11 @@
     box-sizing: border-box;
 }
 
+.gf{
+	max-width: 410px;
+	margin: auto;
+}
+
 body  {
 	background: #9698ed;
 	
@@ -39,7 +44,7 @@ background: radial-gradient(#9698ed, #3531ff);
 
 .bt-menu.bt-menu-open {
 	height: 100%;
-	border-width: 0px 0px 50px 150px;
+	border-width: 0px 0px 50px 180px;
 	background-color: rgba(0,0,0,0.3);
 	-webkit-transition: border-width 0.3s, background-color 0.3s;
 	transition: border-width 0.3s, background-color 0.3s;
@@ -160,7 +165,7 @@ background: radial-gradient(#9698ed, #3531ff);
 
 /* First menu */
 .bt-menu ul:first-of-type li {
-	width: 150px;
+	width: 180px;
 	height: 50px;
 	line-height: 50px;
 	-webkit-transform: translate3d(-100%,50%,0);
