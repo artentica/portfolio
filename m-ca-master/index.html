@@ -1,0 +1,149 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<!-- meta - donnees --> 
+		<meta charset="utf-8" lang="fr" />
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" lang="fr" />
+		<meta http-equiv="default-style" content="text/css; charset=utf-8" />
+		<meta name="author" lang="fr" content="DUBOIS Florentin, COLLIGNON Rémi, MORVAN Guy-yann, RIOUALLON Vincent" />
+		<meta name="description" lang="fr" content="tutoriel pour faire un canon de gauss réalisée par des étudiants" />
+		<meta name="keywords" lang="fr" content="canon de gauss, tutoriel canon de gauss" />
+		<meta name="viewport" content="width=device-width, height=device-height" />
+
+		<!-- titre de la page -->
+		<title> Canon de Gauss - Magnétisme</title>
+
+		<!-- style -->
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<link rel="icon" type="image/png" href="favicon.png"> 
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+	</head>
+	<body>
+		<h1>Magnétisme</h1>
+		<h2>Théorie:</h2>
+			<div class="align" >
+				<p>
+					Un aimant est assimilable à un dipôle magnétique <span class="math">\(\displaystyle \mathop{M}\limits^{\hookrightarrow}\)</span>
+					et crée en son voisinage un potentiel: <span class="math">\(\vec A={\mu_0\over 4.\pi}.\frac{\displaystyle \mathop{M}\limits^{\hookrightarrow}\wedge\vec u}{r^2}\)</span>.
+					Ce potentiel vecteur correspond à un champ magnétique <br/> <span class="math">\(
+					\displaystyle \mathop{B}\limits^{\hookrightarrow}=\displaystyle \mathop{\textrm{rot}}\limits^{\hookrightarrow}{\vec A}={\mu_0\over 4.\pi}.{2.M.\cos\theta\over r^3}.\vec u_r+{\mu_0\over 4.\pi}.{M.\sin\theta\over r^3}.\vec u_\theta\)</span>.
+					Soit: <span class="math">\(\displaystyle \mathop{B}\limits^{\hookrightarrow}={\mu_0\over 4.\pi}.{2.M\over r^3}.\vec u\)</span> sur l’axe de l’aimant.
+				</p>
+
+
+				<p>
+					La bille d’acier présente un moment dipolaire induit <span class="math">\(\displaystyle \mathop{M'}\limits^{\hookrightarrow}\)</span>;
+					elle subit une force <span class="math">\(\vec F=-\overrightarrow{\textrm{grad}} Ep=+\overrightarrow{\textrm{grad}}(\displaystyle \mathop{M'}\limits^{\hookrightarrow}.\displaystyle \mathop{B}\limits^{\hookrightarrow})\)</span>.
+				</p>
+				
+				<p>D’où une force <span class="math">\(F={k\over (r-r_0)^3}\)</span></p>
+				<p>D’après la conservation de l’énergie: <span class="math">\(Ec_i+Ep_i=Ec_f+Ep_f\)</span> avec <span class="math">\(Ec_i\ll Ec_f\)</span> <span class="math">\(\Rightarrow\)</span> <span class="math">\({1\over 2}.m.v_f^2=Ep_i-Ep_f\)</span></p>
+			</div>
+		<h2>Pratique:</h2>
+
+		<div id="anim">
+			<span id="bille1" class="bille"></span>
+			<span id="bloc" class="bloc" ></span>
+			<span id="bille2" class="bille"></span>
+			<span id="bille3" class="bille"></span>
+			<span id="bloc2" class="bloc" ></span>
+			<span id="bille4" class="bille"></span>
+			<span id="bille5" class="bille"></span>
+			<span id="bloc3" class="bloc"></span>
+			<span id="bille6" class="bille"></span>
+			<span id="bille7" class="bille"></span>
+		</div>
+		<input type="button" id="handle" value="Lancer l'animation !" />
+		<input type="button" id="reset" value="Remettre a zéro !" />
+
+		<h2>Quizz:</h2>
+		<fieldset class="align quizz" >
+			<legend>connaissez vous vraiment les aimants?</legend>
+				<p>- l’énergie totale du système: augmente ? diminue ? se conserve ?
+					<input type="button" class="reponse" value="La réponse !" />
+					<span>L'énergie se conserve toujours dans un référentiel inertiel (principe physique).</span>
+				</p>
+				<p>- l’impulsion/la quantité de mouvement du système: augmente ? diminue ? se conserve ?
+					<input type="button" class="reponse" value="La réponse !" />
+					<span>La quantité de mouvement du système augmente durant l'expérience. La quantité de mouvement de la première bille est transmise à la seconde qui accèlére au moment de quitter l'aimant grâce à la différence de force magnétique entre les deux billes (et ainsi de suite).</span>
+				</p>
+				<p>- plus efficace avec combien de billes devant l’aimant: 0, 1, 2, 3
+					<input type="button" class="reponse" value="La réponse !" />
+					<span>Le fait de mettre des billes devant l'aimant fait diminuer l'énergie reçue par la bille arrivante et ainsi diminuer la différence d'énergie entre la bille arrivante et la bille qui doit partir. La bille partante sera donc moins rapide. Le système sera donc moins efficace avec des billes devant l'aimant.</span>
+				</p>
+				<p>- plus efficace avec combien de billes derrière l’aimant: 1, 2 ,3 ,4
+					<input type="button" class="reponse" value="La réponse !" />
+					<span>Le nombre de 2 billes semble un bon compromis : en effet, il ne doit pas y avoir trop de billes (sinon la dernière bille n'est plus attirée par l'aimant) ni trop peu (deux minimum car il faut qu'il y ait une différence d'énergie entre la bille incidente et la bille émise.</span>
+				</p>
+				<p>- plus efficace avec une bille en plastique entre l’aimant et la dernière bille ?
+					<input type="button" class="reponse" value="La réponse !" />
+					<span>Théoriquement, le fait d'avoir une bille en plastique ou en céramique augmente l'énergie dégagée par le système.</span>
+				</p>
+				<p>- la taille de l’aimant a-t-elle une influence ?
+					<input type="button" class="reponse" value="La réponse !" />
+					<span>Pour deux aimants de tailles et de magnétisations différentes, c'est en général la différence de volume qui sera plus déterminante que la différence de magnétisation. Pour cette raison, les gros aimants sont en général plus forts que les petits, même s'ils sont moins aimantés.</span>
+				</p>
+				<p>- la composition chimique de l’aimant a-t-elle une influence ?
+					<input type="button" class="reponse" value="La réponse !" />
+					<span>Suivant la composition de l'aimant, l'aimantation sera plus ou moins importante. Ainsi les aimants Neodyme-Fer-Bore sont très puissants alors que les aimants en céramique sont bien moins puissants (mais le coût s'en ressent).</span>
+				</p>
+				<p>- la taille de la bille a-t-elle une influence ?
+					<input type="button" class="reponse" value="La réponse !" />
+					<span>La bille doit être de la taille de l'aimant ou dans ses environs proches. Une bille trop grande ne pourra pas s'arreter contre l'aimant alors qu'une bille trop petite ne dégagera pas une énergie cinétique suffisante.</span>
+				</p>
+				<p>- la composition chimique de la bille incidente a-t-elle une influence ?
+					<input type="button" class="reponse" value="La réponse !" />
+					<span>La bille incidente doit forcément être magnétique pour que le magnétisme puisse avoir une influence. Suivant la composition de la bille, celle-ci pourra être plus ou moins attirée.</span>
+				</p>
+				<p>- la composition chimique de la bille émise a-t-elle une influence ?
+					<input type="button" class="reponse" value="La réponse !" />
+					<span>La bille émise se doit d'être assez résistante pour supporter les chocs. Cette bille se doit aussi d'être magnétique afin d'être attirée par l'aimant.</span>
+				</p>
+			</fieldset>
+		<footer>Projet CIR 2 2014
+				<span>
+					<a href="http://vincentriouallon.com">Vincent Riouallon</a>
+					<a href="http://remi.rcdinfo.fr" >Rémi Collignon</a>
+					<a href="">Florentin Dubois</a>
+					<a href="">Guy-yann Morvan</a>
+				</span>
+		</footer>
+	</body>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js" type="text/javascript" ></script>
+	<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+	<script src="rotate.js" ></script>
+	<script>
+		$(document).ready(function(){
+			$('#handle').click(function(e){
+				$('#bille1').rotate(+80);
+				$('#bille1').animate({
+					left: '149px'
+				}, 1000, function(){
+					$('#bille3').rotate(+80);
+					$('#bille3').animate({
+						left: '500px'
+					}, 700, function(){ 
+						$('#bille5').rotate(+80);				
+						$('#bille5').animate({
+							left: '950px' 
+						}, 500,	function(){ 
+							$('#bille7').rotate(+80);
+							$('#bille7').animate({
+								left: '1600px' 
+							}, 300)}) 
+					});
+				});
+
+			});
+
+			$('#reset').click(function(){
+				$('#bille1').removeAttr('style');
+				$('#bille3').removeAttr('style');
+				$('#bille5').removeAttr('style');
+				$('#bille7').removeAttr('style');
+
+			});
+		});
+	</script>
+</html>
