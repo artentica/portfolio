@@ -1,0 +1,276 @@
+<!DOCTYPE HTML>
+<html lang="fr-FR">
+<head>
+	<meta charset="UTF-8">
+	<title>MixItUp - Démo</title>
+
+	<style type="text/css">
+		body, html {margin: 0; padding:0 }
+		body { 
+			max-width: 728px;
+			margin: 25px auto 0;
+			font-size: 14px;
+			font-family: "Open Sans", "Segoe UI", "Segoe WP", Helvetica, Arial, sans-serif;
+			color: #666;
+			overflow-y: scroll;
+		}
+		h1 { 
+			float: left;
+			width: 300px;
+			margin-top: 0;
+		}
+		h1, h2 { font-weight: normal; }
+
+		p.intro {
+			margin: 0;
+			text-align: right;
+		}
+
+		a { color: #1591e0 }
+
+		.filters {
+			display: table;
+			width: 100%;
+			table-layout: fixed;
+		}
+		
+		ul, li {
+			margin: 0; padding: 0;
+			list-style: none;
+		}
+		.col {
+			display: table-cell;
+			padding-right: 6px;
+		}
+		.col h2 {
+			margin-bottom: 5px;
+		}
+		.col ul {
+			overflow: hidden;
+		}
+		.col li {
+			float: left;
+			margin: 3px 3px 0 0;
+		}
+		.col li button {
+			display: inline-block;
+			padding: 3px 10px;
+			background: #eee;
+			border: 1px solid #ddd;
+			cursor: pointer;
+		}
+		.col li button:focus {
+			border: 1px dashed #1591E0;
+			outline: 0 none;
+		}
+		.line { 
+			clear: left;
+		}
+		.col li button.all {
+			background: #ddd;
+		}
+		.col li button.active {
+			color: #f2f2f2;
+			border-color: #1591e0;
+			background: #1591e0;
+		}
+		.js #grid li {
+			opacity: 0;
+			display: none;
+		}
+		.ad {
+			margin-top: 4em;
+			padding: 10px;
+			height: 125px;
+			text-align: center;
+		}	
+		.ad ins {
+			margin: 0 1em;
+		}
+	</style>
+</head>
+<body>
+	
+	<h1>MixItUp Démo</h1>
+
+	<p class="intro"><em>Plugin téléchargeable sur <a href="https://github.com/barrel/mixitup">Github</a></em></p>
+	<p class="intro"><a href="/blog/tutoriels/mixitup-plugin-jquery-filtrer-ordonner-contenu">Tutoriel pour mettre en place MixItUp</a></p>
+	
+	
+	
+	<h2>Contenu à filtrer</h2>
+
+	<ul id="grid">
+		<li class="mix trees" data-alphabetic="Arbres" data-numeric="6">
+			<img src="img/trees.jpg" width="240" height="160" alt="">
+		</li>
+		<li class="mix eyes human" data-alphabetic="Yeux d'humain" data-numeric="5">
+			<img src="img/human-eye2.jpg" width="240" height="160" alt="">
+		</li>
+		<li class="mix animals eyes" data-alphabetic="Yeux d'animaux" data-numeric="4">
+			<img src="img/tiger-eye.jpg" width="240" height="160" alt="">
+		</li>
+		<li class="mix trees" data-alphabetic="Arbres" data-numeric="1">
+			<img src="img/trees2.jpg" width="240" height="160" alt="">
+		</li>
+		<li class="mix animals trees" data-alphabetic="Panda Roux" data-numeric="2">
+			<img src="img/panda-roux.jpg" width="240" height="160" alt="">
+		</li>
+		<li class="mix humans tree" data-alphabetic="Silhouette" data-numeric="3">
+			<img src="img/silhouette.jpg" width="240" height="160" alt="">
+		</li>
+		<li class="mix animals" data-alphabetic="Renard" data-numeric="8">
+			<img src="img/fox.jpg" width="240" height="160" alt="">
+		</li>
+		<li class="mix humans eye" data-alphabetic="Humain" data-numeric="7">
+			<img src="img/human-eye.jpg" width="240" height="160" alt="">
+		</li>
+	</ul>
+
+
+	<p class="copy">
+		<h2>Photo Credits</h2>
+		<p>
+			<a href="http://www.flickr.com/photos/60674965@N03/8023799631/">Pikcel Project</a>,
+			
+			<a href="http://www.flickr.com/photos/44946121@N07/4514344754/">{Lina}</a>,
+			
+			<a href="http://www.flickr.com/photos/95572727@N00/4070581709/">Stuck in Customs</a>,
+			
+			<a href="http://www.flickr.com/photos/44345361@N06/6820565620/">VinothChandar</a>,
+		 	
+		 	<a href="http://www.flickr.com/photos/84826593@N00/458320232/">wildphotons</a>,
+		 	
+		 	<a href="http://www.flickr.com/photos/42149364@N03/7787996760/">Anant N S (www.thelensor.tumblr.com)</a>,
+		 	
+		 	<a href="http://www.flickr.com/photos/95986608@N00/4241923180/">WhiteStar</a>,
+		 	
+		 	<a href="http://www.flickr.com/photos/8796961@N08/709945164/">_StaR_DusT_</a>
+		 	<br />
+		 	via <a href="http://compfight.com">Compfight</a> <a href="http://creativecommons.org/licenses/by/2.0/">cc</a>
+	</p>
+
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+
+	<script type="text/javascript">
+	$(function(){
+
+		$('body').addClass('js');
+
+
+		$('h2:first').before('<div class="filters">'+
+		'<div class="col">'+
+			'<h2>Filtres</h2>'+
+
+			'<ul>'+
+				'<li><button type="button" class="filter" data-filter="trees">Arbres</button></li>'+
+				'<li><button type="button" class="filter" data-filter="eyes">Yeux</button></li>'+
+				'<li><button type="button" class="filter" data-filter="animals">Animaux</button></li>'+
+				'<li><button type="button" class="filter" data-filter="humans">Humain</button></li>'+
+				'<li><button type="button" class="filter all"  data-filter="mix">Toutes</button></li>'+
+			'</ul>'+
+		'</div>'
+		+
+		'<div class="col">'+
+			'<h2>Ordonner par</h2>'+
+			'<ul>'+
+				'<li><button type="button" class="sort" data-sort="data-alphabetic" data-order="desc">Lettre Desc.</button></li>'+
+				'<li><button type="button" class="sort" data-sort="data-alphabetic" data-order="asc">Lettre Asc.</button></li>'+
+				'<li><button type="button" class="sort line" data-sort="data-numeric" data-order="desc">Numérique Desc.</button></li>'+
+				'<li><button type="button" class="sort" data-sort="data-numeric" data-order="asc">Numérique Asc.</button></li>'+
+				'<li><button type="button" class="sort line active" data-sort="default" data-order="asc">Normal</button></li>'+
+				// apparition dans le DOM, desc = inverse du DOM 
+				'<li><button type="button" class="sort" data-sort="random">Aléatoire</button></li>'+
+			'</ul>'+
+		'</div>'+
+	'</div>');
+
+
+		$('#grid').mixitup({
+			effects: ['fade','scale','rotateZ'],
+		});
+		/*
+		$('#grid').mixitup({
+			targetSelector: '.mix',
+			filterSelector: '.filter',
+			sortSelector: '.sort',
+			buttonEvent: 'click',
+			effects: ['fade','scale', 'rotateZ'],
+			listEffects: null,
+			easing: 'smooth',
+			layoutMode: 'grid',
+			targetDisplayGrid: 'inline-block',
+			targetDisplayList: 'block',
+			gridClass: '',
+			listClass: '',
+			transitionSpeed: 600,
+			showOnLoad: 'all',
+			multiFilter: 'false',
+			filterLogic: 'or',
+			resizeContainer: true,
+			minHeight: 0,
+			failClass: 'fail',
+			perspectiveDistance: '3000',
+			perspectiveOrigin: '50% 50%',
+			animateGridList: true,
+			onMixLoad: null,
+			onMixStart: null,
+			onMixEnd: null
+		});
+*/
+	});
+	</script>
+
+
+
+
+
+<!-- 
+	DON'T COPY BELOW !
+	Ne PAS COPIER le code ci-dessous
+-->
+	<div class="ad">
+		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<ins class="adsbygoogle"
+		     style="display:inline-block;width:125px;height:125px"
+		     data-ad-client="ca-pub-5551695116421662"
+		     data-ad-slot="2571147907"></ins>
+		<script>
+		(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<ins class="adsbygoogle"
+		     style="display:inline-block;width:125px;height:125px"
+		     data-ad-client="ca-pub-5551695116421662"
+		     data-ad-slot="2571147907"></ins>
+		<script>
+		(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<ins class="adsbygoogle"
+		     style="display:inline-block;width:125px;height:125px"
+		     data-ad-client="ca-pub-5551695116421662"
+		     data-ad-slot="2571147907"></ins>
+		<script>
+		(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+	</div>
+	<script type="text/javascript">
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-8397602-5']);
+	  _gaq.push(['_trackPageview']);
+	  _gaq.push(['_setDomainName', '.creativejuiz.fr']);
+
+	  (function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	</script>
+<!-- 
+	MERCI
+-->
+
+</body>
+</html>

@@ -74,6 +74,26 @@ var data = {
   linux: [
     { value : 50, color : "hsl(120, 33%, 50%)" },
     { value : 50, color : "hsl(120, 10%, 90%)" }
+  ],
+  windows: [
+    { value : 90, color : "hsl(120, 33%, 50%)" },
+    { value : 10, color : "hsl(120, 10%, 90%)" }
+  ],
+  angularjs: [
+    { value : 35, color : "hsl(120, 33%, 50%)" },
+    { value : 65, color : "hsl(120, 10%, 90%)" }
+  ],
+  nodejs: [
+    { value : 20, color : "hsl(120, 33%, 50%)" },
+    { value : 80, color : "hsl(120, 10%, 90%)" }
+  ],
+  git: [
+    { value : 90, color : "hsl(120, 33%, 50%)" },
+    { value : 10, color : "hsl(120, 10%, 90%)" }
+  ],
+  jquery: [
+    { value : 40, color : "hsl(120, 33%, 50%)" },
+    { value : 60, color : "hsl(120, 10%, 90%)" }
   ]
 };
 
@@ -81,7 +101,7 @@ var offset = 0;
 $.each(data, function(key, data) {
   var canvas = document.querySelector('#' + key);
   if(canvas) {
-    offset += 250;
+    offset += 65;
     setTimeout(function() {
       var ctx = canvas.getContext('2d');
       var chart = new Chart(ctx);
