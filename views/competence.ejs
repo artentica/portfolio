@@ -11,6 +11,8 @@
 		<link rel="stylesheet" type="text/css" href="css/icons.css" />
 		<link rel="stylesheet" type="text/css" href="css/style5.css" />
 		<link rel="stylesheet" href="css/progress.css" type="text/css" />
+
+    <link rel="stylesheet" type="text/css" href="css/projet.css" />
     <link rel="shortcut icon" href="logo/vr.png">
 		<script src="js/modernizr.custom.js"></script>
 	</head>
@@ -226,13 +228,14 @@
     $('body').addClass('js');
 
 
-    $('h2:first').before('<div class="filters">'+
+    $('h2:first').after('<div class="filters">'+
     '<div class="col">'+
-        '<button type="button" class="filter mix"  data-filter="mix">Tout</button>'+
-        '<button type="button" class="filter" data-filter="web">Web</button>'+
-        '<button type="button" class="filter" data-filter="os">OS</button>'+
-        '<button type="button" class="filter" data-filter="data">Donnée/Autre</button>'+
-        '<button type="button" class="filter" data-filter="cinema">Cinema</button>'+
+        '<span class="filter mix"  data-filter="mix"><a class="a_demo_one">Tout</a></span>'+
+        '<span class="filter mix"  data-filter="software"><a class="a_demo_one">Software</a></span>'+
+        '<span class="filter" data-filter="web"><a class="a_demo_one">Web</a></span>'+
+        '<span class="filter" data-filter="os"><a class="a_demo_one">OS</a></span>'+
+        '<span class="filter" data-filter="data"><a class="a_demo_one">Autre</a></span>'+
+        '<span class="filter" data-filter="cinema"><a class="a_demo_one">Cinema</a></span>'+
     '</div>');
 
 
