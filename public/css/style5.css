@@ -12,13 +12,7 @@
 }
 
 body  {
-	background: #9698ed;
-	
-background: -webkit-radial-gradient(#9698ed, #3531ff);
-background: -moz-radial-gradient(#9698ed, #3531ff);
-background: -o-radial-gradient(#9698ed, #3531ff);
-background: -ms-radial-gradient(#9698ed, #3531ff);
-background: radial-gradient(#9698ed, #3531ff); 
+background-color: rgb(205,206,206);
 }
 
 .container {
