@@ -66,6 +66,36 @@ $(document).ready(function(){
             }
         });
 
+         $('.erebutton').click(function(event){
+            closeall();
+            if($('.eresub').is(':visible')){}//fermé immédiatement fonction invisible inexistante
+            
+            else{
+                $('.eresub').slideDown();
+                event.stopPropagation();
+            }
+        });
+
+          $('.orizonbutton').click(function(event){
+            closeall();
+            if($('.orizonsub').is(':visible')){}//fermé immédiatement fonction invisible inexistante
+            
+            else{
+                $('.orizonsub').slideDown();
+                event.stopPropagation();
+            }
+        });
+
+           $('.badbutton').click(function(event){
+            closeall();
+            if($('.badsub').is(':visible')){}//fermé immédiatement fonction invisible inexistante
+            
+            else{
+                $('.badsub').slideDown();
+                event.stopPropagation();
+            }
+        });
+
         
         
     });//fin de la fonction main
@@ -77,6 +107,9 @@ $(document).ready(function(){
         $('.portfoliosansjssub').slideUp();
         $('.winpixiessub').slideUp();
         $('.animationsub').slideUp();
+        $('.eresub').slideUp();
+        $('.orizonsub').slideUp();
+        $('.badsub').slideUp();
         
     }
     
@@ -87,6 +120,9 @@ $(document).ready(function(){
         $('.portfoliosansjssub').hide();
         $('.winpixiessub').hide();
         $('.animationsub').hide();
+        $('.eresub').hide();
+        $('.orizonsub').hide();
+        $('.badsub').hide();
         
     }
   

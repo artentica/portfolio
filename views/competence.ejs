@@ -21,10 +21,10 @@
    <header class="codrops-header">
     <div class='container'>
       <h2>
-        Skills
+        Compétences
       </h2>
-      <div  id="grid" class='row'>
-        <div class="mix web">
+      <div  id="grid" class='row' >
+        <div class="mix web"  data-numeric="6">
          <figure>
            <canvas height='150' id='html5' width='150'></canvas><img src="logo/HTML5.png" alt="logo HTML5" class="img_skills"/>
            <figcaption>
@@ -33,7 +33,7 @@
          </figure>
        </div>  
 
-       <div  class="mix web"class='col-sm-4'>
+       <div  class="mix web"class='col-sm-4'  data-numeric="5">
         <figure>
           <canvas height='150' id='css3' width='150'></canvas><img src="logo/CSS3.png" alt="logo CSS3" class="img_skills"/>
           <figcaption>
@@ -42,7 +42,7 @@
         </figure>
       </div>
 
-      <div class="mix web">
+      <div class="mix web"  data-numeric="4">
         <figure>
           <canvas height='150' id='php' width='150'></canvas><img src="logo/php.png" alt="logo PHP" class="img_skills"/>
           <figcaption>
@@ -50,7 +50,7 @@
           </figcaption>
         </figure>
       </div>
-      <div class="mix web">
+      <div class="mix web"  data-numeric="3">
         <figure>
           <canvas height='150' id='javascript' width='150'></canvas><img src="logo/js.png" alt="logo Javascript" class="img_skills"/>
           <figcaption>
@@ -207,6 +207,14 @@
           </figcaption>
         </figure>
       </div>
+      <div class="mix cinema">
+        <figure>
+          <canvas height='150' id='audacity' width='150'></canvas><img src="logo/audacity.png" alt="logo audacity" class="img_skills"/>
+          <figcaption>
+            Audacity
+          </figcaption>
+        </figure>
+      </div>
 
       
       
@@ -230,12 +238,18 @@
 
         $('h2:first').after('<div class="filters">'+
           '<div class="col">'+
-          '<span class="filter mix"  data-filter="mix"><a class="a_demo_one">Tout</a></span>'+
-          '<span class="filter mix"  data-filter="software"><a class="a_demo_one">Software</a></span>'+
-          '<span class="filter" data-filter="web"><a class="a_demo_one">Web</a></span>'+
-          '<span class="filter" data-filter="os"><a class="a_demo_one">OS</a></span>'+
-          '<span class="filter" data-filter="data"><a class="a_demo_one">Autre</a></span>'+
-          '<span class="filter" data-filter="cinema"><a class="a_demo_one">Cinema</a></span>'+
+          '<input type="radio" id="domaine_all" name="domaine"/>'+
+          '<label for="domaine_all"><span class="filter"  data-filter="mix"><a class="a_demo_one"><b>Tout</b></a></span></label>'+
+          '<input type="radio" id="domaine_soft" name="domaine"/>'+
+          '<label for="domaine_soft"><span class="filter"  data-filter="software"><a class="a_demo_one">Software</a></span></label>'+
+          '<input type="radio" id="domaine_web" name="domaine"/>'+
+          '<label for="domaine_web"><span class="filter" data-filter="web"><a class="a_demo_one">Web</a></span></label>'+
+          '<input type="radio" id="domaine_os" name="domaine"/>'+
+          '<label for="domaine_os"><span class="filter" data-filter="os"><a class="a_demo_one">OS</a></span></label>'+
+          '<input type="radio" id="ordre_autre" name="domaine"/>'+
+          '<label for="domaine_autre"><span class="filter" data-filter="data"><a class="a_demo_one">Autre</a></span></label>'+
+          '<input type="radio" id="ordre_cine" name="domaine"/>'+
+          '<label for="domaine_cine"><span class="filter" data-filter="cinema"><a class="a_demo_one">Cinema</a></span></label>'+
           '</div>');
 
 
