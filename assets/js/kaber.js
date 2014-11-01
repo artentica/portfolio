@@ -22,9 +22,9 @@ var Kaber = (function($) {
 			// $('.part3').Parallax({ property:'top', speed:0.20, start:480, delay:-900 });
 			// $('.part4').Parallax({ property:'top', speed:0.30, start:500, delay:-1000 });
 			
-			$('.part2').Parallax({ property:'top', speed:0.10, start:0, delay:-100 });
-			$('.part3').Parallax({ property:'top', speed:0.20, start:0, delay:-100 });
-			$('.part4').Parallax({ property:'top', speed:0.30, start:0, delay:-200 });
+			// $('.part2').Parallax({ property:'top', speed:0.10, start:0, delay:-100 });
+			// $('.part3').Parallax({ property:'top', speed:0.20, start:0, delay:-100 });
+			// $('.part4').Parallax({ property:'top', speed:0.30, start:0, delay:-200 });
 
 			$('.axe').Parallax({ property:'top', speed:0.12, start:0, delay:-800 });
 			$('.jet').Parallax({ property:'top', speed:-0.10, start:80, delay:-900 });
