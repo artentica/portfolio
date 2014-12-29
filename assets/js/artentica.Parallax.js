@@ -34,7 +34,7 @@
 
 		// update element position
 		function updatePosition() {
-			
+
 			if(options.disable) return false;
 
 			var scrollTop = $(window).scrollTop();
@@ -51,11 +51,11 @@
 					obj.css(options.property, getPosition() + 'px');
 				else
 					obj.css(options.property, getEndPosition() + 'px');
-			
+
 			} else {
-				
+
 				obj.css(options.property, options.start + 'px');
-			
+
 			}
 
 		}
@@ -63,20 +63,20 @@
 		function doTransformParallax(scrollTop) {
 
 			if(scrollTop > options.startPos) {
-				
+
 				obj.css('transform', 'translate3d(0,' + getPosition() + 'px,0)');
-			
+
 			} else {
-				
+
 				obj.css('transform', 'translate3d(0,' + getPosition() + 'px,0)');
-			
+
 			}
 
 		}
 
 		// get new position
 		function getPosition() {
-	
+
 			// Calculate new position based on speed / scroll position / start position
 			return ($(window).scrollTop() * options.speed) - (options.startPos * options.speed) + options.start;
 
@@ -96,12 +96,12 @@
 
 	$.fn.Parallax.defaults = {
 		disable: false,
-		property:'top', 
-		speed:0.2, 
-		start:0, 
+		property:'top',
+		speed:0.2,
+		start:0,
 		delay:0,
 		duration:2500
-	}; 
+	};
 
 
 })(jQuery);

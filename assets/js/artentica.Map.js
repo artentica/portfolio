@@ -9,7 +9,7 @@ var Map = (function($) {
 	var init = function() {
 
 		// set src of google map icon for markers
-		googleMapIcon = 'http://kabertech.com/assets/img/map-pin.png';
+		googleMapIcon = 'http://Kabertech.com/assets/img/map-pin.png';
 
 		// custom google map styling
 		googleMapStyle = [
@@ -63,8 +63,8 @@ var Map = (function($) {
 
 		// render the map
 		renderMap([43.9106381,-91.2427342], 14, 'map');
-		plotMapPoint(43.909777,-91.242823,"https://www.google.com/maps/place/Kaber+Technologies,+LLC/@43.909777,-91.242823,17z/data=!3m1!4b1!4m2!3m1!1s0x87f952f05d30a181:0x19e894fb973b61bd");
-		
+		plotMapPoint(43.909777,-91.242823,"https://www.google.com/maps/place/Artentica+Technologies,+LLC/@43.909777,-91.242823,17z/data=!3m1!4b1!4m2!3m1!1s0x87f952f05d30a181:0x19e894fb973b61bd");
+
 	};
 
 	var renderMap = function(center, zoom, element) {
@@ -73,7 +73,7 @@ var Map = (function($) {
 		if($('#' + element).length == 0) return;
 
 		// create a new StyledMapType object, passing it the array of styles, as well as the name to be displayed on the map type control.
-		googleMapType = new google.maps.StyledMapType(googleMapStyle, {name: "Kaber"});
+		googleMapType = new google.maps.StyledMapType(googleMapStyle, {name: "Artentica"});
 
 		// create a map object, and include the MapTypeId to add to the map type control.
 		googleMapOptions = {
@@ -86,16 +86,16 @@ var Map = (function($) {
 			disableDoubleClickZoom: true,
 			center: new google.maps.LatLng(center[0],center[1]),
 			mapTypeControlOptions: {
-				mapTypeIds: [google.maps.MapTypeId.SATELLITE, google.maps.MapTypeId.TERRAIN, 'Kaber']
+				mapTypeIds: [google.maps.MapTypeId.SATELLITE, google.maps.MapTypeId.TERRAIN, 'Artentica']
 			}
 		};
-		 
+
 		// set up new google map
 		map = new google.maps.Map(document.getElementById(element), googleMapOptions);
 
 		// associate the styled map with the MapTypeId and set it to display.
-		map.mapTypes.set('Kaber', googleMapType);
-		map.setMapTypeId('Kaber');
+		map.mapTypes.set('Artentica', googleMapType);
+		map.setMapTypeId('Artentica');
 
 	}
 
@@ -115,7 +115,7 @@ var Map = (function($) {
 		});
 
 	};
-	
+
 	return {
 		init: init
 	};

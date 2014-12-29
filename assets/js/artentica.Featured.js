@@ -59,7 +59,7 @@ var Featured = (function($) {
 		// set up correct indexes of next slide
 		Slider.current = Slider.next;
 		Slider.next = Slider.next == Slider.total ? 0 : Slider.next + 1;
-		
+
 		// animate to new item
 		animate();
 
@@ -89,7 +89,7 @@ var Featured = (function($) {
 
 		// hide background content
 		$('body').addClass('featured-open-body');
-		
+
 		// set a timeout so firefox doesn't bug out
 		setTimeout(function() {
 
@@ -103,7 +103,7 @@ var Featured = (function($) {
 			$('.feature-content').load($url);
 
 		},25);
-		
+
 	};
 
 	var closeItem = function() {
