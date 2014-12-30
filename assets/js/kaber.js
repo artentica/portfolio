@@ -1,4 +1,4 @@
-var Artentica = (function($) {
+var Kaber = (function($) {
 
 	var init = function() {
 
@@ -6,7 +6,7 @@ var Artentica = (function($) {
 		if(typeof Map !== 'undefined')
 			Map.init();
 
-		// skills functionality
+		// projectsd functionality
 		if(typeof Featured !== 'undefined')
 			Featured.init();
 
@@ -14,7 +14,7 @@ var Artentica = (function($) {
 		if(typeof Contact !== 'undefined')
 			Contact.init();
 
-		// skills functionality
+		// projectsd functionality
 		if ($.fn.Parallax && !Modernizr.appleios) {
 			$('.parallax-top').Parallax({ property:'top', speed:0.30, start:0, delay:0 });
 
@@ -87,72 +87,50 @@ var Artentica = (function($) {
 
 	var setWaypoints = function() {
 
-		// about_me snap point
-		$('#about_me').waypoint(function(direction) {
+		// engineering snap point
+		$('#engineering').waypoint(function(direction) {
 			$('.main-nav').toggleClass('fixed-nav', direction == 'down');
 			$('.main-nav a').removeClass('active');
-			$('.main-nav a.about_me-btn').addClass('active');
-		}, { offset:'80px' });
+			$('.main-nav a.engineering-btn').addClass('active');
+		}, { offset:'90px' });
 
-		// education snap point
-		$('#education').waypoint(function(direction) {
+		// design snap point
+		$('#design').waypoint(function(direction) {
 			$('.main-nav a').removeClass('active');
 			if(direction == 'down') {
 				$('.main-nav').addClass('nav-light-gray');
-				$('.main-nav a.education-btn').addClass('active');
+				$('.main-nav a.design-btn').addClass('active');
 			} else {
 				$('.main-nav').removeClass('nav-light-gray');
-				$('.main-nav a.about_me-btn').addClass('active');
+				$('.main-nav a.engineering-btn').addClass('active');
 			}
 		}, { offset:'80px' });
 
-		// workexp snap point
-		$('#workexp').waypoint(function(direction) {
+		// research snap point
+		$('#research').waypoint(function(direction) {
 			$('.main-nav a').removeClass('active');
 			if(direction == 'down') {
-                $('.main-nav').removeClass('nav-light-gray');
 				$('.main-nav').addClass('nav-dark-gray');
-				$('.main-nav a.workexp-btn').addClass('active');
-				$('#workexp').addClass('active');
+				$('.main-nav a.research-btn').addClass('active');
+				$('#research').addClass('active');
 			} else {
 				$('.main-nav').removeClass('nav-dark-gray');
 				$('.main-nav').addClass('nav-light-gray');
-				$('.main-nav a.education-btn').addClass('active');
-
+				$('.main-nav a.design-btn').addClass('active');
+				$('#research').removeClass('active');
 			}
 		}, { offset:'80px' });
 
-		// skills snap point
-		$('#skills').waypoint(function(direction) {
+		// research snap point
+		$('#projectsd').waypoint(function(direction) {
 			$('.main-nav a').removeClass('active');
 			if(direction == 'down') {
-                $('.main-nav').removeClass('nav-dark-gray');
+				$('.main-nav').removeClass('nav-dark-gray');
 				$('.main-nav').addClass('nav-light-gray');
-				$('.main-nav a.skills-btn').addClass('active');
-				$('#project').addClass('active');
-
 			} else {
 				$('.main-nav').removeClass('nav-light-gray');
 				$('.main-nav').addClass('nav-dark-gray');
-				$('.main-nav a.workexp-btn').addClass('active');
-                $('#skills').addClass('active');
-			}
-		}, { offset:'80px' });
-
-        // skills snap point
-		$('#projects').waypoint(function(direction) {
-			$('.main-nav a').removeClass('active');
-			if(direction == 'down') {
-                $('.main-nav').removeClass('nav-light-gray');
-				$('.main-nav').addClass('nav-dark-gray');
-				$('.main-nav a.projects-btn').addClass('active');
-				$('#skills').addClass('active');
-			} else {
-				$('.main-nav').removeClass('nav-dark-gray');
-				$('.main-nav').addClass('nav-light-gray');
-				$('.main-nav a.skills-btn').addClass('active');
-                $('#skills').addClass('active');
-                console.log("yolo");
+				$('.main-nav a.research-btn').addClass('active');
 			}
 		}, { offset:'80px' });
 
@@ -167,7 +145,7 @@ var Artentica = (function($) {
 		// Stop any currently active scroll
 		$('html, body').dequeue();
 		// Scroll to #id offset by 90 pixels
-		$('html, body').animate({ scrollTop: $(id).offset().top-80 }, 1000, 'easeOutExpo');
+		$('html, body').animate({ scrollTop: $(id).offset().top-60 }, 1000, 'easeOutExpo');
 
 	};
 
@@ -180,7 +158,7 @@ var Artentica = (function($) {
 }(jQuery));
 
 $(function() {
-	Artentica.init();
+	Kaber.init();
 });
 
 Modernizr.addTest('ipad', function () {

@@ -7,7 +7,6 @@ var Contact = (function($) {
 		    if (!$('.contact').is(e.target) && $('.contact').has(e.target).length === 0) {
 				$('#content').removeClass('contact-open');
 				$('.main-nav').removeClass('main-nav-open');
-
 		    }
 		});
 
@@ -15,7 +14,6 @@ var Contact = (function($) {
 
 	// toggle contact
 	var showContact = function() {
-
 		$('#content').toggleClass('contact-open');
 		$('.main-nav').toggleClass('main-nav-open');
 	};

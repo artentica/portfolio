@@ -9,17 +9,17 @@ var Map = (function($) {
 	var init = function() {
 
 		// set src of google map icon for markers
-		googleMapIcon = 'http://Kabertech.com/assets/img/map-pin.png';
+		googleMapIcon = 'http://kabertech.com/assets/img/map-pin.png';
 
 		// custom google map styling
 		googleMapStyle = [
 		  {
-		    "featureType": "administrative",
+		    "projectsType": "administrative",
 		    "stylers": [
 		      { "visibility": "off" }
 		    ]
 		  },{
-		    "featureType": "road",
+		    "projectsType": "road",
 		    "stylers": [
 		      { "visibility": "simple" },
 		      { "color": "#393939" }
@@ -30,29 +30,29 @@ var Map = (function($) {
 		      { "visibility": "off" }
 		    ]
 		  },{
-		    "featureType": "water",
+		    "projectsType": "water",
 		    "stylers": [
 		      { "color": "#303030" }
 		    ]
 		  },{
-		    "featureType": "landscape",
+		    "projectsType": "landscape",
 		    "stylers": [
 		      { "color": "#2a2a2a" }
 		    ]
 		  },{
-		    "featureType": "poi",
+		    "projectsType": "poi",
 		    "stylers": [
 		      { "color": "#393939" },
 		      { "visibility": "simplified" }
 		    ]
 		  },{
-		    "featureType": "transit",
+		    "projectsType": "transit",
 		    "elementType": "geometry",
 		    "stylers": [
 		      { "visibility": "off" }
 		    ]
 		  },{
-		    "featureType": "administrative",
+		    "projectsType": "administrative",
 		    "elementType": "geometry.stroke",
 		    "stylers": [
 		      { "visibility": "on" },
@@ -63,7 +63,7 @@ var Map = (function($) {
 
 		// render the map
 		renderMap([43.9106381,-91.2427342], 14, 'map');
-		plotMapPoint(43.909777,-91.242823,"https://www.google.com/maps/place/Artentica+Technologies,+LLC/@43.909777,-91.242823,17z/data=!3m1!4b1!4m2!3m1!1s0x87f952f05d30a181:0x19e894fb973b61bd");
+		plotMapPoint(43.909777,-91.242823,"https://www.google.com/maps/place/Kaber+Technologies,+LLC/@43.909777,-91.242823,17z/data=!3m1!4b1!4m2!3m1!1s0x87f952f05d30a181:0x19e894fb973b61bd");
 
 	};
 
@@ -73,7 +73,7 @@ var Map = (function($) {
 		if($('#' + element).length == 0) return;
 
 		// create a new StyledMapType object, passing it the array of styles, as well as the name to be displayed on the map type control.
-		googleMapType = new google.maps.StyledMapType(googleMapStyle, {name: "Artentica"});
+		googleMapType = new google.maps.StyledMapType(googleMapStyle, {name: "Kaber"});
 
 		// create a map object, and include the MapTypeId to add to the map type control.
 		googleMapOptions = {
@@ -86,7 +86,7 @@ var Map = (function($) {
 			disableDoubleClickZoom: true,
 			center: new google.maps.LatLng(center[0],center[1]),
 			mapTypeControlOptions: {
-				mapTypeIds: [google.maps.MapTypeId.SATELLITE, google.maps.MapTypeId.TERRAIN, 'Artentica']
+				mapTypeIds: [google.maps.MapTypeId.SATELLITE, google.maps.MapTypeId.TERRAIN, 'Kaber']
 			}
 		};
 
@@ -94,8 +94,8 @@ var Map = (function($) {
 		map = new google.maps.Map(document.getElementById(element), googleMapOptions);
 
 		// associate the styled map with the MapTypeId and set it to display.
-		map.mapTypes.set('Artentica', googleMapType);
-		map.setMapTypeId('Artentica');
+		map.mapTypes.set('Kaber', googleMapType);
+		map.setMapTypeId('Kaber');
 
 	}
 

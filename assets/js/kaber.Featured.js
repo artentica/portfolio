@@ -5,7 +5,7 @@ var Featured = (function($) {
 	var init = function() {
 
 		// create new slider properties
-		Slider = new SliderProps($('#featured-slider'), 0, 0, 0);
+		Slider = new SliderProps($('#projectsd-slider'), 0, 0, 0);
 
 		// set slide total
 		Slider.total = Slider.element.find('.slide').length - 1;
@@ -17,7 +17,7 @@ var Featured = (function($) {
 				$(this).css({ left:'100%' });
 			}
 
-			$('.feature-nav').append('<a href="javascript:;" class="slidebtn trans-all"><span class="trans-all"></span></a>');
+			$('.projects-nav').append('<a href="javascript:;" class="slidebtn trans-all"><span class="trans-all"></span></a>');
 
 		});
 
@@ -67,7 +67,7 @@ var Featured = (function($) {
 
 	var animate = function() {
 
-		// reset featured item positions
+		// reset projectsd item positions
 		var newPos = Slider.next > Slider.current ? '100%' : '-100%';
 		Slider.element.find('.slide:eq(' + Slider.next + ')').css({ left:newPos });
 
@@ -78,29 +78,29 @@ var Featured = (function($) {
 		Slider.element.find('.slide:eq(' + Slider.next + ')').animate({ left:'0%' }, 1000, 'easeOutExpo');
 
 		// set active slide
-		$('.feature-nav a').removeClass('active');
-		$('.feature-nav a:eq(' + Slider.next + ')').addClass('active');
+		$('.projects-nav a').removeClass('active');
+		$('.projects-nav a:eq(' + Slider.next + ')').addClass('active');
 
-		$('.feature-count .active').html('0' + (Slider.next+1));
+		$('.projects-count .active').html('0' + (Slider.next+1));
 
 	};
 
 	var loadItem = function($url) {
 
 		// hide background content
-		$('body').addClass('featured-open-body');
+		$('body').addClass('projectsd-open-body');
 
 		// set a timeout so firefox doesn't bug out
 		setTimeout(function() {
 
 			// clear existing content and container
-			$('.feature-content').html('');
+			$('.projects-content').html('');
 
 			// open modal
-			$('.feature-modal').addClass('feature-open');
+			$('.projects-modal').addClass('projects-open');
 
 			// load new url
-			$('.feature-content').load($url);
+			$('.projects-content').load($url);
 
 		},25);
 
@@ -109,12 +109,12 @@ var Featured = (function($) {
 	var closeItem = function() {
 
 		// remove open class
-		$('.feature-modal').removeClass('feature-open');
+		$('.projects-modal').removeClass('projects-open');
 
 		// set a timeout so firefox doesn't bug out
 		setTimeout(function() {
 			// show background content
-			$('body').removeClass('featured-open-body');
+			$('body').removeClass('projectsd-open-body');
 		},25);
 
 	}
