@@ -138,14 +138,13 @@ var Artentica = (function($) {
                 $('#projects').addClass('active');
 			}
 		}, { offset:'80px' });
-
+        skills
         // projects snap point
 		$('#skills').waypoint(function(direction) {
 			$('.main-nav a').removeClass('active');
 			if(direction == 'down') {
                  $('.main-nav').removeClass('nav-dark-gray');
 				$('.main-nav').addClass('nav-light-gray');
-                console.log("yolo");
 				$('.main-nav a.skills-btn').addClass('active');
 
 				$('#projects').addClass('active');
@@ -157,6 +156,19 @@ var Artentica = (function($) {
 			}
 		}, { offset:'80px' });
 
+        $('#foot_page').waypoint(function(direction) {
+			$('.main-nav a').removeClass('active');
+			if(direction == 'down') {
+                 $('.main-nav').removeClass('nav-dark-gray');
+				$('.main-nav').addClass('nav-light-gray');
+			} else {
+                $('.main-nav').removeClass('nav-light-gray');
+				$('.main-nav').addClass('nav-dark-gray');
+				$('.main-nav a.projects-btn').addClass('active');
+                $('#projects').addClass('active');
+			}
+		}, { offset:'80px' });
+
 	};
 
 	var showMenu = function() {
@@ -164,7 +176,7 @@ var Artentica = (function($) {
 	};
 
 	var scrollTo = function(id) {
-
+		console.log("scroll");
 		// Stop any currently active scroll
 		$('html, body').dequeue();
 		// Scroll to #id offset by 90 pixels

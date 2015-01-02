@@ -109,7 +109,7 @@
 					<div  style=" width: 100%;
 height: 100%;	background-image: url('assets/img/img_prez.png');
 	 background-repeat: no-repeat;
-	z-index:1;background-position: 0px 70px;">
+	z-index:1;background-position: 0px 100px;">
 
 					<div class="logo"><a href="index.html"><img src="" alt="logo"/></a></div>
 
@@ -407,37 +407,31 @@ Je me considère comme quelqu'un de très actif, je fais du kendo en club 2 fois
 
 						<div class="projects-item">
 
-							<div class="projects-count-large">01</div>
 							<div class="projects-info">
-								<h3>ELITE<span>Mills, Lathes, Bandsaws</span></h3>
-								<a href="javascript:Featured.loadItem('work/elite.html');" class="view">VIEW PROJECT</a>
+								<h3>Informatic</h3>
+								<a href="javascript:Featured.loadItem('work/informatic.html');" class="view">VIEW PROJECTS</a>
 							</div><!-- end .projects-info -->
 
-							<!-- <div class="projects-mill"><img src="assets/img/portfolio/elite-mill-full.png" alt="mill"/></div> -->
 
 						</div><!-- end .projects-item -->
 
 						<div class="projects-item">
 
-							<div class="projects-count-large">02</div>
 							<div class="projects-info">
-								<h3>EASY WOOD<span>Easy Chuck</span></h3>
-								<a href="javascript:Featured.loadItem('work/easy-wood.html');" class="view">VIEW PROJECT</a>
+								<h3>Electronic</h3>
+								<a href="javascript:Featured.loadItem('work/electronics.html');" class="view">VIEW PROJECTS</a>
 							</div><!-- end .projects-info -->
 
-							<!-- <div class="projects-easywood"><img src="assets/img/portfolio/easy-wood-full.png" alt="easy-wood"/></div> -->
 
 						</div><!-- end .projects-item -->
 
 						<div class="projects-item">
 
-							<div class="projects-count-large">03</div>
 							<div class="projects-info">
-								<h3>JET<span>Wood Lathe</span></h3>
-								<a href="javascript:Featured.loadItem('work/jet-lathe.html');" class="view">VIEW PROJECT</a>
+								<h3>Cinema</h3>
+								<a href="javascript:Featured.loadItem('work/cinema.html');" class="view">VIEW PROJECTS</a>
 							</div><!-- end .projects-info -->
 
-							<!-- <div class="projects-jet"><img src="assets/img/portfolio/jet-lathe-full.png" alt="lathe"/></div> -->
 
 						</div><!-- end .projects-item -->
 
@@ -599,7 +593,7 @@ Je me considère comme quelqu'un de très actif, je fais du kendo en club 2 fois
 
 				</section><!-- end #projects -->
 
-				<footer>
+				<footer id="foot_page">
 
 					<div class="work-together">
 
@@ -615,8 +609,9 @@ Je me considère comme quelqu'un de très actif, je fais du kendo en club 2 fois
 
 								<div class="to-top"><a href="javascript:Artentica.scrollTo('.top');">BACK TO TOP</a></div>
 
+								Portfolio de Rioualon Vincent <a href="tel:+0658177029">06.58.17.70.29</a>
 
-							</div><!-- end .container -->
+							</div>
 
 						</div><!-- end .footer-info -->
 
@@ -639,8 +634,87 @@ Je me considère comme quelqu'un de très actif, je fais du kendo en club 2 fois
 		<script type="application/javascript">
 
 function initialize() {
+
+
+   var styles = [
+  {
+    "featureType": "administrative",
+    "stylers": [
+      { "visibility": "simplified" }
+    ]
+  },{
+    "featureType": "road",
+    "stylers": [
+      { "visibility": "simplified" },
+      { "color": "#393939" }
+    ]
+  },{
+    "featureType": "road",
+    "elementType": "labels",
+    "stylers": [
+      { "visibility": "off" }
+    ]
+  },{
+    "featureType": "water",
+    "stylers": [
+      { "color": "#303030" }
+    ]
+  },{
+    "featureType": "landscape",
+    "stylers": [
+      { "color": "#2a2a2a" }
+    ]
+  },{
+    "featureType": "poi",
+    "stylers": [
+      { "visibility": "simplified" },
+      { "color": "#393939" }
+    ]
+  },{
+    "featureType": "transit",
+    "elementType": "geometry",
+    "stylers": [
+      { "visibility": "off" }
+    ]
+  },{
+    "featureType": "administrative",
+    "elementType": "geometry.stroke",
+    "stylers": [
+      { "visibility": "on" },
+      { "color": "#393939" }
+    ]
+  },{
+    "featureType": "landscape",
+    "stylers": [
+      { "visibility": "simplified" },
+      { "color": "#2a2a2a" }
+    ]
+  },{
+    "featureType": "administrative.neighborhood",
+    "elementType": "labels",
+    "stylers": [
+      { "visibility": "simplified" },
+      { "color": "#4c4c4b" }
+    ]
+  },{
+  },{
+    "featureType": "administrative.locality",
+    "stylers": [
+      { "visibility": "simplified" },
+      { "color": "#838383" }
+    ]
+  },{
+    "featureType": "transit",
+    "stylers": [
+      { "visibility": "off" }
+    ]
+  },{
+  }
+];
+   var styledMap = new google.maps.StyledMapType(styles,
+    {name: "Artentica Map"});
   var mapOptions = {
-    zoom: 10,
+    zoom: 12,
     disableDefaultUI: false,
 
       zoomControl: true,
@@ -654,11 +728,15 @@ function initialize() {
 			scrollwheel: false,
 			disableDoubleClickZoom: false,
             streetViewControl: false,
-    center: new google.maps.LatLng(48.4293972, -4.5491805,17)
+      mapTypeControlOptions: {
+      mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
+    },
+    center: new google.maps.LatLng(48.407055, -4.495554,17)
   }
   var map = new google.maps.Map(document.getElementById('map-canvas'),
                                 mapOptions);
-
+  map.mapTypes.set('map_style', styledMap);
+  map.setMapTypeId('map_style');
   setMarkers(map, beaches);
 }
 

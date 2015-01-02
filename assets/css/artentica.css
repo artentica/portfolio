@@ -112,7 +112,7 @@ img {
       float: none; } }
 
 a {
-  color: #e1382e;
+  color: #D1DCFF;
   text-decoration: none;
   outline: none; }
 
@@ -219,7 +219,7 @@ a img {
       display: inline-block;
       height: 28px;
       width: 28px;
-      border: 2px solid #e1382d; }
+      border: 2px solid #2D2FE1; }
       .service-callout .view-item span img {
         vertical-align: top;
         width: 10px;
@@ -267,7 +267,7 @@ a img {
     display: block;
     width: 55px;
     height: 55px;
-    border: 2px solid #e1382d; }
+    border: 2px solid #2D2FE1; }
   .circle-callout a:hover {
     -webkit-transform: scale(1.2);
     -moz-transform: scale(1.2);
@@ -312,7 +312,7 @@ span.sub-text {
   margin-bottom: 10px; }
 
 span.red-hit {
-  color: #e1382d; }
+  color: #2D2FE1; }
 
 .heading-sep {
   width: 55%;
@@ -457,7 +457,7 @@ MENU
         .menu .logo-btn svg {
           height: 28px; } }
     .menu .logo-btn svg:hover path {
-      fill: #e1382d; }
+      fill: #2D2FE1; }
   .menu .diagonal {
     width: 1800px;
     height: 1800px;
@@ -512,7 +512,7 @@ MENU
       display: block;
       font-size: 15px; }
     .menu .menu-items a:hover {
-      color: #e1382d; }
+      color: #2D2FE1; }
     .menu .menu-items .heading-sep {
       margin: 10px auto;
       margin-bottom: 20px; }
@@ -529,10 +529,10 @@ MENU
       width: 20px;
       width: 20px; }
     .menu .close svg:hover path {
-      fill: #e1382d; }
+      fill: #2D2FE1; }
   .menu .menu-bottom {
     color: #f28a83;
-    background: #e1382d;
+    background: #2D2FE1;
     position: absolute;
     line-height: 80px;
     width: 100%;
@@ -571,7 +571,7 @@ NAVIGATION
 */
 #main-nav-hold {
   font-family: "museo-sans", sans-serif;
-  background: #e1382d;
+  background: #2D2FE1;
   font-size: 16px;
   height: 90px;
   position: relative;
@@ -595,15 +595,15 @@ NAVIGATION
     -ms-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
     z-index: 100;
-    border-bottom: 1px solid #bf3025;
+    border-bottom: 1px solid #2D2FE1;
     height: 90px;
     position: absolute;
     width: 100%;
     left: 0px;
     top: 0px;
-    background: #e1382d; }
+    background: #2D2FE1; }
     #main-nav-hold .main-nav a.nav-btn {
-      color: #f28a83;
+     color: #D1DCFF;
       line-height: 90px;
       margin: 0px 15px; }
       @media (max-width: 1150px) {
@@ -668,7 +668,7 @@ HEADER
 header {
   height: 100%;
   width: 100%;
-  background: url(../img/header-bg.jpg) center no-repeat;
+  background: url(../img/font_intro.jpg) center no-repeat;
   background-size: cover;
   overflow: hidden;
   position: relative; }
@@ -695,6 +695,7 @@ header {
       header video.headervid {
         display: none; } }
   header .overlay {
+    opacity: 0.4;
     position: absolute;
     left: 0px;
     top: 0px;
@@ -757,7 +758,7 @@ header {
       display: inline-block;
       margin-left: 15px; }
     header .header-nav a:hover {
-      color: #e1382c; }
+      color: #0003FF; }
       header .header-nav a:hover .menu-sandwhich {(608) 519-3399  /
         margin-top: -5px; }
         header .header-nav a:hover .menu-sandwhich span {
@@ -835,7 +836,7 @@ header {
       padding: 0px;
       display: inline-block; }
     header .scroll a:hover {
-      color: #e1382d; }
+      color: #2D2FE1; }
     header .scroll img {
       width: 70px;
       height: 70px; }
@@ -930,7 +931,7 @@ CONTACT
     padding: 20px 50px;
     font-size: 18px;
     font-family: "museo-sans", sans-serif;
-    background: #e1382d;
+    background: #2D2FE1;
     border: none;
     color: #ffffff;
     font-weight: 700;
@@ -955,7 +956,7 @@ CONTACT
       width: 20px;
       width: 20px; }
     .contact .close svg:hover path {
-      fill: #e1382d; }
+      fill: #2D2FE1; }
   .contact h2 {
     color: #ffffff;
     font-size: 50px;
@@ -975,10 +976,10 @@ about_me
 
 */
 #about_me {
-  background: #e1382d;
+  background: #2D2FE1;
   padding: 130px 0px;
   padding-bottom: 300px;
-  color: #f6c4c1;
+  color: #D1DCFF;;
   position: relative;
   overflow: hidden; }
   @media (max-width: 767px) {
@@ -1065,7 +1066,7 @@ about_me
     background: #fb584d; }
     #about_me .service-sep span {
       border: 2px solid #fb584d;
-      background: #e1382d; }
+      background: #2D2FE1; }
   #about_me .service-callout .text {
     color: #ffffff; }
   #about_me .shadow-bottom {
@@ -1682,9 +1683,9 @@ FEATURED WORKS
       background: #999999;
       vertical-align: middle; }
     #projects .projects-nav a.active {
-      border: 2px solid #e1382d; }
+      border: 2px solid #2D2FE1; }
     #projects .projects-nav a:hover span {
-      background: #e1382d; }
+      background: #2D2FE1; }
     #projects .projects-nav a.active span, #projects .projects-nav a.active:hover span {
       background: none; }
   #projects .projects-sep {
@@ -1728,7 +1729,7 @@ FEATURED WORKS
       border-radius: 3px;
       display: block;
       line-height: 70px;
-      background: #e1382d;
+      background: #2D2FE1;
       color: #ffffff;
       text-align: center;
       font-size: 15px;
@@ -1750,7 +1751,7 @@ FEATURED WORKS
             font-size: 18px;
             line-height: 18px; } }
     #projects .projects-info a:hover {
-      background: #ff473a; }
+      background: #0003FF; }
   #projects .projects-mill {
     width: 1170px;
     position: absolute;
@@ -1918,7 +1919,7 @@ FEATURED WORKS
         .projects-modal .logo-btn svg {
           height: 28px; } }
     .projects-modal .logo-btn svg:hover path {
-      fill: #e1382d; }
+      fill: #2D2FE1; }
   .projects-modal .diagonal {
     width: 1800px;
     height: 1800px;
@@ -1946,14 +1947,14 @@ FEATURED WORKS
       width: 20px;
       width: 20px; }
     .projects-modal .close svg:hover path {
-      fill: #e1382d; }
+      fill: #2D2FE1; }
   .projects-modal .heading-sep {
     margin: 30px auto; }
   .projects-modal h2 {
     color: #ffffff; }
     .projects-modal h2 span {
       display: block;
-      color: #e1382d;
+      color: #2D2FE1;
       font-size: 35px;
       line-height: 35px;
       font-weight: 300;
@@ -2037,7 +2038,7 @@ FEATURED WORKS
         padding: 0px 30px; } }
   .projects-modal .projects-bottom {
     color: #f28a83;
-    background: #e1382d;
+    background: #2D2FE1;
     position: fixed;
     z-index: 100;
     line-height: 80px;
@@ -2151,7 +2152,7 @@ footer {
       footer .work-together {
         font-size: 20px; } }
     footer .work-together a {
-      background: #e1382d;
+      background: #2D2FE1;
       color: #ffffff;
       display: block; }
       @media (max-width: 767px) {
@@ -2160,7 +2161,7 @@ footer {
           line-height: 24px;
           padding: 30px; } }
     footer .work-together a:hover {
-      background: #ff473a; }
+      background: #0003FF; }
     footer .work-together span {
       border-bottom: 2px solid #ffffff; }
   footer .map-hold {
@@ -2193,7 +2194,7 @@ footer {
         font-size: 15px;
         line-height: 25px; } }
     footer .footer-info a {
-      color: #e1382d; }
+      color: #2D2FE1; }
   footer .to-top {
     width: 190px;
     position: absolute;
