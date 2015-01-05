@@ -75,6 +75,7 @@ var Featured = (function($) {
 		var curPos = Slider.next > Slider.current ? '-100%' : '100%';
 
 		Slider.element.find('.slide:eq(' + Slider.current + ')').animate({ left:curPos }, 1000, 'easeOutExpo');
+
 		Slider.element.find('.slide:eq(' + Slider.next + ')').animate({ left:'0%' }, 1000, 'easeOutExpo');
 
 		// set active slide

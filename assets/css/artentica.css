@@ -60,6 +60,10 @@ body {
 img {
   max-width: 100%; }
 
+.map img {
+     max-width: none;
+}
+
 #viewport {
   -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
@@ -345,7 +349,7 @@ margin-bottom: 40px; }
     @media (max-width: 767px) {
       .loading-modal .diagonal {
         display: none; } }
-  .loading-modal .logo {
+  .loading-modal .vr {
     position: absolute;
     width: 100%;
     left: 0px;
@@ -440,23 +444,23 @@ MENU
   opacity: 0;
   -webkit-transition: -webkit-transform 0.4s, opacity 0.4s, visibility 0s 0.4s;
   transition: transform 0.4s, opacity 0.4s, visibility 0s 0.4s; }
-  .menu .logo-btn {
+  .menu .vr-btn {
     width: 35px;
     position: absolute;
     left: 25px;
     top: 27px; }
     @media (max-width: 767px) {
-      .menu .logo-btn {
+      .menu .vr-btn {
         left: 19px;
         top: 19px;
         width: 28px; } }
-    .menu .logo-btn svg {
+    .menu .vr-btn svg {
       width: 100%;
       height: 35px; }
       @media (max-width: 767px) {
-        .menu .logo-btn svg {
+        .menu .vr-btn svg {
           height: 28px; } }
-    .menu .logo-btn svg:hover path {
+    .menu .vr-btn svg:hover path {
       fill: #2D2FE1; }
   .menu .diagonal {
     width: 1800px;
@@ -580,13 +584,13 @@ NAVIGATION
   @media (max-width: 767px) {
     #main-nav-hold {
       display: none; } }
-  #main-nav-hold .logo-btn {
+  #main-nav-hold .vr-btn {
     height: 35px;
     width: 35px;
     position: absolute;
     left: 25px;
     top: 27px; }
-    #main-nav-hold .logo-btn svg {
+    #main-nav-hold .vr-btn svg {
       width: 100%;
       height: 35px; }
   #main-nav-hold .main-nav {
@@ -638,7 +642,7 @@ NAVIGATION
   #main-nav-hold .nav-light-gray {
     background: #e2e2e2;
     border-bottom: 1px solid #c7c7c7; }
-    #main-nav-hold .nav-light-gray .logo-btn svg path {
+    #main-nav-hold .nav-light-gray .vr-btn svg path {
       fill: #424242; }
     #main-nav-hold .nav-light-gray a.nav-btn {
       color: #969696; }
@@ -649,7 +653,7 @@ NAVIGATION
   #main-nav-hold .nav-dark-gray {
     background: #2a2a2a;
     border-bottom: 1px solid #191919; }
-    #main-nav-hold .nav-dark-gray .logo-btn svg path {
+    #main-nav-hold .nav-dark-gray .vr-btn svg path {
       fill: #ffffff; }
     #main-nav-hold .nav-dark-gray a.nav-btn {
       color: #969696; }
@@ -706,7 +710,7 @@ header {
     @media (max-width: 767px) {
       header .overlay {
         display: none; } }
-  header .logo {
+  header .vr {
     position: absolute;
     left: 40px;
     top: 50px;
@@ -714,7 +718,7 @@ header {
     height: 60px;
     z-index: 101; }
     @media (max-width: 767px) {
-      header .logo {
+      header .vr {
         top: 17px;
         left: 20px;
         width: 100px;
@@ -866,7 +870,16 @@ CONTACT
     z-index: 1;
   }
 
-
+.contact-open .contact .contact-text {
+      -webkit-transform: rotateY(0deg);
+      -moz-transform: rotateY(0deg);
+      -ms-transform: rotateY(0deg);
+      transform: rotateY(0deg);
+      -webkit-transition: transform 0.4s;
+      -moz-transition: transform 0.4s;
+      -ms-transition: transform 0.4s;
+      -o-transition: transform 0.4s;
+      transition: transform 0.4s; }
 .contact {
   position: fixed;
   width: 600px;
@@ -919,7 +932,7 @@ CONTACT
   .contact .errortxt {
     border: 1px solid #555555; }
   .contact .formstxt:focus {
-    background: #383838;
+    background: #0003FF;
     border: 1px solid #383838; }
   .contact .formsbtn {
     -webkit-border-radius: 2px;
@@ -942,7 +955,7 @@ CONTACT
         width: 100%;
         font-size: 15px; } }
   .contact .formsbtn:hover {
-    background: #ff473a; }
+    background: #0003FF; }
   .contact .close {
     width: 20px;
     position: absolute;
@@ -1227,9 +1240,31 @@ RESEARCH & PROTOTYPING
 
 -------------------------------------------------------------
 
-Projects
+
 
 */
+
+#skills{
+    height: 1000px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #skills {
   background: #e2e2e2;
   padding: 100px 0px;
@@ -1579,6 +1614,37 @@ TESTIMONIALS
 FEATURED WORKS
 
 */
+.project-main-line .circle-point{
+    border-radius: 10px;
+display: block;
+width: 10px;
+height: 10px;
+position: absolute;
+right: -7px;
+top: -7px;
+border: 2px solid #BFBFBF;
+background: #E2E2E2;
+z-index: 5;
+}
+.pointpointpoint{
+text-align: center;
+letter-spacing: 10px;
+display: block;
+font-size: 70px;
+}
+.title-projects-slide{
+    margin-left: 310px;
+padding-bottom: 55px;
+padding-top: 25px;
+text-align: center;
+font-size: 17px;
+position: relative;
+}
+.title-projects-slide h2{
+    font-size: 30px;
+    letter-spacing: 1px;
+    color: #A9A9A9;
+}
 #projects {
   background: #2a2a2a;
   position: relative;
@@ -1669,6 +1735,7 @@ FEATURED WORKS
       border: 2px solid transparent;
       display: block;
       width: 18px;
+        transition: border 0.4s ease;
       height: 18px;
       margin: 10px auto;
       line-height: 14px; }
@@ -1683,6 +1750,8 @@ FEATURED WORKS
       background: #999999;
       vertical-align: middle; }
     #projects .projects-nav a.active {
+
+
       border: 2px solid #2D2FE1; }
     #projects .projects-nav a:hover span {
       background: #2D2FE1; }
@@ -1722,7 +1791,7 @@ FEATURED WORKS
       font-size: 18px;
       line-height: 32px;
       margin-bottom: 40px; }
-    #projects .projects-info .view {
+    #projects .view {
       -webkit-border-radius: 3px;
       -moz-border-radius: 3px;
       -ms-border-radius: 3px;
@@ -1734,6 +1803,18 @@ FEATURED WORKS
       text-align: center;
       font-size: 15px;
       letter-spacing: 2px; }
+
+        #projects .view {
+            width: 420px;
+            margin: auto;
+            margin-top: 50px;
+        }
+ @media (max-width: 1300px) {
+    #projects-slider {
+     margin-top: 30px; } }
+
+
+
     #projects .projects-info h3 {
       color: #414141;
       margin-bottom: 40px;
@@ -1838,12 +1919,12 @@ FEATURED WORKS
 /* Featured Slider */
 #projects-slider {
   position: relative;
-  height: 850px;
+  height: 1150px;
   z-index: 0;
   font-family: "museo-sans", sans-serif; }
   @media (max-width: 1300px) {
     #projects-slider {
-      height: 800px; } }
+     height: 1050px; } }
   @media (max-width: 960px) {
     #projects-slider {
       display: none; } }
@@ -1900,7 +1981,7 @@ FEATURED WORKS
   opacity: 0;
   -webkit-transition: -webkit-transform 0.4s, opacity 0.4s, visibility 0s 0.4s;
   transition: transform 0.4s, opacity 0.4s, visibility 0s 0.4s; }
-  .projects-modal .logo-btn {
+  .projects-modal .vr-btn {
     height: 35px;
     width: 35px;
     position: absolute;
@@ -1908,17 +1989,17 @@ FEATURED WORKS
     top: 27px;
     z-index: 200; }
     @media (max-width: 767px) {
-      .projects-modal .logo-btn {
+      .projects-modal .vr-btn {
         left: 19px;
         top: 19px;
         width: 28px; } }
-    .projects-modal .logo-btn svg {
+    .projects-modal .vr-btn svg {
       width: 100%;
       height: 35px; }
       @media (max-width: 767px) {
-        .projects-modal .logo-btn svg {
+        .projects-modal .vr-btn svg {
           height: 28px; } }
-    .projects-modal .logo-btn svg:hover path {
+    .projects-modal .vr-btn svg:hover path {
       fill: #2D2FE1; }
   .projects-modal .diagonal {
     width: 1800px;
@@ -2066,15 +2147,12 @@ FEATURED WORKS
 .projects-open-body {
   overflow: hidden; }
 
-#projects .project-main-line{
-    padding-top: 50px;
-    height: 300px;
-}
+
 
 
 #projects .projects-row {
     padding-top: 50px;
-    margin-left: 0.5%;
+    /*margin-left: 0.5%;*/
     width: 93%;
     position: relative;
     z-index: 2; }
@@ -2087,8 +2165,10 @@ FEATURED WORKS
     float: left;
     height: 450px;
     box-sizing: border-box;
-    border-right: 1px dashed #bfbfbf;
-    text-align: center;
+    border-right: 1px dashed #BFBFBF;
+border-bottom: 1px dashed #BFBFBF;
+text-align: center;
+border-top: 1px dashed #BFBFBF;
     padding: 80px 50px;
     font-size: 17px;
     line-height: 28px;
@@ -2111,7 +2191,29 @@ FEATURED WORKS
         width: auto;
         border-right: none;
         height: auto; } }
-    #projects .projects-block h3 {
+
+#projects .project-main-line {
+
+    float: left;
+height: 300px;
+box-sizing: border-box;
+border: 1px dashed #BFBFBF;
+height: 300px;
+text-align: center;
+padding: 80px 50px;
+border-left: none;
+font-size: 17px;
+line-height: 28px;
+position: relative; }
+    @media (max-width: 1150px) {
+      #projects .project-main-line {
+        padding: 60px 40px;
+        font-size: 16px;
+        line-height: 26px;
+        margin-left: 200px;
+      } }
+
+    #projects h3 {
       letter-spacing: 0px;
       font-size: 20px;
       text-transform: uppercase;
@@ -2134,6 +2236,9 @@ FEATURED WORKS
       @media (max-width: 960px) {
         #projects .projects-block .circle-point {
           display: none; } }
+
+
+
 
 /*
 
@@ -2171,7 +2276,7 @@ footer {
       footer .map-hold {
         height: 200px; } }
   footer .map {
-    height: 700px;
+    height: 100%;
     background: #2a2a2a; }
     @media (max-width: 767px) {
       footer .map {

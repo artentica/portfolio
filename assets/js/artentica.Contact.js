@@ -32,7 +32,7 @@ var Contact = (function($) {
 				$(this).addClass('errortxt');
 				valid = false;
 
-				$('#contact-form-error').html('* Missing required fields');
+				$('#contact-form-error').html('* Tous les champs doivent être remlies');
 
 			} else {
 
@@ -58,11 +58,11 @@ var Contact = (function($) {
 			data: formData
 		}).success(function() {
 
-			$('#contact-content').html('<b>Thank you for contacting us! We will get back to you as soon as possible!</b><br/><br/><p><a href="javascript:Contact.showContact();" class="formsbtn">Close</a></p>');
+			$('#contact-content').html('<b>Merci de m\'avoir contacté. Je vous répond le plus vite possible.</b><br/><br/><p><a href="javascript:Contact.showContact();" class="formsbtn">Close</a></p>');
 
 		});
 
-		$('#contact-content').html('<b>Thank you for contacting us! We will get back to you as soon as possible!</b><br/><br/><p><a href="javascript:Contact.showContact();" class="formsbtn">Close</a></p>');
+		$('#contact-content').html('<b>Merci de m\'avoir contacté. Je vous répond le plus vite possible.</b><br/><br/><p><a href="javascript:Contact.showContact();" class="formsbtn">Close</a></p>');
 
 	};
 
