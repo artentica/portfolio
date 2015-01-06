@@ -1,0 +1,336 @@
+
+.clearfix {
+    *zoom: 1;
+}
+.clearfix:before, .clearfix:after {
+    display: table;
+    content: ""}
+.clearfix:after {
+    clear: both;
+}
+
+ ul {
+    padding: 0;
+}
+
+#main .section-inner {
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    -webkit-transition: width .5s;
+    -moz-transition: width .5s;
+    -ms-transition: width .5s;
+    -o-transition: width .5s;
+    transition: width .5s;
+    padding-bottom: 60px;
+}
+
+#skills-chart {
+    margin-top: 40px;
+}
+#skills-chart .chart-title {
+    margin: 0 0 160px 0;
+}
+#skills-chart .chart-title span {
+    font-size: 1.5em;
+    background: rgba(219, 39, 0, 0.45);
+    color: #fff;
+}
+#skills-chart ul {
+    position: relative;
+    list-style: none;
+}
+#skills-chart #chart-legend {
+    position: absolute;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+#skills-chart #chart-legend li {
+    position: relative;
+    float: left;
+    width: 25%;
+    background: url('../img/img_skill/skills-chart-legend-vline.svg') no-repeat 100% 0;
+}
+#skills-chart #chart-legend .legend-label {
+    position: absolute;
+    top: -30px;
+    right: -10px;
+    display: block;
+    font-size: .8em;
+    line-height: 1;
+    -webkit-transform: rotate(50deg);
+    -webkit-transform-origin: 100% 0;
+    -moz-transform: rotate(50deg);
+    -moz-transform-origin: 100% 0;
+    -ms-transform: rotate(50deg);
+    -ms-transform-origin: 100% 0;
+    -o-transform: rotate(50deg);
+    -o-transform-origin: 100% 0;
+    transform: rotate(50deg);
+    transform-origin: 100% 0;
+    width: 200px;
+    text-align: right;
+}
+#skills-chart #chart-legend li#label04 .legend-label {
+    background: url('../img/vr.svg') no-repeat 100% 50%;
+    padding: 0 40px 0 0;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+}
+
+#skills-chart #chart-data {
+    padding-top: 30px;
+    margin: 0;
+    background: url('../img/img_skill/skills-chart-hbar-grid.svg') no-repeat 0 100%}
+#skills-chart #chart-data li {
+    background: url('../img/img_skill/skills-chart-hbar-grid.svg') no-repeat 0 0;
+    border-left: 1px solid #000;
+}
+.no-svg #skills-chart #chart-data li {
+    background: url('../img/img_skill/skills-chart-hbar-grid.png') no-repeat 0 0;
+}
+#skills-chart #chart-data .data-bar {
+    background: url('../img/img_skill/skills-chart-hbar.svg') no-repeat 100% 50%;
+    height: 60px;
+}
+.no-svg #skills-chart #chart-data .data-bar {
+    background: url('../img/img_skill/skills-chart-hbar.png') no-repeat 100% 50%}
+#skills-chart #chart-data .data-label {
+    line-height: 60px;
+    font-size: .938em;
+    margin-left: 15px;
+}
+#skills-chart #chart-data #bar01 .data-bar {
+    width: 85%}
+#skills-chart #chart-data #bar02 .data-bar {
+    width: 85%}
+#skills-chart #chart-data #bar03 .data-bar {
+    width: 100%}
+#skills-chart #chart-data #bar04 .data-bar {
+    width: 78%}
+#skills-chart #chart-data #bar05 .data-bar {
+    width: 48%}
+#skills-chart #chart-data #bar06 .data-bar {
+    width: 100%}
+#skills-chart #chart-data #bar07 .data-bar {
+    width: 65%}
+#skills-chart #chart-data #bar08 .data-bar {
+    width: 53%}
+#skills-chart #chart-data #bar09 .data-bar {
+    width: 44%}
+
+
+
+@media screen and (min-width:480px) {
+    #contacts #email-wrapper .contact-box {
+    width: 70%;
+    font-size: 1.1em;
+}
+}@media screen and (min-width:600px) {
+    #main {
+    padding-top: 25px;
+}
+
+/*
+#skills-chart #chart-legend .legend-label {
+    font-size: .9em;
+}
+*/
+
+}@media screen and (min-width:768px) {
+
+@media screen and (min-width:1024px) {
+
+
+
+#skills-chart {
+    margin-bottom: 140px;
+/*    width: 938px;*/
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+#skills-chart .chart-title {
+    margin: 0 0 -25px 0;
+}
+#skills-chart ul {
+    position: relative;
+    list-style: none;
+}
+#skills-chart #chart-legend {
+    float: right;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+#skills-chart #chart-legend li {
+    position: absolute;
+    left: 0;
+    font-size: initial;
+    float: none;
+    background: 0;
+    border-bottom: 1px solid #aaa;
+    width: 100%}
+#skills-chart #chart-legend li#label01 {
+    top: 300px;
+}
+#skills-chart #chart-legend li#label02 {
+    top: 200px;
+}
+#skills-chart #chart-legend li#label03 {
+    top: 100px;
+}
+#skills-chart #chart-legend li#label04 {
+    top: 0px;
+}
+/*#skills-chart #chart-legend li#label05 {
+    top: 0;
+}*/
+.no-svg #skills-chart #chart-legend li {
+    background: 0;
+}
+
+ul li span{
+     font-size: .95em ;
+}
+#skills-chart #chart-legend .legend-label {
+    position: static;
+    float: right;
+    top: auto;
+    left: auto;
+    display: block;
+    font-size: 20px ;
+    line-height: 1.1;
+    -webkit-transform: rotate(0deg);
+    -webkit-transform-origin: 0 0;
+    -moz-transform: rotate(0deg);
+    -moz-transform-origin: 0 0;
+    -ms-transform: rotate(0deg);
+    -ms-transform-origin: 0 0;
+    -o-transform: rotate(0deg);
+    -o-transform-origin: 0 0;
+    transform: rotate(0deg);
+    transform-origin: 0 0;
+    width: 18.5%;
+    padding-top: 4px;
+    height: 33px;
+    border-right: 5px solid #000;
+    margin-top: 50px;
+    text-align: left;
+}
+#skills-chart #chart-legend li#label01 .legend-label {
+    border-right-color: #f44b00;
+}
+#skills-chart #chart-legend li#label02 .legend-label {
+    border-right-color: #f4b800;
+}
+#skills-chart #chart-legend li#label03 .legend-label {
+    border-right-color: #beca7d;
+}
+#skills-chart #chart-legend li#label04 .legend-label {
+     background: url('../img/vr.svg') no-repeat 120px 5px;
+    padding: 4px 0 0 0;
+    -webkit-background-size: 35px;
+    -moz-background-size: 35px;
+    -o-background-size: 35px;
+    background-size: 35px;
+}
+/*#skills-chart #chart-legend li#label05 .legend-label {
+    background: url('../img/vr.svg') no-repeat 120px 5px;
+    padding: 4px 0 0 0;
+    -webkit-background-size: 35px;
+    -moz-background-size: 35px;
+    -o-background-size: 35px;
+    background-size: 35px;
+}*/
+#skills-chart #chart-data {
+    float: left;
+    padding-top: 0;
+    margin: 0;
+    background: url('../img/img_skill/skills-chart-vbar-grid.svg') no-repeat 100% 100%;
+    width: 80%}
+#skills-chart #chart-data li {
+    float: left;
+    background: url('../img/img_skill/skills-chart-vbar-grid.svg') no-repeat 0 100%;
+    border-left: 0 none;
+    border-bottom: 1px solid #000;
+    height: 300px;
+    position: relative;
+    margin-top: 100px;
+}
+#skills-chart #chart-data .data-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: url('../img/img_skill/skills-chart-vbar.svg') no-repeat 50% 0;
+}
+.no-svg #skills-chart #chart-data .data-bar {
+    background: url('../img/img_skill/skills-chart-vbar.png') no-repeat 100% 50%}
+#skills-chart #chart-data .data-bar.bbq {
+    background: url('../img/img_skill/skills-chart-vbar-bbq.svg') no-repeat 50% 0;
+}
+#skills-chart #chart-data .data-label {
+    position: absolute;
+    bottom: -25px;
+    left: 52%;
+    line-height: 1;
+    font-size: 1em;
+    margin-left: 0;
+    -webkit-transform: rotate(45deg);
+    -webkit-transform-origin: 0 0;
+    -moz-transform: rotate(45deg);
+    -moz-transform-origin: 0 0;
+    -ms-transform: rotate(45deg);
+    -ms-transform-origin: 0 0;
+    -o-transform: rotate(45deg);
+    -o-transform-origin: 0 0;
+    transform: rotate(45deg);
+    transform-origin: 0 0;
+    width: 300px;
+}
+#skills-chart #chart-data #bar01 .data-bar {
+    width: 100%;
+    height: 85%}
+#skills-chart #chart-data #bar02 .data-bar {
+    width: 100%;
+    height: 85%}
+#skills-chart #chart-data #bar03 .data-bar {
+    width: 100%;
+    height: 78%}
+#skills-chart #chart-data #bar04 .data-bar {
+    width: 100%;
+    height: 78%}
+#skills-chart #chart-data #bar05 .data-bar {
+    width: 100%;
+    height: 48%}
+#skills-chart #chart-data #bar06 .data-bar {
+    width: 100%;
+    height: 100%}
+#skills-chart #chart-data #bar07 .data-bar {
+    width: 100%;
+    height: 65%}
+#skills-chart #chart-data #bar08 .data-bar {
+    width: 100%;
+    height: 53%}
+#skills-chart #chart-data #bar09 .data-bar {
+    width: 100%;
+    height: 44%}
+
+#skills-chart #chart-data #bar10 .data-bar {
+    width: 100%;
+    height: 44%}
+
+.clearfix:before, .clearfix:after {
+    content: " ";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    *zoom: 1;
+}
+

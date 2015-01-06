@@ -180,7 +180,7 @@ a img {
     left: 0px;
     top: -7px;
     border: 2px solid #bbbbbb;
-    background: #e2e2e2; }
+    background: #ECECEC; }
 
 .service-callout {
   font-family: "museo-sans", sans-serif;
@@ -640,7 +640,7 @@ NAVIGATION
     left: -600px; }
 
   #main-nav-hold .nav-light-gray {
-    background: #e2e2e2;
+    background: #ECECEC;
     border-bottom: 1px solid #c7c7c7; }
     #main-nav-hold .nav-light-gray .vr-btn svg path {
       fill: #424242; }
@@ -1094,7 +1094,7 @@ RESEARCH & PROTOTYPING
 
 */
 #education {
-  background: #e2e2e2;
+  background: #ECECEC;
   padding: 150px 0px;
   padding-bottom: 0px;
   overflow: hidden; }
@@ -1118,7 +1118,7 @@ RESEARCH & PROTOTYPING
     background: #bfbfbf; }
     #education .service-sep span {
       border: 2px solid #bfbfbf;
-      background: #e2e2e2; }
+      background: #ECECEC; }
   #education .service-callout .text {
     color: #424242; }
   #education .diagonal {
@@ -1195,7 +1195,7 @@ RESEARCH & PROTOTYPING
         line-height: 26px; } }
     @media (max-width: 960px) {
       #education .education-block {
-        background: #e2e2e2;
+        background: #ECECEC;
         border-top: 1px solid #bfbfbf;
         width: 50%;
         padding: 70px 30px;
@@ -1224,7 +1224,7 @@ RESEARCH & PROTOTYPING
       right: -7px;
       top: -7px;
       border: 2px solid #bfbfbf;
-      background: #e2e2e2;
+      background: #ECECEC;
       z-index: 5; }
       @media (max-width: 960px) {
         #education .education-block .circle-point {
@@ -1244,29 +1244,8 @@ RESEARCH & PROTOTYPING
 
 */
 
-#skills{
-    height: 1000px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #skills {
-  background: #e2e2e2;
+  background: #ECECEC;
   padding: 100px 0px;
   padding-bottom: 0px;
   overflow: hidden; }
@@ -1290,7 +1269,7 @@ RESEARCH & PROTOTYPING
     background: #bfbfbf; }
     #skills .service-sep span {
       border: 2px solid #bfbfbf;
-      background: #e2e2e2; }
+      background: #ECECEC; }
   #skills .service-callout .text {
     color: #424242; }
   #skills .diagonal {
@@ -1351,7 +1330,7 @@ RESEARCH & PROTOTYPING
         line-height: 26px; } }
     @media (max-width: 960px) {
       #skills .skills-block {
-        background: #e2e2e2;
+        background: #ECECEC;
         border-top: 1px solid #bfbfbf;
         width: 50%;
         padding: 70px 30px;
@@ -1380,7 +1359,7 @@ RESEARCH & PROTOTYPING
       right: -7px;
       top: -7px;
       border: 2px solid #bfbfbf;
-      background: #e2e2e2;
+      background: #ECECEC;
       z-index: 5; }
       @media (max-width: 960px) {
         #skills .skills-block .circle-point {
@@ -1402,7 +1381,7 @@ RESEARCH & DEVELOPMENT
   background: #2a2a2a;
   padding: 150px 0px;
   padding-bottom: 240px;
-  color: #e2e2e2;
+  color: #ECECEC;
   position: relative;
   overflow: hidden; }
   @media (max-width: 1150px) {
@@ -1556,7 +1535,7 @@ TESTIMONIALS
   padding: 250px 0px;
   background: #2a2a2a url(../img/testimonial-bg.jpg) center no-repeat;
   background-size: cover;
-  color: #e2e2e2;
+  color: #ECECEC;
   position: relative; }
   @media (max-width: 767px) {
     #testimonials {
@@ -1623,7 +1602,7 @@ position: absolute;
 right: -7px;
 top: -7px;
 border: 2px solid #BFBFBF;
-background: #E2E2E2;
+background: #ECECEC;
 z-index: 5;
 }
 .pointpointpoint{
@@ -1774,7 +1753,7 @@ position: relative;
       -moz-border-radius: 10px;
       -ms-border-radius: 10px;
       border-radius: 10px;
-      background: #e2e2e2; }
+      background: #ECECEC; }
   #projects .projects-info {
     width: 25%;
     position: absolute;
@@ -2180,7 +2159,7 @@ border-top: 1px dashed #BFBFBF;
         line-height: 26px; } }
     @media (max-width: 960px) {
       #projects .projects-block {
-        background: #e2e2e2;
+        background: #ECECEC;
         border-top: 1px solid #bfbfbf;
         width: 50%;
         padding: 70px 30px;
@@ -2231,7 +2210,7 @@ position: relative; }
       right: -7px;
       top: -7px;
       border: 2px solid #bfbfbf;
-      background: #e2e2e2;
+      background: #ECECEC;
       z-index: 5; }
       @media (max-width: 960px) {
         #projects .projects-block .circle-point {
