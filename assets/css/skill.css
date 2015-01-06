@@ -175,13 +175,13 @@
     border-bottom: 1px solid #aaa;
     width: 100%}
 #skills-chart #chart-legend li#label01 {
-    top: 300px;
+    top: 450px;
 }
 #skills-chart #chart-legend li#label02 {
-    top: 200px;
+    top: 300px;
 }
 #skills-chart #chart-legend li#label03 {
-    top: 100px;
+    top: 150px;
 }
 #skills-chart #chart-legend li#label04 {
     top: 0px;
@@ -217,11 +217,11 @@ ul li span{
     width: 18.5%;
     padding-top: 4px;
     height: 33px;
-    border-right: 5px solid #000;
-    margin-top: 50px;
+    /*border-right: 5px solid #000;*/
+    margin-top: 100px;
     text-align: left;
 }
-#skills-chart #chart-legend li#label01 .legend-label {
+/*#skills-chart #chart-legend li#label01 .legend-label {
     border-right-color: #f44b00;
 }
 #skills-chart #chart-legend li#label02 .legend-label {
@@ -229,7 +229,7 @@ ul li span{
 }
 #skills-chart #chart-legend li#label03 .legend-label {
     border-right-color: #beca7d;
-}
+}*/
 #skills-chart #chart-legend li#label04 .legend-label {
      background: url('../img/vr.svg') no-repeat 120px 5px;
     padding: 4px 0 0 0;
@@ -257,9 +257,9 @@ ul li span{
     background: url('../img/img_skill/skills-chart-vbar-grid.svg') no-repeat 0 100%;
     border-left: 0 none;
     border-bottom: 1px solid #000;
-    height: 300px;
+    height: 450px;
     position: relative;
-    margin-top: 100px;
+    margin-top: 150px;
 }
 #skills-chart #chart-data .data-bar {
     position: absolute;
