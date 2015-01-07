@@ -141,6 +141,7 @@ var Artentica = (function($) {
         skills
         // projects snap point
 		$('#skills').waypoint(function(direction) {
+            skillChartAnimation()
 			$('.main-nav a').removeClass('active');
 			if(direction == 'down') {
                  $('.main-nav').removeClass('nav-dark-gray');
@@ -155,6 +156,14 @@ var Artentica = (function($) {
                 $('#projects').addClass('active');
 			}
 		}, { offset:'80px' });
+
+        $("#description_skill").waypoint(function() {
+
+                        $("#skills .moving_skill_desc").each(function(e) {
+                            $(this).delay(e*80).transition({opacity:1,x: '0px'},700);
+                        });
+
+        }, { offset:'60%' });
 
         $('#foot_page').waypoint(function(direction) {
 			$('.main-nav a').removeClass('active');
@@ -176,7 +185,6 @@ var Artentica = (function($) {
 	};
 
 	var scrollTo = function(id) {
-		console.log("scroll");
 		// Stop any currently active scroll
 		$('html, body').dequeue();
 		// Scroll to #id offset by 90 pixels
@@ -210,4 +218,103 @@ return !!navigator.userAgent.match(/iPod/i);
 
 Modernizr.addTest('appleios', function () {
 return (Modernizr.ipad || Modernizr.ipod || Modernizr.iphone);
+});
+
+
+
+function scrollbarWidth() {
+    var e = $('<div style="width:50px;height:50px;overflow:hidden;position:absolute;top:-200px;left:-200px;"><div style="height:100px;"></div>');
+    $("body").append(e);
+    var t = $("div", e).innerWidth();
+    e.css("overflow-y", "scroll");
+    var n = $("div", e).innerWidth();
+    $(e).remove();
+    return t - n
+}
+
+function supersizedMobile() {
+    isMobileTouch && $("#supersized").addClass("disable-fixed")
+}
+
+function skillsChartLegendHeight(e) {
+    if (e >= 1024) $("#skills-chart #chart-legend li").height("150px");
+    else {
+        var t = $("#skills-chart #chart-data").outerHeight();
+        $("#skills-chart #chart-legend li").height(t)
+    }
+}
+
+function skillsChartVBarWidth(e) {
+    if (e >= 1024) {
+        var t = $("#skills-chart #chart-data li").length,
+            n = 100 / t;
+        $("#skills-chart #chart-data li").css("width", n + "%")
+    } else $("#skills-chart #chart-data li").css("width", "100%")
+}
+
+function clearfixChartLegend(e) {
+    if (e >= 1024) {
+        $("#skills-chart #chart-legend").removeClass("clearfix");
+        $("#skills-chart #chart-data").addClass("clearfix")
+    } else {
+        $("#skills-chart #chart-legend").addClass("clearfix");
+        $("#skills-chart #chart-data").removeClass("clearfix")
+    }
+}
+
+function skillChartAnimationInit() {
+    browserWidth >= 1024 && !isMobileTouch && $("#skills-chart .data-bar").each(function(e) {
+        skillChartVBarsHeight[e] = $(this).css("height");
+        $(this).css("height", 0);
+        $(".data-label", this).css("opacity", 0)
+    })
+}
+
+function skillChartAnimation() {
+    if (!isMobileTouch) {
+        var e = $(document).scrollTop();
+        if (e > browserHeight + 300 && skillChartAnimationCount == 0) {
+            skillChartAnimationCount = 1;
+            $("#skills-chart .data-bar").each(function(e) {
+                $(this).delay(e * 100).animate({
+                    height: skillChartVBarsHeight[e]
+                }, 800, function() {
+                    $(".data-label", this).animate({
+                        opacity: 1
+                    }, 200)
+                })
+            })
+
+        }
+    }
+}
+var isMobileTouch = /ipad|iphone|ipod|android|blackberry|webos|windows phone/i.test(navigator.userAgent.toLowerCase()),
+    browserWidth, browserHeight, mainMenuShown = !1,
+    clickedOnMenu = !1,
+    skillChartAnimationCount = 0,
+    skillChartVBarsHeight = new Array,
+    showTweets = function(e) {
+        var t = $("#tweets");
+        t.empty();
+        var n = e[0].text;
+        n = n.replace(/(https?:\/\/[^\s:]+)/gi, '<a href="$1">$1</a>');
+        n = n.replace(/(@(\w+))/g, '<a href="http://twitter.com/$2">$1</a>');
+        n = n.replace(/(\#(\w+))/g, '<a href="http://search.twitter.com/search?q=%23$2">$1</a>');
+        t.append(n)
+    };
+
+$(document).ready(function() {
+    browserWidth = $(window).width() + scrollbarWidth();
+    browserHeight = $(window).height();
+    skillChartAnimationInit();
+    $(window).resize(function() {
+        browserWidth = $(window).width() + scrollbarWidth();
+        browserHeight = $(window).height();
+        skillsChartVBarWidth(browserWidth);
+        clearfixChartLegend(browserWidth);
+        skillsChartLegendHeight(browserWidth);
+    }).resize();
+    $(window).scroll(function() {
+        browserHeight = $(window).height();
+    }).scroll();
 });
