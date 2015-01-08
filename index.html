@@ -99,17 +99,19 @@
 
 			</div><!-- end .menu -->
 
-			<header class="top" >
-
+			<header id="large-header" class="large-header overlay" class="top" >
+                <div class="overlay"></div>
+                <canvas id="demo-canvas"></canvas>
 				<div class="parallax-top">
+					<div>
 
-					<div class="overlay"></div>
-
-					<div  style=" width: 100%;
-height: 100%;	background-image: url('assets/img/img_prez.png');
-	 background-repeat: no-repeat;
-	z-index:1;background-position: 0px 100px;">
-
+					<canvas id="demo-canvas2"style="
+    position: absolute;
+    top: 0;opacity: 0.6;
+"></canvas>
+                    <div class="parralax_header">
+                        <img src="assets/img/img_prez.png" alt="parralax_img_prez"/>
+                    </div>
 					<div class="vr"><a href="index.html"><img src="assets/img/vr.svg" alt="vr"/></a></div>
 
 					<nav class="header-nav">
@@ -157,17 +159,23 @@ height: 100%;	background-image: url('assets/img/img_prez.png');
 
 				</div><!-- end #main-nav-hold -->
 
+<section id="about_me">
 
+					<div class="shadow-bottom"></div>
 
+					<div class="container">
 
-				<section id="about_me">
-				<div class="shadow-bottom"></div>
+						<div class="exploded part1"><img src="assets/img/img_prez.png" alt="prez"></div>
 
-				<div class="container">
-                    <div class="exploded part1"><img src="assets/img/img_prez.png" alt="explode-1"></div>
+						<div class="column-right">
 
-				<div class="column-right-bigger">
-<p>Je me nomme Vincent RIOUALLON. Je suis actuellement élève en école d'ingénieur, l'ISEN, où je suis en Cycle Informatique et Réseau (CIR).</p>
+							<h2>About Me</h2>
+
+							<div class="heading-sep"></div>
+
+							<div class="service-text">
+
+								<p>Je me nomme Vincent RIOUALLON. Je suis actuellement élève en école d'ingénieur, l'ISEN, où je suis en Cycle Informatique et Réseau (CIR).</p>
 			<p>Je suis une personne ouverte à toutes expérience et aime découvrir un maximum de choses. Cela m'a amené à travailler dans des domaines très différents : ménage, vendeur (spécialité : magie), formateur en maison d'arrêt.</p>
 			<p>Les arts m’intéressent également, j’apprends à jouer de la basse, faire des effets spéciaux (Adobe After Effect), des animations 3d (Cinema4D) et des retouches photos pour parfaire les effets visuels.
 J'ai tout de même un certains penchant pour le développement et pour les nouvelles technologies. J'ai appris le langage C, HTML, CSS et un peu le Javascript. Tous c'est langage permette une très grande variété de projets mais je suis en train d'apprendre le C++ pour coder une LeapMotion.
@@ -176,9 +184,33 @@ Je me considère comme quelqu'un de très actif, je fais du kendo en club 2 fois
 			<p>Je possède un ordinateur fixe me servant pour mes rendues cinématiques qui consomment beaucoup de ressource ainsi qu'un ordinateur portable pour travailler. Les deux machines sont sous Windows7 mais pour le développement j'ai une préférence pour Linux.</p>
 
 
-				</div>
-				</div>
-				</section><!-- end #about_me -->
+
+							</div><!-- end .service-text -->
+
+
+			<!--				<div class="service-sep"><span></span></div>
+-->
+							<div class="service-callout">
+
+
+
+								<div class="text">
+
+								</div><!-- end .text -->
+
+								<div class="clear"></div>
+
+							</div><!-- end .service-callout -->
+
+						</div><!-- end .column-right -->
+
+						<div class="clear"></div>
+
+					</div><!-- end .container -->
+
+				</section>
+
+
 
 				<section id="education">
 
@@ -759,6 +791,11 @@ t è gytfytuf    ytyfuy-tfyg  uy  uyuuifu  iguguy  uguyg lii
 		<script src="assets/js/artentica.Contact.js"></script>
 		<script src="assets/js/artentica.js"></script>
         <script src="assets/js/artentica.Loader.js"></script>
+        <script src="assets/js/TweenLite.min.js"></script>
+		<script src="assets/js/EasePack.min.js"></script>
+		<script src="assets/js/rAF.js"></script>
+        <script src="assets/js/inverse_snow.js"></script>
+		<script src="assets/js/node.js"></script>
 		<script type="application/javascript">
 
 function initialize() {

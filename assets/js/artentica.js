@@ -1,3 +1,4 @@
+$('.parallax-top').Parallax({ property:'top', speed:0.72, start:0, delay:0 });
 var Artentica = (function($) {
 
 	var init = function() {
@@ -16,7 +17,7 @@ var Artentica = (function($) {
 
 		// projects functionality
 		if ($.fn.Parallax && !Modernizr.appleios) {
-			$('.parallax-top').Parallax({ property:'top', speed:0.30, start:0, delay:0 });
+
 
 			// $('.part2').Parallax({ property:'top', speed:0.10, start:460, delay:-900 });
 			// $('.part3').Parallax({ property:'top', speed:0.20, start:480, delay:-900 });
@@ -141,7 +142,7 @@ var Artentica = (function($) {
         skills
         // projects snap point
 		$('#skills').waypoint(function(direction) {
-            skillChartAnimation()
+            skillChartAnimation(1)
 			$('.main-nav a').removeClass('active');
 			if(direction == 'down') {
                  $('.main-nav').removeClass('nav-dark-gray');
@@ -159,9 +160,7 @@ var Artentica = (function($) {
 
         $("#description_skill").waypoint(function() {
 
-                        $("#skills .moving_skill_desc").each(function(e) {
-                            $(this).delay(e*80).transition({opacity:1,x: '0px'},700);
-                        });
+                descrip_skills();
 
         }, { offset:'60%' });
 
@@ -220,7 +219,17 @@ Modernizr.addTest('appleios', function () {
 return (Modernizr.ipad || Modernizr.ipod || Modernizr.iphone);
 });
 
+function descrip_skills(vip){
+    var e = $(window).scrollTop();
+        var top = $("#skills").position().top;
+    if(e>=top && desc_skill == 0 || vip && desc_skill == 0 ){
+        desc_skill = 1;
+        $("#skills .moving_skill_desc").each(function(e) {
+                            $(this).delay(e*80).transition({opacity:1,x: '0px'},700);
+                        });
+    }
 
+}
 
 function scrollbarWidth() {
     var e = $('<div style="width:50px;height:50px;overflow:hidden;position:absolute;top:-200px;left:-200px;"><div style="height:100px;"></div>');
@@ -255,7 +264,7 @@ function skillsChartVBarWidth(e) {
 function clearfixChartLegend(e) {
     if (e >= 1024) {
         $("#skills-chart #chart-legend").removeClass("clearfix");
-        $("#skills-chart #chart-data").addClass("clearfix")
+        $("#skills-chart #chart-data").addClass("cl earfix")
     } else {
         $("#skills-chart #chart-legend").addClass("clearfix");
         $("#skills-chart #chart-data").removeClass("clearfix")
@@ -270,14 +279,17 @@ function skillChartAnimationInit() {
     })
 }
 
-function skillChartAnimation() {
-    if (!isMobileTouch) {
-        var e = $(document).scrollTop();
-        if (e > browserHeight + 300 && skillChartAnimationCount == 0) {
+function skillChartAnimation(vip) {
+    if (browserWidth >= 1024 && !isMobileTouch) {
+        var e = $(window).scrollTop();
+        var top = $("#skills").position().top;
+        if (e>=top && skillChartAnimationCount == 0 || vip && skillChartAnimationCount == 0 ) {
+            console.log(e);
+            console.log(top);
             skillChartAnimationCount = 1;
-            $("#skills-chart .data-bar").each(function(e) {
-                $(this).delay(e * 100).animate({
-                    height: skillChartVBarsHeight[e]
+            $("#skills-chart .data-bar").each(function(index) {console.log(index);
+                $(this).delay(index * 100).animate({
+                    height: skillChartVBarsHeight[index]
                 }, 800, function() {
                     $(".data-label", this).animate({
                         opacity: 1
@@ -302,11 +314,13 @@ var isMobileTouch = /ipad|iphone|ipod|android|blackberry|webos|windows phone/i.t
         n = n.replace(/(\#(\w+))/g, '<a href="http://search.twitter.com/search?q=%23$2">$1</a>');
         t.append(n)
     };
+    var desc_skill = 0;
 
 $(document).ready(function() {
     browserWidth = $(window).width() + scrollbarWidth();
     browserHeight = $(window).height();
     skillChartAnimationInit();
+    skillChartAnimation();
     $(window).resize(function() {
         browserWidth = $(window).width() + scrollbarWidth();
         browserHeight = $(window).height();
@@ -316,5 +330,9 @@ $(document).ready(function() {
     }).resize();
     $(window).scroll(function() {
         browserHeight = $(window).height();
+        skillChartAnimation();
     }).scroll();
+
+
+
 });
