@@ -2197,7 +2197,7 @@ border-top: 1px dashed #BFBFBF;
         height: auto; } }
 
 #projects .project-main-line {
-
+width: 100%;
     float: left;
 height: 300px;
 box-sizing: border-box;
