@@ -87,6 +87,10 @@
             posx = e.clientX + document.body.scrollLeft + document.documentElement.scrollLeft;
             posy = e.clientY + document.body.scrollTop + document.documentElement.scrollTop;
         }
+        if($("#content").hasClass("contact-open")){
+            var rectif = $(".contact.trans-contact").width();
+            posx += rectif;
+        }
         target.x = posx;
         target.y = posy;
     }
