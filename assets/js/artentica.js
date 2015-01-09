@@ -187,6 +187,7 @@ var Artentica = (function($) {
 		// Stop any currently active scroll
 		$('html, body').dequeue();
 		// Scroll to #id offset by 90 pixels
+        console.log(id);
 		$('html, body').animate({ scrollTop: $(id).offset().top-80 }, 1000, 'easeOutExpo');
 
 	};

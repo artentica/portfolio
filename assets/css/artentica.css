@@ -1030,7 +1030,9 @@ about_me
       padding-bottom: 740px; } }
   @media (max-width: 767px) {
     #about_me .column-right {
-      padding-bottom: 0px; } }
+      padding-bottom: 0px;
+     padding-right: 0px;
+ padding-left: 0px;} }
   #about_me .exploded {
     position: absolute; }
   #about_me .linedash {
