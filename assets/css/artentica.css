@@ -1964,7 +1964,9 @@ position: relative;
     text-align: center; }
     @media (max-width: 767px) {
       #projects-mobile .projects-info {
-        width: 280px; } }
+        width: 280px;
+      padding: 0px;
+      width: 100%} }
     #projects-mobile .projects-info .view {
       display: inline-block;
       padding: 0px 30px;
