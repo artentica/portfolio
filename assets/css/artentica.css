@@ -1103,11 +1103,13 @@ RESEARCH & PROTOTYPING
   #education h2 {
     color: #424242; }
   #education .column-left {
+    width: 55%;
+      margin-right: 3%;
     z-index: 10;
     position: relative; }
     @media (max-width: 960px) {
       #education .column-left {
-        padding-bottom: 550px; } }
+        padding-bottom: 0px; } }
     @media (max-width: 767px) {
       #education .column-left {
         padding-bottom: 0px; } }
@@ -1146,29 +1148,25 @@ RESEARCH & PROTOTYPING
       #education .circle-callout {
         right: 90px;
         top: 750px; } }
-  #education .axe {
-    width: 970px;
-    position: absolute;
-    right: -450px;
-    top: 180px;
-    z-index: 1; }
+  #education .school {
+    width: 35%;
+z-index: 1;
+float: right; }
     @media (max-width: 1300px) {
-      #education .axe {
-        width: 920px;
-        right: -400px; } }
-    @media (max-width: 1150px) {
-      #education .axe {
-        width: 720px;
-        right: -330px;
-        top: 400px; } }
-    @media (max-width: 960px) {
-      #education .axe {
-        width: 850px;
-        right: -250px;
-        top: 910px; } }
-    @media (max-width: 767px) {
-      #education .axe {
-        display: none; } }
+       #education .column-left {
+        width: 90%;
+        margin: auto;
+        float: none;
+       }
+      #education .school {
+        width: 70%;
+          float: none;
+          margin: auto;
+          margin-bottom: -10px;
+        } }
+     @media (max-width: 767px) {
+      #education .school {
+        width: 90%; } }
   #education .education-row {
     padding-top: 40px;
     position: relative;
