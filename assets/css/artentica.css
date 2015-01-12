@@ -63,7 +63,7 @@ body {
 
 .container {
   margin: auto;
-  width: 1200px;
+  width: 85%;
   position: relative; }
   @media (max-width: 1300px) {
     .container {
@@ -79,6 +79,7 @@ body {
       width: 85%; } }
 
 img {
+  margin-bottom: -10px;
   max-width: 100%; }
 
 .map img {
@@ -1018,22 +1019,20 @@ about_me
 #about_me {
   background: #2D2FE1;
   padding: 50px 0px;
-  padding-bottom: 100px;
+  padding-bottom: 0px;
   color: #D1DCFF;;
   position: relative;
   overflow: hidden; }
   @media (max-width: 767px) {
     #about_me {
       padding: 60px 0px; } }
-  @media (max-width: 960px) {
-    #about_me .column-right {
-      padding-bottom: 740px; } }
+
   @media (max-width: 767px) {
     #about_me .column-right {
       padding-bottom: 0px;
      padding-right: 0px;
  padding-left: 0px;} }
-  #about_me .exploded {
+  #about_me .img {
     position: absolute; }
   #about_me .linedash {
     height: 1500px;
@@ -1051,56 +1050,27 @@ about_me
     @media (max-width: 767px) {
       #about_me .linedash {
         display: none; } }
-  #about_me .part1 {
-    width: 560px;
-    left: -90px;
-    top: -50px;
+  #about_me .aboutme_img_prez {
+    width: 40%;
     z-index: 10; }
-    @media (max-width: 1150px) {
-      #about_me .part1 {
-        width: 460px; } }
-    @media (max-width: 960px) {
-      #about_me .part1 {
-        left: 25px;
-        top: 800px; } }
-    @media (max-width: 767px) {
-      #about_me .part1 {
-        display: none; } }
-  #about_me .smallpart, #about_me .part2, #about_me .part3, #about_me .part4 {
+  #about_me .smallpart{
     left: 250px;
     width: 100px; }
     @media (max-width: 1150px) {
-      #about_me .smallpart, #about_me .part2, #about_me .part3, #about_me .part4 {
+      #about_me .smallpart{
         left: 190px;
         width: 80px; } }
     @media (max-width: 960px) {
-      #about_me .smallpart, #about_me .part2, #about_me .part3, #about_me .part4 {
+      #about_me .smallpart{
         left: 310px; } }
     @media (max-width: 767px) {
-      #about_me .smallpart, #about_me .part2, #about_me .part3, #about_me .part4 {
+      #about_me .smallpart{
         display: none; } }
-  #about_me .part2 {
-    top: 600px;
-    z-index: 9; }
     @media (max-width: 960px) {
-      #about_me .part2 {
-        top: auto;
-        bottom: 90px; } }
-  #about_me .part3 {
-    top: 680px;
-    z-index: 8; }
-    @media (max-width: 960px) {
-      #about_me .part3 {
-        top: auto;
-        bottom: -30px; } }
-  #about_me .part4 {
-    top: 780px;
-    z-index: 7; }
-    @media (max-width: 960px) {
-      #about_me .part4 {
-        top: auto;
-        bottom: -200px; } }
-  #about_me h2 {
+      #about_me .aboutme_img_prez {
+        width: 100%;
+        position:initial;} }
+
     color: #ffffff; }
   #about_me .service-list {
     color: #ffffff; }
@@ -1124,7 +1094,7 @@ RESEARCH & PROTOTYPING
 */
 #education {
   background: #ECECEC;
-  padding: 150px 0px;
+  padding: 50px 0px;
   padding-bottom: 0px;
   overflow: hidden; }
   @media (max-width: 767px) {
@@ -1200,13 +1170,16 @@ RESEARCH & PROTOTYPING
       #education .axe {
         display: none; } }
   #education .education-row {
-    padding-top: 150px;
+    padding-top: 40px;
     position: relative;
     z-index: 2; }
     @media (max-width: 767px) {
       #education .education-row {
-        padding-top: 90px; } }
+        padding-top: 0px; } }
   #education .education-block {
+    opacity:0;
+    transform-origin: left;
+    transform:rotateY(-90deg);
     width: 25%;
     float: left;
     height: 450px;
@@ -1477,9 +1450,9 @@ RESEARCH & DEVELOPMENT
         padding-bottom: 0px; } }
 
     .column-right {
-  width: 60%;
-  padding-right: 5%;
-padding-left: 30px;
+  width: 55%;
+  padding-right: 3%;
+padding-left: 2%;
   float: right; }
 
   @media (max-width: 960px) {
@@ -1487,21 +1460,34 @@ padding-left: 30px;
       width: 100%;
       float: none; } }
 
-.workexpleft {
+.column-rightimg {
   width: 40%;
-  padding-left: 5%;
-padding-right: 30px;
-  float: left; }
+  float: right; }
 
   @media (max-width: 960px) {
-    .workexpleft {
+    .column-rightimg {
+      width: 100%;
+      float: none; } }
+
+.workexpleftimg {
+  width: 40%;
+  float: left; }
+
+.workexplefttxt {
+  width: 55%;
+padding-right: 3%;
+padding-left: 2%;
+float: left; }
+
+  @media (max-width: 960px) {
+    .workexpleftimg, .workexplefttxt {
       width: 100%;
       float: none; } }
 
 
   #workexp .container {
 
-      width: 100%;
+      width: 85%;
   }
   #workexp h2 {
     color: #ffffff; }
@@ -1619,7 +1605,7 @@ TESTIMONIALS
 
 -------------------------------------------------------------
 
-FEATURED WORKS
+PROJECTS WORKS
 
 */
 .project-main-line .circle-point{
@@ -1727,14 +1713,23 @@ position: relative;
         bottom: -170px; } }
   #projects .projects-nav {
     position: absolute;
-    right: 60px;
-    top: 370px;
+    right: 30px;
+    top: 400px;
     text-align: center;
     z-index: 20; }
     @media (max-width: 1300px) {
       #projects .projects-nav {
         right: 40px;
-        top: 320px; } }
+        top: 320px;
+      }
+        #projects .projects-nav a {
+            width: 20px !important;
+            height: 20px !important;
+        }
+        #projects .projects-nav a.active {
+            border: 2px solid #2D2FE1 !important;
+        }
+    }
     #projects .projects-nav a {
       -webkit-border-radius: 100%;
       -moz-border-radius: 100%;
@@ -1742,9 +1737,9 @@ position: relative;
       border-radius: 100%;
       border: 2px solid transparent;
       display: block;
-      width: 18px;
+      width: 35px;
         transition: border 0.4s ease;
-      height: 18px;
+      height: 35px;
       margin: 10px auto;
       line-height: 14px; }
     #projects .projects-nav a span {
@@ -1760,7 +1755,7 @@ position: relative;
     #projects .projects-nav a.active {
 
 
-      border: 2px solid #2D2FE1; }
+      border: 4px solid #2D2FE1; }
     #projects .projects-nav a:hover span {
       background: #2D2FE1; }
     #projects .projects-nav a.active span, #projects .projects-nav a.active:hover span {
@@ -1817,6 +1812,11 @@ position: relative;
             margin: auto;
             margin-top: 50px;
         }
+        #projects .view_mobile {
+            width: initial;
+            margin-top: 20px;
+margin-bottom: 25px;
+        }
  @media (max-width: 1300px) {
     #projects-slider {
      margin-top: 30px; } }
@@ -1836,9 +1836,10 @@ position: relative;
         line-height: 22px;
         letter-spacing: 0px; }
         @media (max-width: 767px) {
-          #projects .projects-info h3 span {
-            font-size: 18px;
-            line-height: 18px; } }
+          #projects .projects-info h3{
+            margin-top: 30px;
+            font-size: 35px;
+            margin-bottom: 0;} }
     #projects .projects-info a:hover {
       background: #0003FF; }
   #projects .projects-mill {
@@ -1932,7 +1933,7 @@ position: relative;
   font-family: "museo-sans", sans-serif; }
   @media (max-width: 1300px) {
     #projects-slider {
-     height: 1050px; } }
+     height: 1150px; } }
   @media (max-width: 960px) {
     #projects-slider {
       display: none; } }
@@ -1964,9 +1965,8 @@ position: relative;
     text-align: center; }
     @media (max-width: 767px) {
       #projects-mobile .projects-info {
-        width: 280px;
-      padding: 0px;
-      width: 100%} }
+        width: 100%;
+      padding: 0;} }
     #projects-mobile .projects-info .view {
       display: inline-block;
       padding: 0px 30px;
@@ -2173,6 +2173,8 @@ position: relative;
 #projects .projects-block {
     width: 33.333%;
     float: left;
+    opacity:0;
+    transform: translate(0px, 200px);
     height: 450px;
     box-sizing: border-box;
     border-right: 1px dashed #BFBFBF;
@@ -2185,7 +2187,6 @@ border-top: 1px dashed #BFBFBF;
     position: relative; }
     @media (max-width: 1150px) {
       #projects .projects-block {
-        padding: 60px 40px;
         font-size: 16px;
         line-height: 26px; } }
     @media (max-width: 960px) {
@@ -2204,6 +2205,8 @@ border-top: 1px dashed #BFBFBF;
 
 #projects .project-main-line {
 width: 100%;
+    opacity:0;
+    transform: translate(-180px, 0px);
     float: left;
 height: 300px;
 box-sizing: border-box;
@@ -2217,10 +2220,8 @@ line-height: 28px;
 position: relative; }
     @media (max-width: 1150px) {
       #projects .project-main-line {
-        padding: 60px 40px;
         font-size: 16px;
         line-height: 26px;
-        margin-left: 200px;
       } }
 
     #projects h3 {

@@ -127,6 +127,7 @@ var Artentica = (function($) {
 		$('#projects').waypoint(function(direction) {
 			$('.main-nav a').removeClass('active');
 			if(direction == 'down') {
+                project_appear(1);
                $('.main-nav').removeClass('nav-light-gray');
 				$('.main-nav').addClass('nav-dark-gray');
 				$('.main-nav a.projects-btn').addClass('active');
@@ -157,6 +158,14 @@ var Artentica = (function($) {
                 $('#projects').addClass('active');
 			}
 		}, { offset:'80px' });
+
+
+         $(".education-row").waypoint(function() {
+
+                education_block_rotate(1);
+
+        }, { offset:'60%' });
+
 
         $("#description_skill").waypoint(function() {
 
@@ -220,16 +229,39 @@ Modernizr.addTest('appleios', function () {
 return (Modernizr.ipad || Modernizr.ipod || Modernizr.iphone);
 });
 
-function descrip_skills(vip){
+function descrip_skills(){
     var e = $(window).scrollTop();
         var top = $("#skills").position().top;
-    if(e>=top && desc_skill == 0 || vip && desc_skill == 0 ){
+    if(e>=top && desc_skill == 0){
         desc_skill = 1;
         $("#skills .moving_skill_desc").each(function(e) {
                             $(this).delay(e*80).transition({opacity:1,x: '0px'},700);
                         });
     }
 
+}
+
+function project_appear(vip){
+    var e = $(window).scrollTop();
+    var top = $("#projects").position().top;
+    if(e>=top && projects_appear_state == 0 || vip && projects_appear_state == 0 ){
+        projects_appear_state = 1;
+    $("#projects-slider .project-main-line").transition({opacity:1,x: '0px'},1000);
+    $("#projects-slider .projects-block").each(function(e) {
+                $(this).delay(e*100).transition({opacity:1,y: '0px'},800);
+    });
+    }
+}
+
+function education_block_rotate(vip){
+    var e = $(window).scrollTop();
+    var top = $("#education").position().top;
+    if(e>=top && educa_var == 0 || vip && educa_var == 0 ){
+        educa_var = 1;
+    $(".education-row .education-block").each(function(e) {
+                $(this).delay(e*200).transition({opacity:1,rotateY: '0deg'},800);
+    });
+    }
 }
 
 function scrollbarWidth() {
@@ -285,10 +317,8 @@ function skillChartAnimation(vip) {
         var e = $(window).scrollTop();
         var top = $("#skills").position().top;
         if (e>=top && skillChartAnimationCount == 0 || vip && skillChartAnimationCount == 0 ) {
-            console.log(e);
-            console.log(top);
             skillChartAnimationCount = 1;
-            $("#skills-chart .data-bar").each(function(index) {console.log(index);
+            $("#skills-chart .data-bar").each(function(index) {
                 $(this).delay(index * 100).animate({
                     height: skillChartVBarsHeight[index]
                 }, 800, function() {
@@ -316,12 +346,15 @@ var isMobileTouch = /ipad|iphone|ipod|android|blackberry|webos|windows phone/i.t
         t.append(n)
     };
     var desc_skill = 0;
+    var projects_appear_state = 0;
+    var educa_var = 0;
 
 $(document).ready(function() {
     browserWidth = $(window).width() + scrollbarWidth();
     browserHeight = $(window).height();
     skillChartAnimationInit();
     skillChartAnimation();
+    project_appear();
     $(window).resize(function() {
         browserWidth = $(window).width() + scrollbarWidth();
         browserHeight = $(window).height();
@@ -332,6 +365,7 @@ $(document).ready(function() {
     $(window).scroll(function() {
         browserHeight = $(window).height();
         skillChartAnimation();
+        project_appear();
     }).scroll();
 
 
