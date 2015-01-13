@@ -90,6 +90,10 @@ var Artentica = (function($) {
 
 		// about_me snap point
 		$('#about_me').waypoint(function(direction) {
+			$('div.aboutme_img_prez').removeClass('fixed_abouteme_img');
+		}, { offset:'bottom-in-view' });
+
+        $('#about_me').waypoint(function(direction) {
 			$('.main-nav').toggleClass('fixed-nav', direction == 'down');
 			$('.main-nav a').removeClass('active');
 			$('.main-nav a.about_me-btn').addClass('active');
@@ -189,7 +193,7 @@ $('#bandeau_work').waypoint(function(direction) {
 
         $('div.aboutme_img_prez').waypoint(function(direction) {
             $('div.aboutme_img_prez').addClass('fixed_abouteme_img');
-        }, { offset:'200px' });
+        }, { offset:'bottom-in-view' });
 
          $(".education-row").waypoint(function() {
 
