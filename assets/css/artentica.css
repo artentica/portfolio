@@ -80,7 +80,8 @@ body {
 
 img {
   margin-bottom: -10px;
-  max-width: 100%; }
+  max-width: 100%;
+padding-bottom: 40px;}
 
 .map img {
      max-width: none;
@@ -453,6 +454,9 @@ margin-bottom: 0px; }
 MENU
 
 */
+.parralax_header img{
+    padding: 0;
+}
 .menu {
   font-family: "museo-sans", sans-serif;
   position: fixed;
@@ -1032,8 +1036,6 @@ about_me
       padding-bottom: 0px;
      padding-right: 0px;
  padding-left: 0px;} }
-  #about_me .img {
-    position: absolute; }
   #about_me .linedash {
     height: 1500px;
     border-right: 1px dashed #ed8881;
@@ -1050,9 +1052,16 @@ about_me
     @media (max-width: 767px) {
       #about_me .linedash {
         display: none; } }
+  .fixed_abouteme_img{
+      position:fixed;
+      bottom: 0;
+  }
   #about_me .aboutme_img_prez {
     width: 40%;
     z-index: 10; }
+#about_me .aboutme_img_prez img{
+    padding: 0;
+}
   #about_me .smallpart{
     left: 250px;
     width: 100px; }
@@ -1144,12 +1153,11 @@ RESEARCH & PROTOTYPING
     right: -30px;
     top: 210px;
     z-index: 30; }
-    @media (max-width: 960px) {
-      #education .circle-callout {
-        right: 90px;
-        top: 750px; } }
+    #education .school .circle-callout {
+        right: 2%;
+        top: 2%; }
   #education .school {
-    width: 35%;
+    width: 40%;
 z-index: 1;
 float: right; }
     @media (max-width: 1300px) {
@@ -1173,7 +1181,7 @@ float: right; }
     z-index: 2; }
     @media (max-width: 767px) {
       #education .education-row {
-        padding-top: 0px; } }
+        padding-top: 40px; } }
   #education .education-block {
     opacity:0;
     transform-origin: left;
@@ -1380,40 +1388,16 @@ RESEARCH & DEVELOPMENT
 #workexp {
   background: #2a2a2a;
   padding: 50px 0px;
-  padding-bottom: 240px;
+  padding-bottom: 40px;
   color: #ECECEC;
   position: relative;
   overflow: hidden; }
   @media (max-width: 1150px) {
     #workexp {
-      padding-bottom: 200px;
-      padding-bottom: 160px; } }
+      padding-bottom: 40px; } }
   @media (max-width: 767px) {
     #workexp {
-      padding: 60px 0px; } }
-
-
-
-  /*#workexp .jet {
-    width: 925px;
-    position: absolute;
-    left: -180px;
-    top: 400px;
-    z-index: 5; }
-    @media (max-width: 1150px) {
-      #workexp .jet {
-        width: 725px;
-        top: 400px;
-        left: -100px; } }
-    @media (max-width: 960px) {
-      #workexp .jet {
-        top: 920px;
-        left: 200px; } }
-    @media (max-width: 767px) {
-      #workexp .jet {
-        display: none; } }*/
-
-
+      padding: 40px 0px; } }
 
   #workexp .jet-steez {
     width: 900px;
@@ -1437,20 +1421,25 @@ RESEARCH & DEVELOPMENT
     @media (max-width: 767px) {
       #workexp .jet-steez {
         display: none; } }
+.clear .column-right{
+    opacity: 0;
+    transform: translate(60px,-20px);
+}
   #workexp .column-right {
     z-index: 10;
     position: relative; }
     @media (max-width: 960px) {
       #workexp .column-right {
-        padding-bottom: 580px; } }
+        padding-bottom: 40px; } }
     @media (max-width: 767px) {
       #workexp .column-right {
         padding-bottom: 0px; } }
 
     .column-right {
   width: 55%;
+  padding-bottom: 40px;
   padding-right: 3%;
-padding-left: 2%;
+  padding-left: 2%;
   float: right; }
 
   @media (max-width: 960px) {
@@ -1460,6 +1449,8 @@ padding-left: 2%;
 
 .column-rightimg {
   width: 40%;
+    opacity: 0;
+    transform: translate(-80px,60px);
   float: right; }
 
   @media (max-width: 960px) {
@@ -1469,9 +1460,16 @@ padding-left: 2%;
 
 .workexpleftimg {
   width: 40%;
+    opacity:0;
+transform: translate(-80px,60px);
   float: left; }
-
+#bandeau_work .workexplefttxt {
+    opacity: 0;
+transform: translate(-60px,0px);
+}
 .workexplefttxt {
+    opacity: 0;
+transform: translate(-60px,-20px);
   width: 55%;
 padding-right: 3%;
 padding-left: 2%;
@@ -2260,6 +2258,8 @@ footer {
   background: #2a2a2a; }
   footer .work-together {
     text-align: center;
+      opacity:0;
+    transform: translateX(-100%);
     line-height: 200px;
     font-size: 32px; }
     @media (max-width: 960px) {

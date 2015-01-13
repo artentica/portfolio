@@ -123,11 +123,31 @@ var Artentica = (function($) {
 			}
 		}, { offset:'80px' });
 
+        $('#1exp').waypoint(function(direction) {
+            work_exp("1exp",1)
+        }, { offset:'55%' });
+
+        $('#2exp').waypoint(function(direction) {
+             work_exp("2exp",1)
+        }, { offset:'55%' });
+
+        $('#3exp').waypoint(function(direction) {
+            work_exp("3exp",1)
+        }, { offset:'55%' });
+
+        $('#4exp').waypoint(function(direction) {
+            work_exp("4exp",1)
+        }, { offset:'55%' });
+
+$('#bandeau_work').waypoint(function(direction) {
+            work_exp("bandeau_work",1)
+        }, { offset:'55%' });
+
 		// projects snap point
 		$('#projects').waypoint(function(direction) {
 			$('.main-nav a').removeClass('active');
 			if(direction == 'down') {
-                project_appear(1);
+
                $('.main-nav').removeClass('nav-light-gray');
 				$('.main-nav').addClass('nav-dark-gray');
 				$('.main-nav a.projects-btn').addClass('active');
@@ -140,10 +160,13 @@ var Artentica = (function($) {
                 $('#projects').addClass('active');
 			}
 		}, { offset:'80px' });
-        skills
+
+        $('#projects').waypoint(function(direction) {
+             project_appear(1);
+		}, { offset:'200px' });
+
         // projects snap point
 		$('#skills').waypoint(function(direction) {
-            skillChartAnimation(1)
 			$('.main-nav a').removeClass('active');
 			if(direction == 'down') {
                  $('.main-nav').removeClass('nav-dark-gray');
@@ -159,6 +182,14 @@ var Artentica = (function($) {
 			}
 		}, { offset:'80px' });
 
+        $('#skills').waypoint(function(direction) {
+            skillChartAnimation(1);
+        }, { offset:'200px' });
+
+
+        $('div.aboutme_img_prez').waypoint(function(direction) {
+            $('div.aboutme_img_prez').addClass('fixed_abouteme_img');
+        }, { offset:'200px' });
 
          $(".education-row").waypoint(function() {
 
@@ -173,8 +204,13 @@ var Artentica = (function($) {
 
         }, { offset:'60%' });
 
+        $("#foot_page").waypoint(function() {
+               footer_contact(1);
+        }, { offset:'450px' });
+
         $('#foot_page').waypoint(function(direction) {
 			$('.main-nav a').removeClass('active');
+
 			if(direction == 'down') {
                  $('.main-nav').removeClass('nav-dark-gray');
 				$('.main-nav').addClass('nav-light-gray');
@@ -240,6 +276,25 @@ function descrip_skills(){
     }
 
 }
+function work_exp(id,vip){
+    var e = $(window).scrollTop();
+    var top = $("#"+ id).position().top;
+    if(e>=top|| vip){
+    $("#" +id +" .workexpleftimg").transition({opacity:1,x: '0px'},700);
+    $("#" +id +" .column-right").transition({opacity:1,x: '0px'},700);
+    $("#" +id +" .column-rightimg").transition({opacity:1,x: '0px'},700);
+    $("#" +id +" .workexplefttxt").transition({opacity:1,x: '0px'},700);
+    }
+}
+
+function footer_contact(vip){
+    var e = $(window).scrollTop();
+    var top = $("footer .work-together").position().top - 300;
+    if(e>=top|| vip){
+    $("footer .work-together").transition({opacity:1,x: '0px'},700);
+    }
+}
+
 
 function project_appear(vip){
     var e = $(window).scrollTop();
