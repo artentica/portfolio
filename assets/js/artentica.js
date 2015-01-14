@@ -89,9 +89,6 @@ var Artentica = (function($) {
 	var setWaypoints = function() {
 
 		// about_me snap point
-		$('#about_me').waypoint(function(direction) {
-			$('div.aboutme_img_prez').removeClass('fixed_abouteme_img');
-		}, { offset:'bottom-in-view' });
 
         $('#about_me').waypoint(function(direction) {
 			$('.main-nav').toggleClass('fixed-nav', direction == 'down');
@@ -129,23 +126,23 @@ var Artentica = (function($) {
 
         $('#1exp').waypoint(function(direction) {
             work_exp("1exp",1)
-        }, { offset:'55%' });
+        }, { offset:'60%' });
 
         $('#2exp').waypoint(function(direction) {
              work_exp("2exp",1)
-        }, { offset:'55%' });
+        }, { offset:'60%' });
 
         $('#3exp').waypoint(function(direction) {
             work_exp("3exp",1)
-        }, { offset:'55%' });
+        }, { offset:'60%' });
 
         $('#4exp').waypoint(function(direction) {
             work_exp("4exp",1)
-        }, { offset:'55%' });
+        }, { offset:'60%' });
 
-$('#bandeau_work').waypoint(function(direction) {
+$('#bandeau_work .workexplefttxt').waypoint(function(direction) {
             work_exp("bandeau_work",1)
-        }, { offset:'55%' });
+        }, { offset:'bottom-in-view' });
 
 		// projects snap point
 		$('#projects').waypoint(function(direction) {
@@ -167,7 +164,7 @@ $('#bandeau_work').waypoint(function(direction) {
 
         $('#projects').waypoint(function(direction) {
              project_appear(1);
-		}, { offset:'200px' });
+		}, { offset:'25%' });
 
         // projects snap point
 		$('#skills').waypoint(function(direction) {
@@ -192,8 +189,30 @@ $('#bandeau_work').waypoint(function(direction) {
 
 
         $('div.aboutme_img_prez').waypoint(function(direction) {
-            $('div.aboutme_img_prez').addClass('fixed_abouteme_img');
+           /* $('div.aboutme_img_prez').addClass('fixed_abouteme_img');*/
+            if(direction == 'down') {
+                $('div.aboutme_img_prez').addClass('notview');
+                $('#scroll_aboutme').removeClass('notdisplay');
+
+            }
+            if(direction == 'up') {
+                $('div.aboutme_img_prez').removeClass('notview');
+                $('#scroll_aboutme').addClass('notdisplay');
+            }
         }, { offset:'bottom-in-view' });
+
+
+        $('#about_me').waypoint(function(direction) {
+            if(direction == 'down') {
+                $('#scroll_aboutme').addClass('glue_bottom');
+
+            }
+            if(direction == 'up') {
+                $('#scroll_aboutme').removeClass('glue_bottom');
+            }
+        }, { offset:'bottom-in-view' });
+
+
 
          $(".education-row").waypoint(function() {
 
@@ -208,9 +227,9 @@ $('#bandeau_work').waypoint(function(direction) {
 
         }, { offset:'60%' });
 
-        $("#foot_page").waypoint(function() {
+        $("#foot_page .work-together").waypoint(function() {
                footer_contact(1);
-        }, { offset:'450px' });
+        }, { offset:'bottom-in-view' });
 
         $('#foot_page').waypoint(function(direction) {
 			$('.main-nav a').removeClass('active');
@@ -390,24 +409,36 @@ function skillChartAnimation(vip) {
         }
     }
 }
+
+function change_prez_img(position,start,size){
+    var part = size/3;
+    if(position>=start+part){
+        $("#scroll_aboutme img").attr('src', 'assets/img/rond1.jpg');
+    }
+     if(position>=start+part*2){
+        $("#scroll_aboutme img").attr('src', 'assets/img/rond2.jpg');
+    }
+     if(position>=start+part*3){
+        $("#scroll_aboutme img").attr('src', 'assets/img/rond3.jpg');
+    }
+}
+
 var isMobileTouch = /ipad|iphone|ipod|android|blackberry|webos|windows phone/i.test(navigator.userAgent.toLowerCase()),
-    browserWidth, browserHeight, mainMenuShown = !1,
+    browserWidth, browserHeight, mainMenuShown = !1,bottom_screen,bottom_aboutme,
     clickedOnMenu = !1,
     skillChartAnimationCount = 0,
-    skillChartVBarsHeight = new Array,
-    showTweets = function(e) {
-        var t = $("#tweets");
-        t.empty();
-        var n = e[0].text;
-        n = n.replace(/(https?:\/\/[^\s:]+)/gi, '<a href="$1">$1</a>');
-        n = n.replace(/(@(\w+))/g, '<a href="http://twitter.com/$2">$1</a>');
-        n = n.replace(/(\#(\w+))/g, '<a href="http://search.twitter.com/search?q=%23$2">$1</a>');
-        t.append(n)
-    };
+    size_prez_img = $(".aboutme_img_prez img").width(),
+    size_height_prez_img = $(".aboutme_img_prez img").height(),
+    height_aboutme_container = $("#about_me #container_notscroll").height(),
+    bottom_img_prez_offset = $("#about_me #container_notscroll img").offset().top + size_height_prez_img,
+    height_aboutme_container_minusImg = height_aboutme_container - size_height_prez_img,
+    skillChartVBarsHeight = new Array;
     var desc_skill = 0;
     var projects_appear_state = 0;
     var educa_var = 0;
+    var bottom_aboutme= height_aboutme_container_minusImg +$("#about_me").offset().top;
 
+$("#scroll_aboutme img").css( "width", size_prez_img+"px" );
 $(document).ready(function() {
     browserWidth = $(window).width() + scrollbarWidth();
     browserHeight = $(window).height();
@@ -420,11 +451,22 @@ $(document).ready(function() {
         skillsChartVBarWidth(browserWidth);
         clearfixChartLegend(browserWidth);
         skillsChartLegendHeight(browserWidth);
+        size_prez_img = $(".aboutme_img_prez img").width();
+        size_height_prez_img = $(".aboutme_img_prez img").height();
+        height_aboutme_container_minusImg = $("#about_me #container_notscroll").height() - size_height_prez_img;
+        bottom_img_prez_offset = $("#about_me #container_notscroll img").offset().top + size_height_prez_img;
+        $("#scroll_aboutme img").css( "width", size_prez_img+"px" );
+        bottom_aboutme= height_aboutme_container +$("#about_me").offset().top;
+
     }).resize();
     $(window).scroll(function() {
+     console.log(bottom_aboutme);
+        bottom_screen=$(window).scrollTop()+browserHeight;
         browserHeight = $(window).height();
         skillChartAnimation();
         project_appear();
+        size_effect = bottom_aboutme-bottom_img_prez_offset;
+        change_prez_img(bottom_screen,bottom_img_prez_offset,size_effect);
     }).scroll();
 
 

@@ -1,22 +1,6 @@
 /*
-Theme Name: Artentica
-Author: Gene Ross
-Author URI: http://generosseducation.com
-*/
-/* Authored Dependencies */
-/*
-
 -------------------------------------------------------------
-
-VARIABLES
-
-*/
-/*
-
--------------------------------------------------------------
-
 GLOBAL
-
 */
 header #demo-canvas{
     z-index: 5;
@@ -79,7 +63,7 @@ body {
       width: 85%; } }
 
 img {
-  margin-bottom: -10px;
+  margin-bottom: -20px;
   max-width: 100%;
 padding-bottom: 40px;}
 
@@ -943,7 +927,7 @@ CONTACT
     -webkit-transform-origin: 50% 0%; }
   .contact .contact-form {
     margin-top: 30px;
-    padding-bottom: 80px; }
+  }
     .contact .contact-form #contact-form-error {
       color: #ffffff; }
   .contact .formstxt {
@@ -1029,52 +1013,45 @@ about_me
   overflow: hidden; }
   @media (max-width: 767px) {
     #about_me {
-      padding: 60px 0px; } }
+      padding: 60px 0px;
+    padding-bottom: 0px;} }
 
   @media (max-width: 767px) {
     #about_me .column-right {
       padding-bottom: 0px;
      padding-right: 0px;
  padding-left: 0px;} }
-  #about_me .linedash {
-    height: 1500px;
-    border-right: 1px dashed #ed8881;
-    left: 300px;
-    top: 0px;
-    z-index: 6; }
-    @media (max-width: 1150px) {
-      #about_me .linedash {
-        left: 230px; } }
-    @media (max-width: 960px) {
-      #about_me .linedash {
-        left: 350px;
-        top: 900px; } }
-    @media (max-width: 767px) {
-      #about_me .linedash {
-        display: none; } }
-  .fixed_abouteme_img{
-      position:fixed;
+
+    .notview{
+        opacity:0;
+        z-index: -150;
+    }
+    #scroll_aboutme img{
+        padding:0;
+    }
+
+     #scroll_aboutme.glue_bottom{
+        position: absolute;
+
+    }
+    #scroll_aboutme{
+    position:fixed;
       bottom: 0;
-  }
+        width: 40%;
+        z-index: 10;
+    }
+    .notdisplay{
+        display: none;
+    }
+
+
   #about_me .aboutme_img_prez {
     width: 40%;
     z-index: 10; }
 #about_me .aboutme_img_prez img{
     padding: 0;
 }
-  #about_me .smallpart{
-    left: 250px;
-    width: 100px; }
-    @media (max-width: 1150px) {
-      #about_me .smallpart{
-        left: 190px;
-        width: 80px; } }
-    @media (max-width: 960px) {
-      #about_me .smallpart{
-        left: 310px; } }
-    @media (max-width: 767px) {
-      #about_me .smallpart{
-        display: none; } }
+
     @media (max-width: 960px) {
       #about_me .aboutme_img_prez {
         width: 100%;
@@ -1399,28 +1376,6 @@ RESEARCH & DEVELOPMENT
     #workexp {
       padding: 40px 0px; } }
 
-  #workexp .jet-steez {
-    width: 900px;
-    position: absolute;
-    left: -490px;
-    bottom: -360px;
-    z-index: 4; }
-    @media (max-width: 1300px) {
-      #workexp .jet-steez {
-        left: -500px;
-        bottom: -370px; } }
-    @media (max-width: 1150px) {
-      #workexp .jet-steez {
-        width: 700px;
-        left: -365px;
-        bottom: -240px; } }
-    @media (max-width: 960px) {
-      #workexp .jet-steez {
-        left: -72px;
-        bottom: -230px; } }
-    @media (max-width: 767px) {
-      #workexp .jet-steez {
-        display: none; } }
 .clear .column-right{
     opacity: 0;
     transform: translate(60px,-20px);
@@ -1838,86 +1793,9 @@ margin-bottom: 25px;
             margin-bottom: 0;} }
     #projects .projects-info a:hover {
       background: #0003FF; }
-  #projects .projects-mill {
-    width: 1170px;
-    position: absolute;
-    left: 22%;
-    top: 0px;
-    z-index: 1; }
-    @media (max-width: 1300px) {
-      #projects .projects-mill {
-        width: 1000px;
-        left: 21%; } }
-    @media (max-width: 1150px) {
-      #projects .projects-mill {
-        width: 1000px;
-        left: 21%; } }
-    @media (max-width: 960px) {
-      #projects .projects-mill {
-        display: none; } }
-  #projects .projects-jet {
-    width: 830px;
-    position: absolute;
-    left: 23%;
-    top: 200px;
-    z-index: 1; }
-    @media (max-width: 1300px) {
-      #projects .projects-jet {
-        width: 730px; } }
-    @media (max-width: 1150px) {
-      #projects .projects-jet {
-        width: 680px; } }
-    @media (max-width: 960px) {
-      #projects .projects-jet {
-        display: none; } }
-  #projects .projects-bash {
-    width: 830px;
-    position: absolute;
-    left: 28%;
-    top: 180px;
-    z-index: 1; }
-    @media (max-width: 1300px) {
-      #projects .projects-bash {
-        top: 150px;
-        width: 730px; } }
-    @media (max-width: 1150px) {
-      #projects .projects-bash {
-        width: 680px;
-        left: 22%; } }
-    @media (max-width: 960px) {
-      #projects .projects-bash {
-        display: none; } }
-  #projects .projects-easywood {
-    width: 570px;
-    position: absolute;
-    left: 36%;
-    top: 80px;
-    z-index: 1; }
-    @media (max-width: 1300px) {
-      #projects .projects-easywood {
-        width: 480px; } }
-    @media (max-width: 1150px) {
-      #projects .projects-easywood {
-        width: 460px; } }
-    @media (max-width: 960px) {
-      #projects .projects-easywood {
-        display: none; } }
-  #projects .projects-wilton {
-    width: 850px;
-    position: absolute;
-    left: 30%;
-    top: 50px; }
-    @media (max-width: 1300px) {
-      #projects .projects-wilton {
-        width: 700px;
-        left: 27%; } }
-    @media (max-width: 1150px) {
-      #projects .projects-wilton {
-        width: 700px;
-        left: 27%; } }
-    @media (max-width: 960px) {
-      #projects .projects-wilton {
-        display: none; } }
+
+
+
   #projects .noborder {
     border: none; }
 
