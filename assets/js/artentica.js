@@ -4,8 +4,14 @@ var Artentica = (function($) {
 	var init = function() {
 
 
-		/*if(typeof Map !== 'undefined')
-			Map.init();*/
+
+
+        // preload functionality
+		if(typeof Loader !== 'undefined') {
+			Loader.preload('body', '#loading-percent', function() {
+				$('.loading-modal').delay(300).fadeOut(1000,open_page());
+			})
+		}
 
 		// projects functionality
 		if(typeof Featured !== 'undefined')
@@ -18,17 +24,6 @@ var Artentica = (function($) {
 		// projects functionality
 		if ($.fn.Parallax && !Modernizr.appleios) {
 
-
-			// $('.part2').Parallax({ property:'top', speed:0.10, start:460, delay:-900 });
-			// $('.part3').Parallax({ property:'top', speed:0.20, start:480, delay:-900 });
-			// $('.part4').Parallax({ property:'top', speed:0.30, start:500, delay:-1000 });
-
-			// $('.part2').Parallax({ property:'top', speed:0.10, start:0, delay:-100 });
-			// $('.part3').Parallax({ property:'top', speed:0.20, start:0, delay:-100 });
-			// $('.part4').Parallax({ property:'top', speed:0.30, start:0, delay:-200 });
-
-			/*$('.axe').Parallax({ property:'top', speed:0.12, start:0, delay:-800 });
-			$('.jet').Parallax({ property:'top', speed:-0.10, start:80, delay:-900 });*/
 		}
 
 		// remove video functionality for mobile
@@ -410,16 +405,41 @@ function skillChartAnimation(vip) {
     }
 }
 
+function open_page(){
+    $("header .header-nav").transition({opacity:1,x: '0px'},2000);
+    $("header div.vr").transition({opacity:1,x: '0px'},2000);
+    $("header .parralax_header").transition({opacity:1,y: '0px'},2000);
+    $("header div.text div.container").transition({opacity:1},2000);
+}
+
 function change_prez_img(position,start,size){
-    var part = size/3;
+    var part = size/9;
     if(position>=start+part){
-        $("#scroll_aboutme img").attr('src', 'assets/img/rond1.jpg');
+        $("#scroll_aboutme img").attr('src', 'assets/img/scroll1.jpg');
     }
      if(position>=start+part*2){
-        $("#scroll_aboutme img").attr('src', 'assets/img/rond2.jpg');
+        $("#scroll_aboutme img").attr('src', 'assets/img/scroll2.jpg');
     }
      if(position>=start+part*3){
-        $("#scroll_aboutme img").attr('src', 'assets/img/rond3.jpg');
+        $("#scroll_aboutme img").attr('src', 'assets/img/scroll3.jpg');
+    }
+     if(position>=start+part*4){
+        $("#scroll_aboutme img").attr('src', 'assets/img/scroll4.jpg');
+    }
+     if(position>=start+part*5){
+        $("#scroll_aboutme img").attr('src', 'assets/img/scroll5.jpg');
+    }
+     if(position>=start+part*6){
+        $("#scroll_aboutme img").attr('src', 'assets/img/scroll6.jpg');
+    }
+     if(position>=start+part*7){
+        $("#scroll_aboutme img").attr('src', 'assets/img/scroll7.jpg');
+    }
+     if(position>=start+part*8){
+        $("#scroll_aboutme img").attr('src', 'assets/img/scroll8.jpg');
+    }
+     if(position>=start+part*9){
+        $("#scroll_aboutme img").attr('src', 'assets/img/scroll9.jpg');
     }
 }
 
@@ -460,7 +480,6 @@ $(document).ready(function() {
 
     }).resize();
     $(window).scroll(function() {
-     console.log(bottom_aboutme);
         bottom_screen=$(window).scrollTop()+browserHeight;
         browserHeight = $(window).height();
         skillChartAnimation();

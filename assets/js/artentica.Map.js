@@ -1,123 +1,144 @@
-var Map = (function($) {
 
-	var googleMapStyle;
-	var googleMapType;
-	var googleMapOptions;
-	var googleMapIcon;
-	var map;
+function initialize() {
 
-	var init = function() {
 
-		// set src of google map icon for markers
-		/*googleMapIcon = 'http://Kabertech.com/assets/img/map-pin.png';*/
+   var styles = [
+  {
+    "featureType": "administrative",
+    "stylers": [
+      { "visibility": "simplified" }
+    ]
+  },{
+    "featureType": "road",
+    "stylers": [
+      { "visibility": "simplified" },
+      { "color": "#393939" }
+    ]
+  },{
+    "featureType": "road",
+    "elementType": "labels",
+    "stylers": [
+      { "visibility": "off" }
+    ]
+  },{
+    "featureType": "water",
+    "stylers": [
+      { "color": "#303030" }
+    ]
+  },{
+    "featureType": "landscape",
+    "stylers": [
+      { "color": "#2a2a2a" }
+    ]
+  },{
+    "featureType": "poi",
+    "stylers": [
+      { "visibility": "simplified" },
+      { "color": "#393939" }
+    ]
+  },{
+    "featureType": "transit",
+    "elementType": "geometry",
+    "stylers": [
+      { "visibility": "off" }
+    ]
+  },{
+    "featureType": "administrative",
+    "elementType": "geometry.stroke",
+    "stylers": [
+      { "visibility": "on" },
+      { "color": "#393939" }
+    ]
+  },{
+    "featureType": "landscape",
+    "stylers": [
+      { "visibility": "simplified" },
+      { "color": "#2a2a2a" }
+    ]
+  },{
+    "featureType": "administrative.neighborhood",
+    "elementType": "labels",
+    "stylers": [
+      { "visibility": "simplified" },
+      { "color": "#4c4c4b" }
+    ]
+  },{
+  },{
+    "featureType": "administrative.locality",
+    "stylers": [
+      { "visibility": "simplified" },
+      { "color": "#838383" }
+    ]
+  },{
+    "featureType": "transit",
+    "stylers": [
+      { "visibility": "off" }
+    ]
+  },{
+  }
+];
+   var styledMap = new google.maps.StyledMapType(styles,
+    {name: "Artentica Map"});
+  var mapOptions = {
+    zoom: 12,
+    disableDefaultUI: false,
 
-		// custom google map styling
-		/*googleMapStyle = [
-		  {
-		    "projectsType": "administrative",
-		    "stylers": [
-		      { "visibility": "off" }
-		    ]
-		  },{
-		    "projectsType": "road",
-		    "stylers": [
-		      { "visibility": "simple" },
-		      { "color": "#393939" }
-		    ]
-		  },{
-		    "elementType": "labels",
-		    "stylers": [
-		      { "visibility": "off" }
-		    ]
-		  },{
-		    "projectsType": "water",
-		    "stylers": [
-		      { "color": "#303030" }
-		    ]
-		  },{
-		    "projectsType": "landscape",
-		    "stylers": [
-		      { "color": "#2a2a2a" }
-		    ]
-		  },{
-		    "projectsType": "poi",
-		    "stylers": [
-		      { "color": "#393939" },
-		      { "visibility": "simplified" }
-		    ]
-		  },{
-		    "projectsType": "transit",
-		    "elementType": "geometry",
-		    "stylers": [
-		      { "visibility": "off" }
-		    ]
-		  },{
-		    "projectsType": "administrative",
-		    "elementType": "geometry.stroke",
-		    "stylers": [
-		      { "visibility": "on" },
-		      { "color": "#393939" }
-		    ]
-		  }
-		];*/
-
-		// render the map
-		renderMap([48.4293972,-4.5514872,17], 12, 'map');
-		plotMapPoint(48.4293972,-4.5514872,17,"https://www.google.com/maps/place/352+Rue+Xavier+Grall,+29820+Guilers,+France/@48.4293972,-4.5491805,17z/data=!3m1!4b1!4m2!3m1!1s0x4816bcff5166c919:0x8f661a249c620ab1");
-
-	};
-
-	var renderMap = function(center, zoom, element) {
-
-		// if element doesnt exist we need to bail out
-		if($('#' + element).length == 0) return;
-
-		// create a new StyledMapType object, passing it the array of styles, as well as the name to be displayed on the map type control.
-		googleMapType = new google.maps.StyledMapType(googleMapStyle, {name: "Artentica"});
-
-		// create a map object, and include the MapTypeId to add to the map type control.
-		googleMapOptions = {
-			zoom: zoom,
-			disableDefaultUI: true,
+      zoomControl: true,
+    zoomControlOptions: {
+        style: google.maps.ZoomControlStyle.LARGE,
+        position: google.maps.ControlPosition.LEFT_CENTER
+    },
+            panControl: false,
 			mapTypeControl: false,
-			zoomControl: false,
 			scaleControl: false,
 			scrollwheel: false,
-			disableDoubleClickZoom: true,
-			center: new google.maps.LatLng(center[0],center[1]),
-			mapTypeControlOptions: {
-				mapTypeIds: [google.maps.MapTypeId.SATELLITE, google.maps.MapTypeId.TERRAIN, 'Artentica']
-			}
-		};
+			disableDoubleClickZoom: false,
+            streetViewControl: true,
+      mapTypeControlOptions: {
+      mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
+    },
+    center: new google.maps.LatLng(48.407055, -4.495554,17)
+  }
+  var map = new google.maps.Map(document.getElementById('map-canvas'),
+                                mapOptions);
+  map.mapTypes.set('map_style', styledMap);
+  map.setMapTypeId('map_style');
+  setMarkers(map, beaches);
+}
+var image1 = 'assets/img/map-blue.png';
+var image2 = 'assets/img/map-green.png';
+var image3 = 'assets/img/map-purple.png';
+var beaches = [
+  ['Where I live', 48.429923, -4.5513709, 4],
+  ['Where I Work', 48.4068511, -4.418686, 3],
+  ['Where I Study', 48.407055, -4.495554, 2]
+];
+var image;
+function setMarkers(map, locations) {
 
-		// set up new google map
-		map = new google.maps.Map(document.getElementById(element), googleMapOptions);
 
-		// associate the styled map with the MapTypeId and set it to display.
-		map.mapTypes.set('Artentica', googleMapType);
-		map.setMapTypeId('Artentica');
+  for (var i = 0; i < locations.length; i++) {
+    var beach = locations[i];
+    var myLatLng = new google.maps.LatLng(beach[1], beach[2]);
+      switch(beach[0]) {
+    case 'Where I live':
+        image = image1;
+        break;
+    case 'Where I Work':
+        image = image2;
+        break;
+    case 'Where I Study':
+        image = image3;
+        break;
+}
+    var marker = new google.maps.Marker({
+        position: myLatLng,
+        map: map,
+        title: beach[0],
+        zIndex: beach[3],
+        icon: image
+    });
+  }
+}
 
-	}
-
-	var plotMapPoint = function(lat, lng, url) {
-
-		var googleMapMarker = new google.maps.Marker({
-			url:url,
-			map: map,
-			position: new google.maps.LatLng(lat,lng),
-			icon: googleMapIcon
-		});
-
-		googleMapMarker.setMap(map);
-
-		google.maps.event.addListener(googleMapMarker, 'click', function() {
-			window.open(googleMapMarker.url);
-		});
-
-	};
-
-	return {
-		init: init
-	};
-
-}(jQuery));
+google.maps.event.addDomListener(window, 'load', initialize);
