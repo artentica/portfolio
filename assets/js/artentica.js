@@ -305,7 +305,7 @@ function work_exp(id,vip){
 function footer_contact(vip){
     var e = $(window).scrollTop();
     var top = $("footer .work-together").position().top - 300;
-    if(e>=top && footercontactdone!=0 || vip && footercontactdone!=0  ){
+    if(e>=top && footercontactdone==0 || vip && footercontactdone==0  ){
     footercontactdone =1;
     $("footer .work-together").transition({opacity:1,x: '0px'},700);
     }
