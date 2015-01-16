@@ -103,12 +103,12 @@ function initialize() {
                                 mapOptions);
   map.mapTypes.set('map_style', styledMap);
   map.setMapTypeId('map_style');
-  setMarkers(map, beaches);
+  setMarkers(map, places);
 }
 var image1 = 'assets/img/map-blue.png';
 var image2 = 'assets/img/map-green.png';
 var image3 = 'assets/img/map-purple.png';
-var beaches = [
+var places = [
   ['Where I live', 48.429923, -4.5513709, 4],
   ['Where I Work', 48.4068511, -4.418686, 3],
   ['Where I Study', 48.407055, -4.495554, 2]
@@ -116,11 +116,10 @@ var beaches = [
 var image;
 function setMarkers(map, locations) {
 
-
   for (var i = 0; i < locations.length; i++) {
-    var beach = locations[i];
-    var myLatLng = new google.maps.LatLng(beach[1], beach[2]);
-      switch(beach[0]) {
+    var place = locations[i];
+    var myLatLng = new google.maps.LatLng(place[1], place[2]);
+      switch(place[0]) {
     case 'Where I live':
         image = image1;
         break;
@@ -134,9 +133,11 @@ function setMarkers(map, locations) {
     var marker = new google.maps.Marker({
         position: myLatLng,
         map: map,
-        title: beach[0],
-        zIndex: beach[3],
-        icon: image
+        title: place[0],
+        zIndex: place[3],
+        icon: image,
+        draggable: false,
+        animation: google.maps.Animation.DROP
     });
   }
 }

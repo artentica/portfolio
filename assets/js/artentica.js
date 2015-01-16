@@ -3,9 +3,6 @@ var Artentica = (function($) {
 
 	var init = function() {
 
-
-
-
         // preload functionality
 		if(typeof Loader !== 'undefined') {
 			Loader.preload('body', '#loading-percent', function() {
@@ -185,7 +182,7 @@ $('#bandeau_work .workexplefttxt').waypoint(function(direction) {
 
         $('div.aboutme_img_prez').waypoint(function(direction) {
            /* $('div.aboutme_img_prez').addClass('fixed_abouteme_img');*/
-            if(direction == 'down') {
+            if(direction == 'down' && $(window).width()>960) {
                 $('div.aboutme_img_prez').addClass('notview');
                 $('#scroll_aboutme').removeClass('notdisplay');
 
@@ -308,7 +305,8 @@ function work_exp(id,vip){
 function footer_contact(vip){
     var e = $(window).scrollTop();
     var top = $("footer .work-together").position().top - 300;
-    if(e>=top|| vip){
+    if(e>=top && footercontactdone!=0 || vip && footercontactdone!=0  ){
+    footercontactdone =1;
     $("footer .work-together").transition({opacity:1,x: '0px'},700);
     }
 }
@@ -321,8 +319,12 @@ function project_appear(vip){
         projects_appear_state = 1;
     $("#projects-slider .project-main-line").transition({opacity:1,x: '0px'},1000);
     $("#projects-slider .projects-block").each(function(e) {
-                $(this).delay(e*100).transition({opacity:1,y: '0px'},800);
+                $(this).delay(e*150).transition({opacity:1,y: '0px'},800);
     });
+    $("#projects .projects-nav a").each(function(e) {
+                $(this).delay(e*200).transition({scale:1},1000);
+    });
+
     }
 }
 
@@ -338,13 +340,14 @@ function education_block_rotate(vip){
 }
 
 function scrollbarWidth() {
-    var e = $('<div style="width:50px;height:50px;overflow:hidden;position:absolute;top:-200px;left:-200px;"><div style="height:100px;"></div>');
+   /* var e = $('<div style="width:50px;height:50px;overflow:hidden;position:absolute;top:-200px;left:-200px;"><div style="height:100px;"></div>');
     $("body").append(e);
     var t = $("div", e).innerWidth();
     e.css("overflow-y", "scroll");
     var n = $("div", e).innerWidth();
     $(e).remove();
-    return t - n
+    return t - n*/
+    return 17; //taille générique des scrolls bar sur chrome firefox et IE
 }
 
 function supersizedMobile() {
@@ -370,7 +373,7 @@ function skillsChartVBarWidth(e) {
 function clearfixChartLegend(e) {
     if (e >= 1024) {
         $("#skills-chart #chart-legend").removeClass("clearfix");
-        $("#skills-chart #chart-data").addClass("cl earfix")
+        $("#skills-chart #chart-data").addClass("clearfix")
     } else {
         $("#skills-chart #chart-legend").addClass("clearfix");
         $("#skills-chart #chart-data").removeClass("clearfix")
@@ -413,33 +416,30 @@ function open_page(){
 }
 
 function change_prez_img(position,start,size){
-    var part = size/9;
-    if(position>=start+part){
-        $("#scroll_aboutme img").attr('src', 'assets/img/scroll1.jpg');
+    var part = size/8;
+    if(position>=start+part && position < start+part*2){
+        $("#scroll_aboutme img").attr('src', 'assets/img/scroll2.png');
     }
-     if(position>=start+part*2){
-        $("#scroll_aboutme img").attr('src', 'assets/img/scroll2.jpg');
+     if(position>=start+part*2 && position < start+part*3){
+        $("#scroll_aboutme img").attr('src', 'assets/img/scroll3.png');
     }
-     if(position>=start+part*3){
-        $("#scroll_aboutme img").attr('src', 'assets/img/scroll3.jpg');
+     if(position>=start+part*3 && position < start+part*4){
+        $("#scroll_aboutme img").attr('src', 'assets/img/scroll4.png');
     }
-     if(position>=start+part*4){
-        $("#scroll_aboutme img").attr('src', 'assets/img/scroll4.jpg');
+     if(position>=start+part*4 && position < start+part*5){
+        $("#scroll_aboutme img").attr('src', 'assets/img/scroll5.png');
     }
-     if(position>=start+part*5){
-        $("#scroll_aboutme img").attr('src', 'assets/img/scroll5.jpg');
+     if(position>=start+part*5 && position < start+part*6){
+        $("#scroll_aboutme img").attr('src', 'assets/img/scroll6.png');
     }
-     if(position>=start+part*6){
-        $("#scroll_aboutme img").attr('src', 'assets/img/scroll6.jpg');
+     if(position>=start+part*6 && position < start+part*7){
+        $("#scroll_aboutme img").attr('src', 'assets/img/scroll7.png');
     }
-     if(position>=start+part*7){
-        $("#scroll_aboutme img").attr('src', 'assets/img/scroll7.jpg');
+     if(position>=start+part*7 && position < start+part*8){
+        $("#scroll_aboutme img").attr('src', 'assets/img/scroll8.png');
     }
      if(position>=start+part*8){
-        $("#scroll_aboutme img").attr('src', 'assets/img/scroll8.jpg');
-    }
-     if(position>=start+part*9){
-        $("#scroll_aboutme img").attr('src', 'assets/img/scroll9.jpg');
+        $("#scroll_aboutme img").attr('src', 'assets/img/scroll9.png');
     }
 }
 
@@ -447,6 +447,7 @@ var isMobileTouch = /ipad|iphone|ipod|android|blackberry|webos|windows phone/i.t
     browserWidth, browserHeight, mainMenuShown = !1,bottom_screen,bottom_aboutme,
     clickedOnMenu = !1,
     skillChartAnimationCount = 0,
+    footercontactdone = 0,
     size_prez_img = $(".aboutme_img_prez img").width(),
     size_height_prez_img = $(".aboutme_img_prez img").height(),
     height_aboutme_container = $("#about_me #container_notscroll").height(),
@@ -467,6 +468,7 @@ $(document).ready(function() {
     project_appear();
     $(window).resize(function() {
         browserWidth = $(window).width() + scrollbarWidth();
+
         browserHeight = $(window).height();
         skillsChartVBarWidth(browserWidth);
         clearfixChartLegend(browserWidth);

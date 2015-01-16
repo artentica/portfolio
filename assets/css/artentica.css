@@ -11,15 +11,12 @@ left: 0px;
 top: 0px;
 width: 100%;
 height: 100%;
-/*background: url(../img/img_prez.png) no-repeat;*/
-
 }
 
 header .parralax_header{
     transform: translateY(50px);
     opacity: 0;
 }
-
 
 header .parralax_header img{
     position: absolute;
@@ -28,7 +25,6 @@ right: 0;
 margin: 0 auto;
 bottom: 0;
 }
-
 
 html {
   height: 100%; }
@@ -56,15 +52,7 @@ body {
   margin: auto;
   width: 85%;
   position: relative; }
-  @media (max-width: 1300px) {
-    .container {
-      width: 1100px; } }
-  @media (max-width: 1150px) {
-    .container {
-      width: 900px; } }
-  @media (max-width: 960px) {
-    .container {
-      width: 700px; } }
+
   @media (max-width: 767px) {
     .container {
       width: 85%; } }
@@ -117,18 +105,6 @@ padding-bottom: 40px;}
 .column-right-bigger {
   width: 575px;
   float: right; }
-
-  @media (max-width: 1300px) {
-    .column-right {
-      width: 525px; } }
-  @media (max-width: 1150px) {
-    .column-right {
-      width: 425px; } }
-  @media (max-width: 960px) {
-    .column-right {
-      width: 100%;
-      float: none; } }
-
 a {
   color: #D1DCFF;
   text-decoration: none;
@@ -350,19 +326,7 @@ margin-bottom: 0px; }
   background: #2a2a2a;
   z-index: 200;
   text-align: center; }
-  .loading-modal .diagonal {
-    width: 1800px;
-    height: 1800px;
-    position: absolute;
-    left: 300px;
-    top: 0px;
-    z-index: 0; }
-    @media (max-width: 960px) {
-      .loading-modal .diagonal {
-        left: -100px; } }
-    @media (max-width: 767px) {
-      .loading-modal .diagonal {
-        display: none; } }
+
   .loading-modal .vr {
     position: absolute;
     width: 100%;
@@ -437,13 +401,9 @@ margin-bottom: 0px; }
   -o-transition: transform 0.2s, visibility 0.2s;
   transition: transform 0.2s, visibility 0.2s; }
 
-/* Sections */
 /*
-
--------------------------------------------------------------
-
+------------------------------------------------------------
 MENU
-
 */
 .parralax_header img{
     padding: 0;
@@ -479,19 +439,7 @@ MENU
           height: 28px; } }
     .menu .vr-btn svg:hover path {
       fill: #2D2FE1; }
-  .menu .diagonal {
-    width: 1800px;
-    height: 1800px;
-    position: absolute;
-    left: 300px;
-    top: 0px;
-    z-index: 0; }
-    @media (max-width: 960px) {
-      .menu .diagonal {
-        left: 0px; } }
-    @media (max-width: 767px) {
-      .menu .diagonal {
-        display: none; } }
+
   .menu .menu-items {
     text-align: center;
     position: absolute;
@@ -568,7 +516,6 @@ MENU
       color: #ffffff; }
     .menu .menu-bottom a:hover {
       text-decoration: underline; }
-
 .menu-open {
   visibility: visible;
   opacity: 1;
@@ -582,13 +529,9 @@ MENU
     transition: transform 0.4s; }
   .menu-open .menu-bottom {
     bottom: 0px; }
-
 /*
-
 -------------------------------------------------------------
-
 NAVIGATION
-
 */
 #main-nav-hold {
   font-family: "museo-sans", sans-serif;
@@ -678,13 +621,9 @@ NAVIGATION
       color: #ffffff; }
     #main-nav-hold .nav-dark-gray .menu-btn span {
       background: #ffffff; }
-
 /*
-
 -------------------------------------------------------------
-
 HEADER
-
 */
 header {
   height: 100%;
@@ -806,7 +745,6 @@ header {
   header div.text div.container{
       opacity: 0;
   }
-
   header .text {
     text-align: center;
     position: absolute;
@@ -873,13 +811,9 @@ header {
     header .scroll img {
       width: 70px;
       height: 70px; }
-
 /*
-
 -------------------------------------------------------------
-
 CONTACT
-
 */
 #content {
   -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
@@ -1011,13 +945,9 @@ CONTACT
       .contact h2 {
         font-size: 30px;
         line-height: 30px; } }
-
 /*
-
--------------------------------------------------------------
-
+------------------------------------------------------------
 about_me
-
 */
 #about_me {
   background: #2D2FE1;
@@ -1059,7 +989,6 @@ about_me
         display: none;
     }
 
-
   #about_me .aboutme_img_prez {
     width: 40%;
     z-index: 10; }
@@ -1085,11 +1014,8 @@ about_me
   #about_me .shadow-bottom {
     opacity: 0.4;
     -webkit-opacity: 0.4; }
-
 /*
-
 -------------------------------------------------------------
-
 RESEARCH & PROTOTYPING
 
 */
@@ -1123,23 +1049,7 @@ RESEARCH & PROTOTYPING
       background: #ECECEC; }
   #education .service-callout .text {
     color: #424242; }
-  #education .diagonal {
-    width: 1800px;
-    height: 1800px;
-    position: absolute;
-    right: -1050px;
-    top: -250px;
-    z-index: 0; }
-    @media (max-width: 1150px) {
-      #education .diagonal {
-        right: -1160px; } }
-    @media (max-width: 960px) {
-      #education .diagonal {
-        right: -950px;
-        top: 350px; } }
-    @media (max-width: 767px) {
-      #education .diagonal {
-        display: none; } }
+
   #education .circle-callout {
     position: absolute;
     right: -30px;
@@ -1234,14 +1144,8 @@ float: right; }
       border-right: none; }
       #education .even .circle-point {
         display: none; } }
-
-
 /*
-
 -------------------------------------------------------------
-
-
-
 */
 
 #skills {
@@ -1272,23 +1176,7 @@ float: right; }
       background: #ECECEC; }
   #skills .service-callout .text {
     color: #424242; }
-  #skills .diagonal {
-    width: 1800px;
-    height: 1800px;
-    position: absolute;
-    right: -1050px;
-    top: -250px;
-    z-index: 0; }
-    @media (max-width: 1150px) {
-      #skills .diagonal {
-        right: -1160px; } }
-    @media (max-width: 960px) {
-      #skills .diagonal {
-        right: -950px;
-        top: 350px; } }
-    @media (max-width: 767px) {
-      #skills .diagonal {
-        display: none; } }
+
   #skills .circle-callout {
     position: absolute;
     right: -30px;
@@ -1298,12 +1186,7 @@ float: right; }
       #skills .circle-callout {
         right: 90px;
         top: 750px; } }
-  #skills .axe {
-    width: 970px;
-    position: absolute;
-    right: -450px;
-    top: -80px;
-    z-index: 1; }
+
 
   #skills .skills-row {
     padding-top: 150px;
@@ -1450,7 +1333,6 @@ float: left; }
       width: 100%;
       float: none; } }
 
-
   #workexp .container {
 
       width: 85%;
@@ -1484,31 +1366,13 @@ float: left; }
       background: #2a2a2a; }
   #workexp .service-callout .text {
     color: #ffffff; }
-  #workexp .diagonal {
-    width: 1800px;
-    height: 1800px;
-    position: absolute;
-    left: -500px;
-    bottom: -520px;
-    z-index: 0; }
-    @media (max-width: 1150px) {
-      #workexp .diagonal {
-        left: -520px; } }
-    @media (max-width: 960px) {
-      #workexp .diagonal {
-        left: 63px;
-        bottom: -200px; } }
-    @media (max-width: 767px) {
-      #workexp .diagonal {
-        display: none; } }
+
   #workexp .shadow-bottom {
     opacity: 0.4;
     -webkit-opacity: 0.4; }
 
 /*
-
--------------------------------------------------------------
-
+-----------------------------------------------------------
 TESTIMONIALS
 
 */
@@ -1532,19 +1396,7 @@ TESTIMONIALS
     @media (max-width: 767px) {
       #testimonials .overlay {
         display: none; } }
-  #testimonials video.jetvid {
-    position: absolute;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    left: 0px;
-    top: 0px;
-    z-index: 0;
-    display: block; }
-    @media (max-width: 767px) {
-      #testimonials video.jetvid {
-        display: none; } }
+
   #testimonials .text {
     font-size: 32px;
     line-height: 50px;
@@ -1697,6 +1549,7 @@ position: relative;
         }
     }
     #projects .projects-nav a {
+      transform: scale(0);
       -webkit-border-radius: 100%;
       -moz-border-radius: 100%;
       -ms-border-radius: 100%;
@@ -1719,7 +1572,6 @@ position: relative;
       background: #999999;
       vertical-align: middle; }
     #projects .projects-nav a.active {
-
 
       border: 4px solid #2D2FE1; }
     #projects .projects-nav a:hover span {
@@ -1787,8 +1639,6 @@ margin-bottom: 25px;
     #projects-slider {
      margin-top: 30px; } }
 
-
-
     #projects .projects-info h3 {
       color: #414141;
       margin-bottom: 40px;
@@ -1808,9 +1658,6 @@ margin-bottom: 25px;
             margin-bottom: 0;} }
     #projects .projects-info a:hover {
       background: #0003FF; }
-
-
-
   #projects .noborder {
     border: none; }
 
@@ -1900,19 +1747,7 @@ margin-bottom: 25px;
           height: 28px; } }
     .projects-modal .vr-btn svg:hover path {
       fill: #2D2FE1; }
-  .projects-modal .diagonal {
-    width: 1800px;
-    height: 1800px;
-    position: absolute;
-    left: 300px;
-    top: 0px;
-    z-index: 0; }
-    @media (max-width: 960px) {
-      .projects-modal .diagonal {
-        left: 0px; } }
-    @media (max-width: 767px) {
-      .projects-modal .diagonal {
-        display: none; } }
+
   .projects-modal .close {
     width: 20px;
     position: absolute;
@@ -1941,13 +1776,6 @@ margin-bottom: 25px;
       letter-spacing: 0px; }
   .projects-modal img {
     margin-bottom: -10px; }
-  .projects-modal .projects-half {
-    width: 50%;
-    float: left; }
-    @media (max-width: 767px) {
-      .projects-modal .projects-half {
-        width: 100%;
-        float: none; } }
   .projects-modal .projects-scroll {
     overflow: auto;
     width: 100%;
@@ -1979,21 +1807,7 @@ margin-bottom: 25px;
       .projects-modal .projects-content {
         width: 280px;
         padding-top: 100px; } }
-  .projects-modal .bash-video {
-    width: 900px;
-    height: 506px; }
-    @media (max-width: 1150px) {
-      .projects-modal .bash-video {
-        width: 850px;
-        height: 478px; } }
-    @media (max-width: 960px) {
-      .projects-modal .bash-video {
-        width: 600px;
-        height: 394px; } }
-    @media (max-width: 767px) {
-      .projects-modal .bash-video {
-        width: 280px;
-        height: 157px; } }
+
   .projects-modal .projects-number {
     text-align: center;
     font-size: 40px;
@@ -2045,9 +1859,6 @@ margin-bottom: 25px;
 
 .projects-open-body {
   overflow: hidden; }
-
-
-
 
 #projects .projects-row {
     padding-top: 50px;
@@ -2112,7 +1923,6 @@ position: relative; }
         font-size: 16px;
         line-height: 26px;
       } }
-
     #projects h3 {
       letter-spacing: 0px;
       font-size: 20px;
@@ -2136,16 +1946,9 @@ position: relative; }
       @media (max-width: 960px) {
         #projects .projects-block .circle-point {
           display: none; } }
-
-
-
-
 /*
-
 -------------------------------------------------------------
-
 FOOTER
-
 */
 footer {
   background: #2a2a2a; }
