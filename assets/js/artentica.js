@@ -206,11 +206,18 @@ $('#bandeau_work .workexplefttxt').waypoint(function(direction) {
 
 
 
-         $(".education-row").waypoint(function() {
+         $("#education").waypoint(function() {
+
+                education();
+
+        }, { offset:'50%' });
+
+        $(".education-row").waypoint(function() {
 
                 education_block_rotate(1);
 
-        }, { offset:'60%' });
+
+        }, { offset:'50%' });
 
 
         $("#description_skill").waypoint(function() {
@@ -408,6 +415,14 @@ function skillChartAnimation(vip) {
     }
 }
 
+function education(){
+    if(prinEduc == 0){
+        prinEduc = 1;
+        $("#education .service-text").transition({opacity:1,x: '0px'},900);
+        $("#education .school img").delay(150).transition({opacity:1,x: '0px'},1000);
+    }
+
+}
 function open_page(){
     $("header .header-nav").transition({opacity:1,x: '0px'},2000);
     $("header div.vr").transition({opacity:1,x: '0px'},2000);
@@ -448,6 +463,7 @@ var isMobileTouch = /ipad|iphone|ipod|android|blackberry|webos|windows phone/i.t
     clickedOnMenu = !1,
     skillChartAnimationCount = 0,
     footercontactdone = 0,
+    prinEduc = 0,
     size_prez_img = $(".aboutme_img_prez img").width(),
     size_height_prez_img = $(".aboutme_img_prez img").height(),
     height_aboutme_container = $("#about_me #container_notscroll").height(),

@@ -135,6 +135,17 @@ a img {
     .service-text {
       margin-bottom: 60px; } }
 
+#education .container {
+    margin-top: 40px;
+}
+#education .service-text {
+  margin-bottom: 0px;
+transform: translateX(-30%);
+opacity:0;}
+  @media (max-width: 767px) {
+    .service-text {
+      margin-bottom: 20px; } }
+
 .service-list {
   list-style: none;
   margin: 0px;
@@ -213,7 +224,7 @@ a img {
       display: inline-block;
       height: 28px;
       width: 28px;
-      border: 2px solid #2D2FE1; }
+      border: 2px solid #001A98; }
       .service-callout .view-item span img {
         vertical-align: top;
         width: 10px;
@@ -261,7 +272,7 @@ a img {
     display: block;
     width: 55px;
     height: 55px;
-    border: 2px solid #2D2FE1; }
+    border: 2px solid #001A98; }
   .circle-callout a:hover {
     -webkit-transform: scale(1.2);
     -moz-transform: scale(1.2);
@@ -306,7 +317,7 @@ span.sub-text {
   margin-bottom: 10px; }
 
 span.red-hit {
-  color: #2D2FE1; }
+  color: #1618E2; }
 
 .heading-sep {
   width: 55%;
@@ -438,7 +449,7 @@ MENU
         .menu .vr-btn svg {
           height: 28px; } }
     .menu .vr-btn svg:hover path {
-      fill: #2D2FE1; }
+      fill: #001A98; }
 
   .menu .menu-items {
     text-align: center;
@@ -481,7 +492,7 @@ MENU
       display: block;
       font-size: 15px; }
     .menu .menu-items a:hover {
-      color: #2D2FE1; }
+      color: #001A98; }
     .menu .menu-items .heading-sep {
       margin: 10px auto;
       margin-bottom: 20px; }
@@ -498,10 +509,10 @@ MENU
       width: 20px;
       width: 20px; }
     .menu .close svg:hover path {
-      fill: #2D2FE1; }
+      fill: #001A98; }
   .menu .menu-bottom {
     color: #f28a83;
-    background: #2D2FE1;
+    background: #001A98;
     position: absolute;
     line-height: 80px;
     width: 100%;
@@ -535,7 +546,7 @@ NAVIGATION
 */
 #main-nav-hold {
   font-family: "museo-sans", sans-serif;
-  background: #2D2FE1;
+  background: #001A98;
   font-size: 16px;
   height: 90px;
   position: relative;
@@ -559,13 +570,13 @@ NAVIGATION
     -ms-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
     z-index: 100;
-    border-bottom: 1px solid #2D2FE1;
+    border-bottom: 1px solid #001681;
     height: 90px;
     position: absolute;
     width: 100%;
     left: 0px;
     top: 0px;
-    background: #2D2FE1; }
+    background: #001A98; }
     #main-nav-hold .main-nav a.nav-btn {
      color: #D1DCFF;
       line-height: 90px;
@@ -634,7 +645,6 @@ header {
   position: relative; }
   header .parallax-top {
     height: 100%;
-      z-index: 100;
     width: 100%;
     position: absolute;
     left: 0px;
@@ -663,12 +673,12 @@ header {
     width: 100%;
     height: 100%;
     background: url(../img/header-overlay.png) repeat;
-    z-index: 1 ; }
+     }
     @media (max-width: 767px) {
       header .overlay {
         display: none; } }
   header .vr {
-    transform: translateX(-200px);
+    transform: translateX(-100px);
     opacity: 0;
     position: absolute;
     left: 40px;
@@ -677,11 +687,18 @@ header {
     height: 60px;
     z-index: 101; }
     @media (max-width: 767px) {
+      header .vr svg{
+          width: 60px;
+          height: 60px;
+      }
       header .vr {
-        top: 17px;
+        top: 5px;
         left: 20px;
         width: 100px;
-        position: fixed; } }
+        position: fixed; }
+
+
+    }
   header .header-nav {
     transform: translateX(200px);
     opacity: 0;
@@ -807,7 +824,7 @@ header {
       padding: 0px;
       display: inline-block; }
     header .scroll a:hover {
-      color: #2D2FE1; }
+      color: #001A98; }
     header .scroll img {
       width: 70px;
       height: 70px; }
@@ -897,7 +914,7 @@ CONTACT
   .contact .errortxt {
     border: 1px solid #555555; }
   .contact .formstxt:focus {
-    background: #0003FF;
+    background: #4c4c4c;
     border: 1px solid #383838; }
   .contact .formsbtn {
     -webkit-border-radius: 2px;
@@ -909,7 +926,7 @@ CONTACT
     padding: 20px 50px;
     font-size: 18px;
     font-family: "museo-sans", sans-serif;
-    background: #2D2FE1;
+    background: #001A98;
     border: none;
     color: #ffffff;
     font-weight: 700;
@@ -934,7 +951,7 @@ CONTACT
       width: 20px;
       width: 20px; }
     .contact .close svg:hover path {
-      fill: #2D2FE1; }
+      fill: #001A98; }
   .contact h2 {
     color: #ffffff;
     font-size: 50px;
@@ -950,7 +967,7 @@ CONTACT
 about_me
 */
 #about_me {
-  background: #2D2FE1;
+  background: #001A98;
   padding: 50px 0px;
   padding-bottom: 0px;
   color: #D1DCFF;;
@@ -1008,7 +1025,7 @@ about_me
     background: #fb584d; }
     #about_me .service-sep span {
       border: 2px solid #fb584d;
-      background: #2D2FE1; }
+      background: #001A98; }
   #about_me .service-callout .text {
     color: #ffffff; }
   #about_me .shadow-bottom {
@@ -1058,6 +1075,12 @@ RESEARCH & PROTOTYPING
     #education .school .circle-callout {
         right: 2%;
         top: 2%; }
+  #education .school>img{
+      transform: translateX(20%);
+opacity:0;
+      width: 100%;
+padding: 0
+  }
   #education .school {
     width: 40%;
 z-index: 1;
@@ -1069,6 +1092,7 @@ float: right; }
         float: none;
        }
       #education .school {
+          position:relative;
         width: 70%;
           float: none;
           margin: auto;
@@ -1531,30 +1555,17 @@ position: relative;
         bottom: -170px; } }
   #projects .projects-nav {
     position: absolute;
-    right: 30px;
+    right: 40px;
     top: 400px;
     text-align: center;
     z-index: 20; }
-    @media (max-width: 1300px) {
-      #projects .projects-nav {
-        right: 40px;
-        top: 320px;
-      }
-        #projects .projects-nav a {
-            width: 20px !important;
-            height: 20px !important;
-        }
-        #projects .projects-nav a.active {
-            border: 2px solid #2D2FE1 !important;
-        }
-    }
+
     #projects .projects-nav a {
       transform: scale(0);
       -webkit-border-radius: 100%;
       -moz-border-radius: 100%;
       -ms-border-radius: 100%;
       border-radius: 100%;
-      border: 2px solid transparent;
       display: block;
       width: 35px;
         transition: border 0.4s ease;
@@ -1567,17 +1578,40 @@ position: relative;
       -ms-border-radius: 100%;
       border-radius: 100%;
       display: inline-block;
-      width: 7px;
-      height: 7px;
+      width: 19px;
+      height: 19px;
       background: #999999;
-      vertical-align: middle; }
+      margin-top: 8px;
+      vertical-align: middle;
+      }
+    #projects .projects-nav a.active:hover {
+        border: 4px solid #1618E2;
+    }
     #projects .projects-nav a.active {
 
-      border: 4px solid #2D2FE1; }
+      border: 4px solid #001A98; }
+
+
     #projects .projects-nav a:hover span {
-      background: #2D2FE1; }
+      background: #1618E2; }
     #projects .projects-nav a.active span, #projects .projects-nav a.active:hover span {
       background: none; }
+@media (max-width: 1300px) {
+      #projects .projects-nav {
+        right: 40px;
+        top: 320px;
+      }
+        #projects .projects-nav a span{
+            margin-top: 0px;
+        }
+        #projects .projects-nav a {
+            width: 20px !important;
+            height: 20px !important;
+        }
+        #projects .projects-nav a.active {
+            border: 2px solid #001A98 !important;
+        }
+    }
   #projects .projects-sep {
     height: 1px;
     background: #bbbbbb;
@@ -1612,6 +1646,9 @@ position: relative;
       font-size: 18px;
       line-height: 32px;
       margin-bottom: 40px; }
+    #projects .view:hover {
+        background: #1618E2;
+    }
     #projects .view {
       -webkit-border-radius: 3px;
       -moz-border-radius: 3px;
@@ -1619,7 +1656,7 @@ position: relative;
       border-radius: 3px;
       display: block;
       line-height: 70px;
-      background: #2D2FE1;
+      background: #001A98;
       color: #ffffff;
       text-align: center;
       font-size: 15px;
@@ -1746,7 +1783,7 @@ margin-bottom: 25px;
         .projects-modal .vr-btn svg {
           height: 28px; } }
     .projects-modal .vr-btn svg:hover path {
-      fill: #2D2FE1; }
+      fill: #001A98; }
 
   .projects-modal .close {
     width: 20px;
@@ -1762,14 +1799,14 @@ margin-bottom: 25px;
       width: 20px;
       width: 20px; }
     .projects-modal .close svg:hover path {
-      fill: #2D2FE1; }
+      fill: #001A98; }
   .projects-modal .heading-sep {
     margin: 30px auto; }
   .projects-modal h2 {
     color: #ffffff; }
     .projects-modal h2 span {
       display: block;
-      color: #2D2FE1;
+      color: #001A98;
       font-size: 35px;
       line-height: 35px;
       font-weight: 300;
@@ -1832,7 +1869,7 @@ margin-bottom: 25px;
         padding: 0px 30px; } }
   .projects-modal .projects-bottom {
     color: #f28a83;
-    background: #2D2FE1;
+    background: #001A98;
     position: fixed;
     z-index: 100;
     line-height: 80px;
@@ -1962,7 +1999,7 @@ footer {
       footer .work-together {
         font-size: 20px; } }
     footer .work-together a {
-      background: #2D2FE1;
+      background: #001A98;
       color: #ffffff;
       display: block; }
       @media (max-width: 767px) {
@@ -1971,7 +2008,7 @@ footer {
           line-height: 24px;
           padding: 30px; } }
     footer .work-together a:hover {
-      background: #0003FF; }
+      background: #1618E2; }
     footer .work-together span {
       border-bottom: 2px solid #ffffff; }
   footer .map-hold {
@@ -2004,7 +2041,7 @@ footer {
         font-size: 15px;
         line-height: 25px; } }
     footer .footer-info a {
-      color: #2D2FE1; }
+      color: #001A98; }
   footer .to-top {
     width: 190px;
     position: absolute;

@@ -21,6 +21,11 @@ var Featured = (function($) {
 
 		});
 
+        $('a.slidebtn').hover(function(){
+            $( this ).transition({scale:0.8},300);
+            $( this ).transition({scale:1.1},300);
+        });
+
 		// set first testimonial nav active
 		Slider.element.find('a.slidebtn:eq(0)').addClass('active');
 
