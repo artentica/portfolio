@@ -205,6 +205,32 @@ $('#bandeau_work .workexplefttxt').waypoint(function(direction) {
         }, { offset:'bottom-in-view' });
 
 
+        $('#about_me h2').waypoint(function(direction) {
+            title_anim_aboutme();
+        }, { offset:'bottom-in-view' });
+
+
+        $('#education h2').waypoint(function(direction) {
+            title_anim_educ();
+        }, { offset:'bottom-in-view' });
+
+
+        $('#skills h2').waypoint(function(direction) {
+            title_anim_skills();
+        }, { offset:'bottom-in-view' });
+
+
+        $('#projects .projects-title').waypoint(function(direction) {
+            title_anim_project();
+        }, { offset:'bottom-in-view' });
+
+
+        $('#workexp h2').waypoint(function(direction) {
+            title_anim_workexp();
+        }, { offset:'bottom-in-view' });
+
+
+
 
          $("#education").waypoint(function() {
 
@@ -335,6 +361,45 @@ function project_appear(vip){
     }
 }
 
+function title_anim_aboutme(){
+    if(aboutme_title == 0 ){
+        aboutme_title = 1;
+        $("#about_me h2").transition({opacity:1,y: '0px'},800)
+        $("#about_me .heading-sep").delay(600).transition({opacity:1,scale:1},600);
+    }
+}
+function title_anim_educ(){
+    if(educ_title == 0 ){
+        educ_title = 1;
+        $("#education h2").transition({opacity:1,x: '0px'},800);
+        $("#education .heading-sep").delay(600).transition({opacity:1,scale:1},600);
+    }
+}
+function title_anim_skills(){
+    if(skills_title == 0 ){
+        skills_title = 1;
+        $("#skills h2").transition({opacity:1,x: '0px'},800);
+        $("#skills .heading-sep").delay(600).transition({opacity:1,scale:1},600);
+
+    }
+}
+function title_anim_project(){
+    if(project_title == 0 ){
+        project_title = 1;
+        $("#projects .projects-title h2").transition({opacity:1,x: '0px'},800);
+        $("#projects .heading-sep").delay(600).transition({opacity:1,scale:1},600);
+    }
+}
+
+function title_anim_workexp(){
+    if(title_workexp == 0 ){
+        title_workexp = 1;
+        $("#workexp h2").transition({opacity:1,x: '0px'},800);
+        $("#workexp .heading-sep").delay(600).transition({opacity:1,scale:1},600);
+
+    }
+}
+
 function education_block_rotate(vip){
     var e = $(window).scrollTop();
     var top = $("#education").position().top;
@@ -420,6 +485,7 @@ function education(){
         prinEduc = 1;
         $("#education .service-text").transition({opacity:1,x: '0px'},900);
         $("#education .school img").delay(150).transition({opacity:1,x: '0px'},1000);
+        $("#education .school span").delay(800).transition({scale:1,opacity:1},600);
     }
 
 }
@@ -464,6 +530,11 @@ var isMobileTouch = /ipad|iphone|ipod|android|blackberry|webos|windows phone/i.t
     skillChartAnimationCount = 0,
     footercontactdone = 0,
     prinEduc = 0,
+    aboutme_title = 0,
+    educ_title = 0,
+    title_workexp = 0,
+    skills_title = 0,
+    project_title = 0,
     size_prez_img = $(".aboutme_img_prez img").width(),
     size_height_prez_img = $(".aboutme_img_prez img").height(),
     height_aboutme_container = $("#about_me #container_notscroll").height(),
@@ -476,6 +547,7 @@ var isMobileTouch = /ipad|iphone|ipod|android|blackberry|webos|windows phone/i.t
     var bottom_aboutme= height_aboutme_container_minusImg +$("#about_me").offset().top;
 
 $("#scroll_aboutme img").css( "width", size_prez_img+"px" );
+console.log(size_prez_img);
 $(document).ready(function() {
     browserWidth = $(window).width() + scrollbarWidth();
     browserHeight = $(window).height();
