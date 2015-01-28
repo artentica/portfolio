@@ -205,17 +205,17 @@ $('#bandeau_work .workexplefttxt').waypoint(function(direction) {
         }, { offset:'bottom-in-view' });
 
 
-        $('#about_me h2').waypoint(function(direction) {
+        $('#about_me .heading-sep').waypoint(function(direction) {
             title_anim_aboutme();
         }, { offset:'bottom-in-view' });
 
 
-        $('#education h2').waypoint(function(direction) {
+        $('#education .heading-sep').waypoint(function(direction) {
             title_anim_educ();
         }, { offset:'bottom-in-view' });
 
 
-        $('#skills h2').waypoint(function(direction) {
+        $('#skills .heading-sep').waypoint(function(direction) {
             title_anim_skills();
         }, { offset:'bottom-in-view' });
 
@@ -225,7 +225,7 @@ $('#bandeau_work .workexplefttxt').waypoint(function(direction) {
         }, { offset:'bottom-in-view' });
 
 
-        $('#workexp h2').waypoint(function(direction) {
+        $('#workexp .heading-sep').waypoint(function(direction) {
             title_anim_workexp();
         }, { offset:'bottom-in-view' });
 
