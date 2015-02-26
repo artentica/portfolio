@@ -105,9 +105,9 @@ function initialize() {
   map.setMapTypeId('map_style');
   setMarkers(map, places);
 }
-var image1 = 'assets/img/map-blue.png';
-var image2 = 'assets/img/map-green.png';
-var image3 = 'assets/img/map-purple.png';
+var image1 = 'assets/img/icone_perso.png';
+var image2 = 'assets/img/icone_perso.png';
+var image3 = 'assets/img/icone_perso.png';
 var places = [
   ['Where I live', 48.429923, -4.5513709, 4],
   ['Where I Work', 48.4068511, -4.418686, 3],

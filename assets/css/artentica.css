@@ -106,7 +106,7 @@ padding-bottom: 40px;}
   width: 575px;
   float: right; }
 a {
-  color: #D1DCFF;
+  color: #E4EAFC;
   text-decoration: none;
   outline: none; }
 
@@ -224,7 +224,7 @@ opacity:0;}
       display: inline-block;
       height: 28px;
       width: 28px;
-      border: 2px solid #001A98; }
+      border: 2px solid #0C174D; }
       .service-callout .view-item span img {
         vertical-align: top;
         width: 10px;
@@ -272,7 +272,7 @@ opacity:0;}
     display: block;
     width: 55px;
     height: 55px;
-    border: 2px solid #001A98; }
+    border: 2px solid #0C174D; }
   .circle-callout a:hover {
     -webkit-transform: scale(1.2);
     -moz-transform: scale(1.2);
@@ -317,7 +317,7 @@ span.sub-text {
   margin-bottom: 10px; }
 
 span.red-hit {
-  color: #1618E2; }
+  color: #1416CF; }
 
 
 
@@ -451,7 +451,7 @@ MENU
         .menu .vr-btn svg {
           height: 28px; } }
     .menu .vr-btn svg:hover path {
-      fill: #001A98; }
+      fill: #0C174D; }
 
   .menu .menu-items {
     text-align: center;
@@ -494,7 +494,7 @@ MENU
       display: block;
       font-size: 15px; }
     .menu .menu-items a:hover {
-      color: #001A98; }
+      color: #0C174D; }
     .menu .menu-items .heading-sep {
       margin: 10px auto;
       margin-bottom: 20px; }
@@ -511,10 +511,10 @@ MENU
       width: 20px;
       width: 20px; }
     .menu .close svg:hover path {
-      fill: #001A98; }
+      fill: #0C174D; }
   .menu .menu-bottom {
     color: #f28a83;
-    background: #001A98;
+    background: #0C174D;
     position: absolute;
     line-height: 80px;
     width: 100%;
@@ -548,7 +548,7 @@ NAVIGATION
 */
 #main-nav-hold {
   font-family: "museo-sans", sans-serif;
-  background: #001A98;
+  background: #0C174D;
   font-size: 16px;
   height: 90px;
   position: relative;
@@ -572,15 +572,15 @@ NAVIGATION
     -ms-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
     z-index: 100;
-    border-bottom: 1px solid #001681;
+    border-bottom: 1px solid #141E4D;
     height: 90px;
     position: absolute;
     width: 100%;
     left: 0px;
     top: 0px;
-    background: #001A98; }
+    background: #0C174D; }
     #main-nav-hold .main-nav a.nav-btn {
-     color: #D1DCFF;
+     color: #E4EAFC;
       line-height: 90px;
       margin: 0px 15px; }
       @media (max-width: 1150px) {
@@ -609,7 +609,7 @@ NAVIGATION
       margin: 6px 0px; }
   #main-nav-hold .fixed-nav {
     position: fixed; }
-  #main-nav-hold .main-nav-open {
+  #main-nav-hold .main-nav-open.fixed-nav {
     left: -600px; }
 
   #main-nav-hold .nav-light-gray {
@@ -826,7 +826,7 @@ header {
       padding: 0px;
       display: inline-block; }
     header .scroll a:hover {
-      color: #001A98; }
+      color: #0C174D; }
     header .scroll img {
       width: 70px;
       height: 70px; }
@@ -928,7 +928,7 @@ CONTACT
     padding: 20px 50px;
     font-size: 18px;
     font-family: "museo-sans", sans-serif;
-    background: #001A98;
+    background: #0C174D;
     border: none;
     color: #ffffff;
     font-weight: 700;
@@ -939,7 +939,7 @@ CONTACT
         width: 100%;
         font-size: 15px; } }
   .contact .formsbtn:hover {
-    background: #0003FF; }
+    background: #181994; }
   .contact .close {
     width: 20px;
     position: absolute;
@@ -953,7 +953,7 @@ CONTACT
       width: 20px;
       width: 20px; }
     .contact .close svg:hover path {
-      fill: #001A98; }
+      fill: #0C174D; }
   .contact h2 {
     color: #ffffff;
     font-size: 50px;
@@ -984,10 +984,10 @@ about_me
     margin-bottom: 0px; }
 
 #about_me {
-  background: #001A98; /*0C174D*/
+  background: #0C174D; /*0C174D*/
   padding: 50px 0px;
   padding-bottom: 0px;
-  color: #D1DCFF;;
+  color: #E4EAFC;
   position: relative;
   overflow: hidden; }
   @media (max-width: 767px) {
@@ -1042,7 +1042,7 @@ about_me
     background: #fb584d; }
     #about_me .service-sep span {
       border: 2px solid #fb584d;
-      background: #001A98; }
+      background: #0C174D; }
   #about_me .service-callout .text {
     color: #ffffff; }
   #about_me .shadow-bottom {
@@ -1640,15 +1640,15 @@ position: relative;
       vertical-align: middle;
       }
     #projects .projects-nav a.active:hover {
-        border: 4px solid #1618E2;
+        border: 4px solid #0D0E7C;
     }
     #projects .projects-nav a.active {
 
-      border: 4px solid #001A98; }
+      border: 4px solid #0C174D; }
 
 
     #projects .projects-nav a:hover span {
-      background: #1618E2; }
+      background: #0D0E7C; }
     #projects .projects-nav a.active span, #projects .projects-nav a.active:hover span {
       background: none; }
 @media (max-width: 1300px) {
@@ -1664,7 +1664,7 @@ position: relative;
             height: 20px !important;
         }
         #projects .projects-nav a.active {
-            border: 2px solid #001A98 !important;
+            border: 2px solid #0C174D !important;
         }
     }
   #projects .projects-sep {
@@ -1702,7 +1702,7 @@ position: relative;
       line-height: 32px;
       margin-bottom: 40px; }
     #projects .view:hover {
-        background: #1618E2;
+        background: #0D0E7C;
     }
     #projects .view {
       -webkit-border-radius: 3px;
@@ -1711,7 +1711,7 @@ position: relative;
       border-radius: 3px;
       display: block;
       line-height: 70px;
-      background: #001A98;
+      background: #0C174D;
       color: #ffffff;
       text-align: center;
       font-size: 15px;
@@ -1838,7 +1838,7 @@ margin-bottom: 25px;
         .projects-modal .vr-btn svg {
           height: 28px; } }
     .projects-modal .vr-btn svg:hover path {
-      fill: #001A98; }
+      fill: #0C174D; }
 
   .projects-modal .close {
     width: 20px;
@@ -1854,14 +1854,14 @@ margin-bottom: 25px;
       width: 20px;
       width: 20px; }
     .projects-modal .close svg:hover path {
-      fill: #001A98; }
+      fill: #0C174D; }
   .projects-modal .heading-sep {
     margin: 30px auto; }
   .projects-modal h2 {
     color: #ffffff; }
     .projects-modal h2 span {
       display: block;
-      color: #001A98;
+      color: #0C174D;
       font-size: 35px;
       line-height: 35px;
       font-weight: 300;
@@ -1924,7 +1924,7 @@ margin-bottom: 25px;
         padding: 0px 30px; } }
   .projects-modal .projects-bottom {
     color: #f28a83;
-    background: #001A98;
+    background: #0C174D;
     position: fixed;
     z-index: 100;
     line-height: 80px;
@@ -2054,7 +2054,7 @@ footer {
       footer .work-together {
         font-size: 20px; } }
     footer .work-together a {
-      background: #001A98;
+      background: #0C174D;
       color: #ffffff;
       display: block; }
       @media (max-width: 767px) {
@@ -2063,7 +2063,7 @@ footer {
           line-height: 24px;
           padding: 30px; } }
     footer .work-together a:hover {
-      background: #1618E2; }
+      background: #0D0E7C; }
     footer .work-together span {
       border-bottom: 2px solid #ffffff; }
   footer .map-hold {
@@ -2096,7 +2096,7 @@ footer {
         font-size: 15px;
         line-height: 25px; } }
     footer .footer-info a {
-      color: #001A98; }
+      color: #0C174D; }
   footer .to-top {
     width: 190px;
     position: absolute;

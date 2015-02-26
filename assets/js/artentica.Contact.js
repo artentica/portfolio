@@ -51,10 +51,10 @@ var Contact = (function($) {
 	var sendForm = function(id) {
 
 		var formData = $('#form-contact').serialize();
-
+        console.log(formData);
 		$.ajax({
 			type: 'POST',
-			url: 'contact-send.php',
+			url: 'send_mail.php',
 			data: formData
 		}).success(function() {
 
