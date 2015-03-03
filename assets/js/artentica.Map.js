@@ -133,12 +133,18 @@ function setMarkers(map, locations) {
     var marker = new google.maps.Marker({
         position: myLatLng,
         map: map,
-        title: place[0],
+        /*title: place[0],*/
         zIndex: place[3],
         icon: image,
         draggable: false,
         animation: google.maps.Animation.DROP
     });
+      var infowindow = new google.maps.InfoWindow({
+      content: "<span style='color: #4F4F4F;'>"+place[0]+"</span>"
+  });
+      google.maps.event.addListener(marker, 'click', function() {
+            infowindow.open(map, this);
+        });
   }
 }
 

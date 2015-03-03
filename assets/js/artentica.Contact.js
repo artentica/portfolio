@@ -54,15 +54,17 @@ var Contact = (function($) {
         console.log(formData);
 		$.ajax({
 			type: 'POST',
-			url: 'send_mail.php',
+			url: 'mail.php',
 			data: formData
 		}).success(function() {
 
 			$('#contact-content').html('<b>Merci de m\'avoir contacté. Je vous répond le plus vite possible.</b><br/><br/><p><a href="javascript:Contact.showContact();" class="formsbtn">Close</a></p>');
 
-		});
+		}).error(function(){
+            $('#contact-content').html('<b>Une erreur est survenue veuiller m\'en excuser. </b><br/><br/><p><a href="javascript:Contact.showContact();" class="formsbtn">Close</a></p>');
+        });
 
-		$('#contact-content').html('<b>Merci de m\'avoir contacté. Je vous répond le plus vite possible.</b><br/><br/><p><a href="javascript:Contact.showContact();" class="formsbtn">Close</a></p>');
+		/*$('#contact-content').html('<b>Merci de m\'avoir contacté. Je vous répond le plus vite possible.</b><br/><br/><p><a href="javascript:Contact.showContact();" class="formsbtn">Close</a></p>');*/
 
 	};
 

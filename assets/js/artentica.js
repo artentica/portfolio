@@ -133,7 +133,8 @@ var Artentica = (function($) {
         }, { offset:'60%' });
 
 $('#bandeau_work .workexplefttxt').waypoint(function(direction) {
-            work_exp("bandeau_work",1)
+            work_exp("bandeau_work",1);
+            $("#bandeau_work .service-sep").delay(300).transition({scale:1},900);
         }, { offset:'bottom-in-view' });
 
 		// projects snap point
