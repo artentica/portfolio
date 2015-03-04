@@ -230,6 +230,10 @@ $('#bandeau_work .workexplefttxt').waypoint(function(direction) {
             title_anim_workexp();
         }, { offset:'bottom-in-view' });
 
+        $('.projects-item div').waypoint(function(direction) {
+            minproject($(this));
+        }, { offset:'bottom-in-view' });
+
 
 
 
@@ -481,6 +485,13 @@ function skillChartAnimation(vip) {
     }
 }
 
+function minproject(e){
+/*    if(minprojectvar == 0){
+        minprojectvar = 1;*/
+        $(e).transition({opacity:1,x: '0px'},600);
+/*}*/
+}
+
 function education(){
     if(prinEduc == 0){
         prinEduc = 1;
@@ -534,6 +545,7 @@ var isMobileTouch = /ipad|iphone|ipod|android|blackberry|webos|windows phone/i.t
     aboutme_title = 0,
     educ_title = 0,
     title_workexp = 0,
+   /* minprojectvar = 0,*/
     skills_title = 0,
     project_title = 0,
     size_prez_img = $(".aboutme_img_prez img").width(),
