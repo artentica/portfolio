@@ -38,7 +38,9 @@ body {
   font-weight: 300;
   color: #757575;
   line-height: 36px;
-  font-size: 23px; }
+  /*font-size: 23px;*/
+  font-size: 19px;
+}
   @media (max-width: 1150px) {
     body {
       font-size: 20px;
@@ -52,6 +54,16 @@ body {
   margin: auto;
   width: 85%;
   position: relative; }
+
+#about_me .container {
+  margin: auto;
+width: 98%;
+position: relative;
+margin-left: 0%
+}
+
+
+
 
   @media (max-width: 767px) {
     .container {
@@ -110,6 +122,54 @@ a {
   text-decoration: none;
   outline: none; }
 
+  #about_me a{
+    color: #ABBFFD;
+/*    font-weight: 600;*/
+    letter-spacing: 1px;
+  }
+
+  #about_me a:hover{
+    color: #7698FF;
+    text-decoration: underline;
+  }
+#about_me p{
+    text-indent:20px;
+}
+
+#about_me .text2{
+    cursor: pointer;
+    border-top: solid 2px #152574;
+}
+
+#about_me .text2:hover{
+     background: #141E52;
+
+    text-decoration: none;
+}
+
+#about_me .text2 a{
+    height:50%;
+    line-height: 62px;
+    text-decoration: none;
+    color: inherit;
+}
+
+#about_me .text2 a{
+    margin: 0;
+    height: 100%;
+}
+
+#about_me .service-callout {
+width: 75%;
+margin: auto;
+    border-radius: 3px;
+color: #FFF;
+display: block;
+background: #0F1949;
+text-align: center;
+font-size: 15px;
+letter-spacing: 2px;
+}
 a img {
   border: none; }
 
@@ -1042,7 +1102,8 @@ about_me
     #scroll_aboutme{
     position:fixed;
       bottom: 0;
-        width: 40%;
+       padding-left: 6.5%;
+    padding-right: 6.5%;width:27%;
         z-index: 10;
     }
     .notdisplay{
@@ -1050,7 +1111,9 @@ about_me
     }
 
   #about_me .aboutme_img_prez {
-    width: 40%;
+    padding-left: 6.5%;
+    padding-right: 2.5%;
+      width:27%;
     z-index: 10; }
 #about_me .aboutme_img_prez img{
     padding: 0;
@@ -1058,7 +1121,11 @@ about_me
 
     @media (max-width: 960px) {
       #about_me .aboutme_img_prez {
-        width: 100%;
+        width: 60%;
+margin: auto;
+position: initial;
+padding: inherit;
+
         position:initial;} }
 
     color: #ffffff; }
@@ -1383,7 +1450,7 @@ RESEARCH & DEVELOPMENT
         padding-bottom: 0px; } }
 
     .column-right {
-  width: 55%;
+  width: 60%;
   padding-bottom: 40px;
   padding-right: 3%;
   padding-left: 2%;
@@ -2616,6 +2683,21 @@ float: right;
   content: "\e025";
 }
 
+/*C'est le bordel dans mon css*/
 
 
+.title_ul{
+  margin-bottom: 5px;
+    text-indent:0px !important;
+}
 
+#about_me ul{
+  margin-top: 0;
+  list-style: none;
+}
+
+#about_me ul li{
+
+  padding-left: 15px;
+  display: inherit;
+}

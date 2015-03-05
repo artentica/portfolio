@@ -510,29 +510,30 @@ function open_page(){
 
 function change_prez_img(position,start,size){
     var part = size/8;
+   /*console.log((position)+"   "+(start+part)+"   "+(start+part*2)+" size: "+size);*/
     if(position>=start+part && position < start+part*2){
-        $("#scroll_aboutme img").attr('src', 'assets/img/scroll2.png');
+        $("#scroll_aboutme img").attr('src', 'assets/img/scroll2test.png');
     }
      if(position>=start+part*2 && position < start+part*3){
-        $("#scroll_aboutme img").attr('src', 'assets/img/scroll3.png');
+        $("#scroll_aboutme img").attr('src', 'assets/img/scroll3test.png');
     }
      if(position>=start+part*3 && position < start+part*4){
-        $("#scroll_aboutme img").attr('src', 'assets/img/scroll4.png');
+        $("#scroll_aboutme img").attr('src', 'assets/img/scroll4test.png');
     }
      if(position>=start+part*4 && position < start+part*5){
-        $("#scroll_aboutme img").attr('src', 'assets/img/scroll5.png');
+        $("#scroll_aboutme img").attr('src', 'assets/img/scroll5test.png');
     }
      if(position>=start+part*5 && position < start+part*6){
-        $("#scroll_aboutme img").attr('src', 'assets/img/scroll6.png');
+        $("#scroll_aboutme img").attr('src', 'assets/img/scroll6test.png');
     }
      if(position>=start+part*6 && position < start+part*7){
-        $("#scroll_aboutme img").attr('src', 'assets/img/scroll7.png');
+        $("#scroll_aboutme img").attr('src', 'assets/img/scroll7test.png');
     }
      if(position>=start+part*7 && position < start+part*8){
-        $("#scroll_aboutme img").attr('src', 'assets/img/scroll8.png');
+        $("#scroll_aboutme img").attr('src', 'assets/img/scroll8test.png');
     }
      if(position>=start+part*8){
-        $("#scroll_aboutme img").attr('src', 'assets/img/scroll9.png');
+        $("#scroll_aboutme img").attr('src', 'assets/img/scroll9test.png');
     }
 }
 
@@ -560,7 +561,7 @@ var isMobileTouch = /ipad|iphone|ipod|android|blackberry|webos|windows phone/i.t
     var bottom_aboutme= height_aboutme_container_minusImg +$("#about_me").offset().top;
 
 $("#scroll_aboutme img").css( "width", size_prez_img+"px" );
-console.log(size_prez_img);
+/*console.log(size_prez_img);*/
 $(document).ready(function() {
     browserWidth = $(window).width() + scrollbarWidth();
     browserHeight = $(window).height();
@@ -577,7 +578,7 @@ $(document).ready(function() {
         size_prez_img = $(".aboutme_img_prez img").width();
         size_height_prez_img = $(".aboutme_img_prez img").height();
         height_aboutme_container_minusImg = $("#about_me #container_notscroll").height() - size_height_prez_img;
-        bottom_img_prez_offset = $("#about_me #container_notscroll img").offset().top + size_height_prez_img;
+        bottom_img_prez_offset = $("#container_notscroll > div.aboutme_img_prez > img").offset().top + size_height_prez_img;
         $("#scroll_aboutme img").css( "width", size_prez_img+"px" );
         bottom_aboutme= height_aboutme_container +$("#about_me").offset().top;
 

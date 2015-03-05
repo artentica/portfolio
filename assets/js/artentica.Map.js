@@ -139,13 +139,38 @@ function setMarkers(map, locations) {
         draggable: false,
         animation: google.maps.Animation.DROP
     });
-      var infowindow = new google.maps.InfoWindow({
-      content: "<span style='color: #4F4F4F;'>"+place[0]+"</span>"
-  });
-      google.maps.event.addListener(marker, 'click', function() {
-            infowindow.open(map, this);
-        });
+      attachSecretMessage(marker, place[0]);
   }
 }
 
+
+function attachSecretMessage(marker, message) {
+  var infowindow = new google.maps.InfoWindow({
+    content: message
+  });
+
+  google.maps.event.addListener(marker, 'click', function() {
+    infowindow.open(marker.get('map'), marker);
+  });
+}
+
+/*function attachSecretMessage(marker,string) {
+  var infowindow = new google.maps.InfoWindow({
+    content: "<span style='color: #4F4F4F;'>"+string+"</span>"
+  });
+
+  google.maps.event.addListener(marker, 'click', function() {
+    infowindow.open(map, marker);
+  });
+}*/
+
+
 google.maps.event.addDomListener(window, 'load', initialize);
+
+/*
+      marker.infowindow = new google.maps.InfoWindow({
+      content: "<span style='color: #4F4F4F;'>"+place[0]+"</span>"
+  });
+      google.maps.event.addListener(marker, 'click', function() {
+            marker.infowindow.open(map);
+        });*/
