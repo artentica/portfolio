@@ -1440,6 +1440,7 @@ RESEARCH & DEVELOPMENT
     transform: translate(60px,-20px);
 }
   #workexp .column-right {
+    width: 55%;
     z-index: 10;
     position: relative; }
     @media (max-width: 960px) {
