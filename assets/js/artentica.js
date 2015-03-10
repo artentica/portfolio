@@ -359,9 +359,22 @@ function project_appear(vip){
     $("#projects-slider .projects-block").each(function(e) {
                 $(this).delay(e*150).transition({opacity:1,y: '0px'},800);
     });
-    $("#projects .projects-nav a").each(function(e) {
-                $(this).delay(e*200).transition({scale:1},1000);
+    $(".horizontal-line").transition({opacity:1,scale:1},800);
+
+    $(".vertical-line").transition({opacity:1,scale:1},800);
+
+    $(".menu-slide span").each(function(e) {
+                $(this).delay(e*150).transition({opacity:1,scale:1},800);
     });
+
+     $("#projects .view").delay(350).transition({opacity:1,y: '0px'},800);
+
+
+    /*$("#projects .projects-nav a").each(function(e) {
+                $(this).delay(e*200).transition({scale:1},1000);
+    });*/
+
+
 
     }
 }

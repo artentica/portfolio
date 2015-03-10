@@ -1,10 +1,10 @@
 @font-face {
 	font-family: 'icomoon';
-	src:url('http://i.icomoon.io/public/temp/2a90d9a6fe/portfolio/icomoon.eot?-lm30q0');
-	src:url('http://i.icomoon.io/public/temp/2a90d9a6fe/portfolio/icomoon.eot?#iefix-lm30q0') format('embedded-opentype'),
-		url('http://i.icomoon.io/public/temp/2a90d9a6fe/portfolio/icomoon.woff?-lm30q0') format('woff'),
-		url('http://i.icomoon.io/public/temp/2a90d9a6fe/portfolio/icomoon.ttf?-lm30q0') format('truetype'),
-		url('http://i.icomoon.io/public/temp/2a90d9a6fe/portfolio/icomoon.svg?-lm30q0#icomoon') format('svg');
+	src:url('fonts/icomoon.eot?-dpw5dn');
+	src:url('fonts/icomoon.eot?#iefix-dpw5dn') format('embedded-opentype'),
+		url('fonts/icomoon.woff?-dpw5dn') format('woff'),
+		url('fonts/icomoon.ttf?-dpw5dn') format('truetype'),
+		url('fonts/icomoon.svg?-dpw5dn#icomoon') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -42,3 +42,4 @@
 .icon-wrench:before {
 	content: "\e991";
 }
+
