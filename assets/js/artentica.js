@@ -142,7 +142,7 @@ $('#bandeau_work .workexplefttxt').waypoint(function(direction) {
 			$('.main-nav a').removeClass('active');
 			if(direction == 'down') {
 
-               $('.main-nav').removeClass('nav-light-gray');
+                $('.main-nav').removeClass('nav-light-gray');
 				$('.main-nav').addClass('nav-dark-gray');
 				$('.main-nav a.projects-btn').addClass('active');
 				$('#project').addClass('active');
@@ -356,12 +356,13 @@ function project_appear(vip){
     if(e>=top && projects_appear_state == 0 || vip && projects_appear_state == 0 ){
         projects_appear_state = 1;
     $("#projects-slider .project-main-line").transition({opacity:1,x: '0px'},1000);
+    $("#projects-slider .title-projects-slide h2").transition({opacity:1,x: '0px'},1000);
     $("#projects-slider .projects-block").each(function(e) {
                 $(this).delay(e*150).transition({opacity:1,y: '0px'},800);
     });
-    $(".horizontal-line").transition({opacity:1,scale:1},800);
+    $("#projects-slider .horizontal-line").transition({opacity:1,scale:1},800);
 
-    $(".vertical-line").transition({opacity:1,scale:1},800);
+    $("#projects-slider .vertical-line").transition({opacity:1,scale:1},800);
 
     $(".menu-slide span").each(function(e) {
                 $(this).delay(e*150).transition({opacity:1,scale:1},800);
@@ -426,6 +427,8 @@ function education_block_rotate(vip){
     $(".education-row .education-block").each(function(e) {
                 $(this).delay(e*200).transition({opacity:1,rotateY: '0deg'},800);
     });
+        $("#education .vertical-line").delay(600).transition({opacity:1,scale:1},800);
+        $("#education .vertical-line2").delay(600).transition({opacity:1,scale:1},800);
     }
 }
 
@@ -509,6 +512,7 @@ function education(){
     if(prinEduc == 0){
         prinEduc = 1;
         $("#education .service-text").transition({opacity:1,x: '0px'},900);
+        $("#education .service-callout").delay(750).transition({opacity:1,y: '0px'},800);
         $("#education .school img").delay(150).transition({opacity:1,x: '0px'},1000);
         $("#education .school span").delay(800).transition({scale:1,opacity:1},600);
     }

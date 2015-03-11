@@ -42,3 +42,7 @@
 .icon-wrench:before {
 	content: "\e991";
 }
+
+.icon-mail:before {
+	content: "\e600";
+}

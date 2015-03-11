@@ -200,6 +200,10 @@ a img {
     .service-text {
       margin-bottom: 60px; } }
 
+#about_me .service-text{
+    margin-bottom: 20px;
+}
+
 #education .container {
     margin-top: 40px;
 }
@@ -1237,26 +1241,41 @@ float: right; }
     opacity:0;
     transform-origin: left;
     transform:rotateY(-90deg);
-    width: 25%;
+    width: 24.8%;
     float: left;
     height: 450px;
     box-sizing: border-box;
-    border-right: 1px dashed #bfbfbf;
+    /*border-right: 1px dashed #bfbfbf;*/
     text-align: center;
     padding: 80px 50px;
     font-size: 17px;
     line-height: 28px;
     position: relative; }
+#education .vertical-line2{
+          display: none;
+      }
     @media (max-width: 1150px) {
-      #education .education-block {
+    #education .vertical-line2{
+          display: none;
+      }
+    #education .vertical-line{
+          display: inherit;
+      }
+    #education .education-block {
         padding: 60px 40px;
         font-size: 16px;
         line-height: 26px; } }
     @media (max-width: 960px) {
+      #education .vertical-line{
+          display: none;
+      }
+        #education .vertical-line2{
+          display: inherit;
+      }
       #education .education-block {
         background: #F0F0F0;
         border-top: 1px solid #bfbfbf;
-        width: 50%;
+        width: 49.5%;
         padding: 70px 30px;
         height: 330px; } }
     @media (max-width: 767px) {
@@ -1264,7 +1283,14 @@ float: right; }
         float: none;
         width: auto;
         border-right: none;
-        height: auto; } }
+        height: auto; }
+        #education .vertical-line2{
+          display: none;
+      }
+         #education .vertical-line{
+          display: none;
+      }
+    }
     #education .education-block h3 {
       letter-spacing: 0px;
       font-size: 20px;
@@ -1663,6 +1689,8 @@ position: relative;
 .title-projects-slide h2{
     font-size: 30px;
     letter-spacing: 1px;
+    opacity:0;
+    transform: translateX(-20px)
     /*color: #A9A9A9;*/
 }
 #projects .heading-sep{
@@ -2741,7 +2769,14 @@ margin-right: 40px;
     height: 2px;
     background-color: rgba(197, 197, 197, 0.27);
 }
-.vertical-line{
+
+#education .vertical-line,#education .vertical-line2{
+    background-color: rgba(134, 134, 134, 0.36);
+    height: 60%;
+    top: 25%;
+}
+
+.vertical-line,.vertical-line2{
     opacity: 0;
     transform: scaleY(0);
     float: left;
@@ -2753,6 +2788,9 @@ margin-right: 40px;
    background-color: rgba(197, 197, 197, 0.27);
 }
 
+#education .vertical-line2{
+    height: 30%;
+}
 .second-line-proj{
     position: relative;
 }
@@ -2775,3 +2813,66 @@ margin-right: 40px;
 .clearfix {
     display: inline-block;
 }*/
+
+.service-callout .email{
+    height: 48px;
+margin-top: 8px;
+    float:left;
+    margin-left:60px
+}
+
+@media (max-width: 960px) {
+   .service-callout .email{
+    margin-left: 0;
+   }
+}
+
+#education .service-callout {
+    width: 75%;
+    margin: auto;
+    border-radius: 3px;
+    color: #FFF;
+    display: block;
+    background: #424242;
+    text-align: center;
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+
+#education .service-callout .image img{
+    height: 75%;
+    padding-top: 3%;
+}
+#education .service-callout .image {
+    height: 64px;
+    overflow: hidden;
+    float: left;
+    position: relative;
+}
+
+#education .service-callout .text {
+    float: left;
+    margin-top: 20px;
+    margin-left: 30px;
+    width: initial;
+}
+
+#education .service-callout:hover{
+     background: #4D4D4D;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#education ul{
+    list-style: none;
+}
+
+#education ul li {
+    padding-left: 20px;
+    /*line-height: 23px;*/
+}
+
+#education .service-callout{
+    opacity: 0;
+    transform: translate(0px, 30px);
+}
