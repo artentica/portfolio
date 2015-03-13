@@ -78,7 +78,9 @@
 		function getPosition() {
 
 			// Calculate new position based on speed / scroll position / start position
-			return ($(window).scrollTop() * options.speed) - (options.startPos * options.speed) + options.start;
+           var value = ($(window).scrollTop() * options.speed) - (options.startPos * options.speed) + options.start;
+            if(value<0) value=0;
+			return value;
 
 		};
 

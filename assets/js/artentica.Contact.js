@@ -51,7 +51,7 @@ var Contact = (function($) {
 	var sendForm = function(id) {
 
 		var formData = $('#form-contact').serialize();
-        console.log(formData);
+        /*console.log(formData);*/
 		$.ajax({
 			type: 'POST',
 			url: 'mail.php',

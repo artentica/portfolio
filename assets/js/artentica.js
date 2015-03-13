@@ -1,4 +1,8 @@
 $('.parallax-top').Parallax({ property:'top', speed:0.72, start:0, delay:0 });
+/*$('#education > div.container > div.school').Parallax({ property:'top', speed:0.9, start:0, delay:50 });*/
+$('.school').Parallax({ property:'top', speed:0.50, start:0, delay:-230,duration:800 });
+
+
 var Artentica = (function($) {
 
 	var init = function() {
@@ -117,24 +121,26 @@ var Artentica = (function($) {
 		}, { offset:'80px' });
 
         $('#1exp').waypoint(function(direction) {
-            work_exp("1exp",1)
+            work_exp("1exp",1);
         }, { offset:'60%' });
 
         $('#2exp').waypoint(function(direction) {
-             work_exp("2exp",1)
+             work_exp("2exp",1);
         }, { offset:'60%' });
 
-        $('#3exp').waypoint(function(direction) {
+     /*   $('#3exp').waypoint(function(direction) {
             work_exp("3exp",1)
         }, { offset:'60%' });
 
         $('#4exp').waypoint(function(direction) {
             work_exp("4exp",1)
-        }, { offset:'60%' });
+        }, { offset:'60%' });*/
 
 $('#bandeau_work .workexplefttxt').waypoint(function(direction) {
             work_exp("bandeau_work",1);
             $("#bandeau_work .service-sep").delay(300).transition({scale:1},900);
+            $("#bandeau_work .service-callout img").delay(150).transition({opacity:1,y:0},900);
+
         }, { offset:'bottom-in-view' });
 
 		// projects snap point
@@ -261,12 +267,19 @@ $('#bandeau_work .workexplefttxt').waypoint(function(direction) {
                footer_contact(1);
         }, { offset:'bottom-in-view' });
 
+       $(".moving_skill_desc").waypoint(function() {
+        $(this).transition({opacity:1,x: '0px'},700);
+        }, { offset:'bottom-in-view' });
+
         $('#foot_page').waypoint(function(direction) {
 			$('.main-nav a').removeClass('active');
 
 			if(direction == 'down') {
-                 $('.main-nav').removeClass('nav-dark-gray');
+                $('.main-nav').removeClass('nav-dark-gray');
 				$('.main-nav').addClass('nav-light-gray');
+                $('.map-btn').addClass('active');
+
+
 			} else {
                 $('.main-nav').removeClass('nav-light-gray');
 				$('.main-nav').addClass('nav-dark-gray');
@@ -323,9 +336,7 @@ function descrip_skills(){
         var top = $("#skills").position().top;
     if(e>=top && desc_skill == 0){
         desc_skill = 1;
-        $("#skills .moving_skill_desc").each(function(e) {
-                            $(this).delay(e*80).transition({opacity:1,x: '0px'},700);
-                        });
+
     }
 
 }
@@ -338,6 +349,56 @@ function work_exp(id,vip){
     $("#" +id +" .column-rightimg").transition({opacity:1,x: '0px'},700);
     $("#" +id +" .workexplefttxt").transition({opacity:1,x: '0px'},700);
     }
+}
+
+function collapsework(e){
+    var minus="Less Work experiences informations ";
+    var plus="More Work experiences informations ";
+
+    var value = e.data("value");
+
+   /* console.log(value);*/
+    if(!value){
+        e.children(".text2").children("a").text(minus);
+        e.children(".text2").children("span").removeClass();
+        e.children(".text2").children("span").addClass("icon-minus");
+                e.data("value",1);
+
+    }else{
+        e.children(".text2").children("a").text(plus);
+        e.children(".text2").children("span").removeClass();
+        e.children(".text2").children("span").addClass("icon-plus");
+                e.data("value",0);
+
+
+    }
+
+}
+
+function collapseskill(e){
+    var minus="Less informations on my skills";
+    var plus="More informations on my skills";
+
+    var value = e.data("value");
+
+   /* console.log(value);*/
+    if(!value){
+        e.children(".text2").children("a").text(minus);
+        e.children(".text2").children("span").removeClass();
+        e.children(".text2").children("span").addClass("icon-minus");
+                e.data("value",1);
+
+    }else{
+        e.children(".text2").children("a").text(plus);
+        e.children(".text2").children("span").removeClass();
+        e.children(".text2").children("span").addClass("icon-plus");
+                e.data("value",0);
+    }
+
+    /*$('.under_div_none').collapse('toggle');*/
+    $('#detail_skill').collapse('toggle');
+    $('.under_div_none').collapse('toggle');
+
 }
 
 function footer_contact(vip){
@@ -525,6 +586,18 @@ function open_page(){
     $("header div.text div.container").transition({opacity:1},2000);
 }
 
+function skill_spe(e){
+    var label = e.data("label");
+     console.log(e);
+    $(".under_div_none .moving_skill_desc").each(function(index) {
+        if(label == $(this).data("label")){
+            if($(this).css( "display")=="none")$(this).css( "display","block");
+            else $(this).css( "display","none");
+
+        }
+    });
+}
+
 function change_prez_img(position,start,size){
     var part = size/8;
    /*console.log((position)+"   "+(start+part)+"   "+(start+part*2)+" size: "+size);*/
@@ -612,3 +685,4 @@ $(document).ready(function() {
 
 
 });
+
