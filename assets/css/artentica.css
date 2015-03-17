@@ -57,7 +57,7 @@ body {
 
 #about_me .container {
   margin: auto;
-width: 98%;
+width: 100%;
 position: relative;
 margin-left: 0%
 }
@@ -123,8 +123,8 @@ a {
   outline: none; }
 
   #about_me a{
-    color: #ABBFFD;
-/*    font-weight: 600;*/
+    color: #9D9D9D;
+font-weight: 600;
     letter-spacing: 1px;
   }
 
@@ -132,8 +132,20 @@ a {
     color: #7698FF;
     text-decoration: underline;
   }
+#about_me li{
+    opacity: 0;
+    transform: translateX(20px);
+}
+
+#about_me .image.email{
+    transform: translateX(-40px);
+    opacity: 0;
+}
+
 #about_me p{
     text-indent:20px;
+    opacity: 0;
+    transform: translateX(20px);
 }
 
 #about_me .text2{
@@ -159,10 +171,20 @@ a {
     height: 100%;
 }
 
+.group_callout,.mail_button{
+   transform: translate(60px,0px);
+    opacity: 0;
+}
+.group_callout img{
+    transform: translateX(-40%);
+    opacity: 0;
+}
+
 #about_me .service-callout {
 width: 75%;
 margin: auto;
-    border-radius: 3px;
+
+border-radius: 3px;
 color: #FFF;
 display: block;
 background: #0F1949;
@@ -418,6 +440,20 @@ background: #ffffff;
 margin: 25px 0px;
 margin-left: 35px;
 margin-bottom: 0px; }
+
+#projects .projects-title .heading-sep,#skills .box_title .heading-sep, #workexp .box_title .heading-sep, #education .box_title .heading-sep, #about_me .box_title .heading-sep {
+  width: 90%;
+height: 2px;
+
+margin: auto; }
+
+.#projects .projects-title .heading-sep, #workexp .box_title .heading-sep, #about_me .box_title .heading-sep {
+    background: #ffffff;
+}
+
+#skills .box_title .heading-sep, #education .box_title .heading-sep  {
+    background: #414141;
+}
 
 .loading-modal {
   font-family: "Open San","verdana","helvetica","museo", serif;
@@ -1159,7 +1195,7 @@ RESEARCH & PROTOTYPING
     #education {
       padding: 60px 0px; } }
   #education h2 {
-    margin-left: 25px;
+    /*margin-left: 25px;*/
     color: #424242;
     transform: translateX(-100%);
     opacity: 0;}
@@ -1325,7 +1361,7 @@ float: right; }
 
 #skills {
   background: #F0F0F0;
-  padding: 100px 0px;
+  padding: 50px 0px;
   padding-bottom: 0px;
   overflow: hidden; }
   @media (max-width: 767px) {
@@ -1334,7 +1370,7 @@ float: right; }
   #skills h2 {
     transform: translateX(-300px);
     opacity: 0;
-    margin-left: 25px;
+    /*margin-left: 25px;*/
     color: #424242; }
   #skills .column-left {
     z-index: 10;
@@ -1544,10 +1580,16 @@ box-shadow: 0px 1px rgba(29, 29, 29, 0.78);
 }
 
 .workexpleftimg {
-  max-width: 40%;
+
     opacity:0;
 transform: translate(-80px,60px);
   float: left; }
+
+@media (min-width: 960px) {
+    .workexpleftimg {
+        max-width: 40%;
+    }
+}
 #bandeau_work .workexplefttxt {
     opacity: 0;
 transform: translate(-60px,0px);
@@ -1722,8 +1764,8 @@ position: relative;
     position: absolute;
     left: 0px;
     top: 0px;
-    padding: 60px;
-    padding-left: 0px;}
+    padding: 50px;
+    padding-left: 25px;}
     @media (max-width: 1300px) {
       #projects .projects-title {
         padding: 40px; } }
@@ -1731,7 +1773,7 @@ position: relative;
      /* color: #414141;*/
     transform: translateX(-100%);
     opacity: 0;
-        margin-left: 25px;
+        /*margin-left: 25px;*/
       margin-bottom: 40px;
       /*font-size: 50px;*/
       line-height: 50px; }
@@ -2378,6 +2420,7 @@ footer {
 
 #skills-chart #chart-data {
     padding-top: 30px;
+    cursor: pointer;
     margin: 0;
     background: url('../img/img_skill/skills-chart-hbar-grid.svg') no-repeat 0 100%}
 #skills-chart #chart-data li {
@@ -2634,8 +2677,8 @@ ul li span{
 }
 
 #skills #description_skill{
-    width: 90%;
-margin: auto;
+    width: 100%;
+
 }
    #skills .title_skills_description{
    width: 20%;
@@ -2651,10 +2694,10 @@ float: right;
     float: none
 }
 
-    #skills .moving_skill_desc{
+/*    #skills .moving_skill_desc{
    opacity: 0;
-        transform: translate(-100px, 0px)
-}
+        transform: translate(-100px, 0px);
+}*/
 }}
 #workexp .text2{
     cursor: pointer;
@@ -2860,6 +2903,13 @@ margin-top: 8px;
     width: initial;
 }
 
+@media (max-width: 960px) {
+   #education .service-callout .text {
+    float: none;
+    margin-left: 0px;
+   }
+}
+
 #education .service-callout:hover{
      background: #4D4D4D;
     cursor: pointer;
@@ -2922,9 +2972,10 @@ tbody.collapse.in {
     opacity: 1;
     transform: translate(0,0);
 }
-
-#skills .service-callout a{
-    line-height: 62px;
+@media screen and (min-width:399px) {
+    #skills .service-callout a{
+        line-height: 62px;
+    }
 }
 
 #skills .service-callout .text2{
@@ -2945,6 +2996,71 @@ text-align: center;
 font-size: 15px;
 letter-spacing: 2px;
 }
-.under_div_none div{
+.under_div_none .moving_skill_desc{
     display:none;
+}
+.education-row a{
+    color:#2A2A2A;
+}
+.education-row a:hover{
+    color: #1B1B1B;
+    text-decoration: underline;
+}
+
+.under_div_none .moving_skill_desc,#description_skill .moving_skill_desc{
+    width: 32.8%;
+    float: left;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 20px 20px;
+    font-size: 17px;
+    line-height: 28px;
+    position: relative;
+}
+
+.group_desc_skill{
+    width: 100%;
+}
+
+@media screen and (max-width:767px) {
+    .under_div_none .moving_skill_desc,#description_skill .moving_skill_desc{
+        width: 49.8%;
+    }
+}
+
+.skill_img img{
+    padding-bottom: 5px;
+    width:30%;
+    max-height: 70px;
+}
+
+.ensemble_desc_img{
+    width: 50%;
+    float: left
+}
+.min_desc_skill{
+        display:none;
+    }
+.max_desc_skill{
+        display:block;
+    }
+@media screen and (max-width:767px) {
+    .min_desc_skill{
+        display:block;
+    }.max_desc_skill{
+        display:none;
+    }
+}
+
+/*.moving_skill_desc .ensemble_desc_img:nth-child(odd):last-child{
+    float: none;
+    margin: auto;
+}*/
+
+#workexp .box_title{
+    padding: 0;
+}
+.box_title{
+    display: inline-block;
+    padding-left: 25px
 }

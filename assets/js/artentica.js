@@ -236,8 +236,28 @@ $('#bandeau_work .workexplefttxt').waypoint(function(direction) {
             title_anim_workexp();
         }, { offset:'bottom-in-view' });
 
+        $('#about_me p').waypoint(function(direction) {
+            $(this).transition({opacity:1,x: '0px'},700);
+        }, { offset:'bottom-in-view' });
+
+
+        $('#about_me li').waypoint(function(direction) {
+            $(this).transition({opacity:1,x: '0px'},700);
+        }, { offset:'bottom-in-view' });
+
         $('.projects-item div').waypoint(function(direction) {
             minproject($(this));
+        }, { offset:'bottom-in-view' });
+
+        $('.group_callout').waypoint(function(direction) {
+           $(".group_callout").transition({opacity:1,y:0},900);
+           $(".group_callout img").delay(200).transition({opacity:1,x:0},900);
+        }, { offset:'bottom-in-view' });
+
+
+        $('.mail_button').waypoint(function(direction) {
+           $(".mail_button").transition({opacity:1,y:0},900);
+           $("#about_me .image.email").delay(200).transition({opacity:1,x:0},900);
         }, { offset:'bottom-in-view' });
 
 
@@ -267,9 +287,9 @@ $('#bandeau_work .workexplefttxt').waypoint(function(direction) {
                footer_contact(1);
         }, { offset:'bottom-in-view' });
 
-       $(".moving_skill_desc").waypoint(function() {
+       /*$(".moving_skill_desc").waypoint(function() {
         $(this).transition({opacity:1,x: '0px'},700);
-        }, { offset:'bottom-in-view' });
+        }, { offset:'bottom-in-view' });*/
 
         $('#foot_page').waypoint(function(direction) {
 			$('.main-nav a').removeClass('active');
@@ -386,13 +406,13 @@ function collapseskill(e){
         e.children(".text2").children("a").text(minus);
         e.children(".text2").children("span").removeClass();
         e.children(".text2").children("span").addClass("icon-minus");
-                e.data("value",1);
+        e.data("value",1);
 
     }else{
         e.children(".text2").children("a").text(plus);
         e.children(".text2").children("span").removeClass();
         e.children(".text2").children("span").addClass("icon-plus");
-                e.data("value",0);
+        e.data("value",0);
     }
 
     /*$('.under_div_none').collapse('toggle');*/
@@ -588,14 +608,40 @@ function open_page(){
 
 function skill_spe(e){
     var label = e.data("label");
-     console.log(e);
+    var ratio;
+    var time_anim = 0;
+    if($("body").width()<=767)ratio = 2;
+    else ratio = 3;
+    /*console.log($("body").width() + "   " + 615);
+    console.log($("body").width()<=615);*/
+
+
+        $(".under_div_none .moving_skill_desc[data-display_skill=1]").unwrap();
+        $(".under_div_none .moving_skill_desc[data-display_skill=2]").unwrap();
+        $(".under_div_none .moving_skill_desc[data-display_skill=3]").unwrap();
+        $(".under_div_none .moving_skill_desc[data-display_skill=4]").unwrap();
+
+    var temp =0;
+    if(e.css("font-weight")!=600)e.css("font-weight","600");
+    else e.css("font-weight","normal");
+
     $(".under_div_none .moving_skill_desc").each(function(index) {
         if(label == $(this).data("label")){
-            if($(this).css( "display")=="none")$(this).css( "display","block");
-            else $(this).css( "display","none");
+            if($(this).css( "display")=="none")$(this).show(time_anim);
+            else $(this).hide(time_anim);
+        }
+        $(this).attr("data-display_skill",0);
+        if($(this).css( "display")=="block"){
+            temp++;
 
+            $(this).attr("data-display_skill",Math.ceil(temp/ratio));
         }
     });
+    $(".under_div_none .moving_skill_desc[data-display_skill=1]").wrapAll('<div class="group_desc_skill clearfix"></div>');
+    $(".under_div_none .moving_skill_desc[data-display_skill=2]").wrapAll('<div class="group_desc_skill clearfix"></div>');
+    $(".under_div_none .moving_skill_desc[data-display_skill=3]").wrapAll('<div class="group_desc_skill clearfix"></div>');
+    $(".under_div_none .moving_skill_desc[data-display_skill=4]").wrapAll('<div class="group_desc_skill clearfix"></div>');
+
 }
 
 function change_prez_img(position,start,size){
@@ -633,6 +679,7 @@ var isMobileTouch = /ipad|iphone|ipod|android|blackberry|webos|windows phone/i.t
     skillChartAnimationCount = 0,
     footercontactdone = 0,
     prinEduc = 0,
+    number_desc_skill = 0,
     aboutme_title = 0,
     educ_title = 0,
     title_workexp = 0,

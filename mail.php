@@ -9,7 +9,9 @@ $headers = 'From: Artentica Portrfolio <no-reply@vincentriouallon.fr>' . "\r\n";
         $message= $_POST["message"];
 
         $messagef ='
-
+        Content-Type: text/plain;
+	charset="utf-8" Content-Transfer-Encoding: 8bit
+        <!DOCTYPE html>
        <html><body><p>Message de '.$name.' de la compagnie: '.$business.'.</p>
        <p>Contact number:</p>
        <ul>
