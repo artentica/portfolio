@@ -318,7 +318,7 @@ $('#bandeau_work .workexplefttxt').waypoint(function(direction) {
 		// Stop any currently active scroll
 		$('html, body').dequeue();
 		// Scroll to #id offset by 90 pixels
-        console.log(id);
+        /*console.log(id);*/
 		$('html, body').animate({ scrollTop: $(id).offset().top-80 }, 1000, 'easeOutExpo');
 
 	};
@@ -612,18 +612,27 @@ function skill_spe(e){
     var time_anim = 0;
     if($("body").width()<=767)ratio = 2;
     else ratio = 3;
-    /*console.log($("body").width() + "   " + 615);
-    console.log($("body").width()<=615);*/
-
 
         $(".under_div_none .moving_skill_desc[data-display_skill=1]").unwrap();
         $(".under_div_none .moving_skill_desc[data-display_skill=2]").unwrap();
         $(".under_div_none .moving_skill_desc[data-display_skill=3]").unwrap();
         $(".under_div_none .moving_skill_desc[data-display_skill=4]").unwrap();
-
+    console.log(e);
     var temp =0;
-    if(e.css("font-weight")!=600)e.css("font-weight","600");
-    else e.css("font-weight","normal");
+    if(e.css("font-weight")!=600){
+        e.css("font-weight","600");
+        var img = e.children("div.data-bar").css("background-image");
+        img = img.replace(".svg","-select.svg");
+        e.children("div.data-bar").css("background-image",img);
+    }
+
+    else{
+        e.css("font-weight","normal");
+        var img = e.children("div.data-bar").css("background-image");
+        img = img.replace("-select","");
+        e.children("div.data-bar").css("background-image",img);
+
+    }
 
     $(".under_div_none .moving_skill_desc").each(function(index) {
         if(label == $(this).data("label")){
