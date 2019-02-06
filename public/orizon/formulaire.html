@@ -1,0 +1,173 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>O-rizon</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Loading Flat UI -->
+    <link href="new.css" rel="stylesheet">
+      <!-- Loading Bootstrap -->
+      <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+
+      <!-- Loading Flat UI -->
+      <link href="css/flat-ui.css" rel="stylesheet">
+      <link href="css/style1.css" rel="stylesheet">
+      <link href="css/demo2.css" rel="stylesheet">
+      <link href="css/log.css" rel="stylesheet">
+      <link href="css/index.css" rel="stylesheet">
+      <link rel="shortcut icon" href="favicon.ico">
+      <link href='http://fonts.googleapis.com/css?family=The+Girl+Next+Door' rel='stylesheet' type='text/css'>
+      
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body style="background-color: #bdc3c7;">
+      <header>
+          <nav id="navbar" class="navbar navbar-default" role="navigation">
+              <!-- Brand and toggle get grouped for better mobile display -->
+              <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                  </button>
+                  <img src="images/logo.png" id="logo" alt="logo" />
+              </div>
+              <!-- Collect the nav links, forms, and other content for toggling -->
+              <div class="collapse navbar-collapse navbar-ex1-collapse">
+                  <ul class="nav navbar-nav navbar-right" style="margin-right: 30%">
+                      <li class="active"><a href="index.html">Accueil</a></li>
+                      <li><a href="ecoles/ecoles.html">Ecoles</a></li>
+                      <li><a href="etudiants/etudiants.html">Etudiants</a></li>
+                      <li><a href="qui/qui.html">Qui sommes-nous ?</a></li>
+                      <li><a href="contact/contact.html">Contact</a></li>
+                  </ul>
+              </div><!-- /.navbar-collapse -->
+      </header>
+          </nav>
+          <div></div>
+          <div id='form_new_contact'>
+              <form id='more_form' action="/">
+                  <h1>Informations personnelles</h1> 
+                  <br />
+
+                  <p>
+                      <label for='name'>Nom:</label>
+                      <input id='first_name' type='text' />
+                  </p>
+                  <p>
+                      <label for='name'>Prenom:</label>
+                      <input id='title' type='text' />
+                  </p>
+                  <p>
+                      <label for='name'>Age:</label>
+                      <input id='spouseF' type='text' />
+                  </p>
+
+                  <p>
+                      <label for='name'>Niveau Scolaire:</label>
+                      <select name="nom" size="1">
+                          <option>3ème
+                          <option>Seconde
+                          <option>Première
+                          <option>Terminale
+                          <option>BAC+2
+                          <option>BAC+3
+                          <option>BAC+4
+                          <option>BAC+5
+                          <option>Autres
+                      </select>
+                  </p>
+
+                  <p>
+                      <label for='name'>Email:</label>
+                      <input id='address' type='text' />
+                  </p>
+
+                  <p>
+                      <label for='name'>Ville:</label>
+                      <input id='state' type='text' />
+                  </p>
+
+                  <p>
+                      <label for='name'>Ecole:</label>
+                      <input id='spousL' type='text' />
+                  </p>
+
+                  <p>
+                      <label for='name'>Mot de passe:</label>
+                      <input id='city' type='password' />
+                  </p>
+
+                  <p>
+                      <label for='name'>Centres d'intérêts:</label>
+                      <input id='city' type='text' />
+                  </p>
+
+                  <p>
+                      <h1>Autres</h1>
+                      <br />
+                  <p>
+                      <label class='long'>Acceptez-vous les conditions générales d'utilisation ?</label>
+                      <br>
+                      <input type="radio" name="" value="yes">Oui
+                      <input type="radio" name="" value="no">Non
+                  </p>
+
+                  <!--
+                <?php
+
+                    for($j = 1; $j < 11; $j++){
+
+                        echo "<p id='contacts".$j."'><label for='name'><select id='contact" . $j . "' name='content'><option>-Select-</option>";
+
+                            echo "<option value='Office Phone'>Office Phone</option>";
+                            echo "<option>Home Phone</option>";
+                            echo "<option>Cell Phone</option>";
+                            echo "<option>Email</option>";
+                            echo "<option>Fax Number</option>";
+                            echo "<option>Web</option>";
+
+
+                        echo "</select></label>";
+                        echo "<input type='text' id='c_value" . $j ."'></p>";
+                    }
+
+
+                    ?>
+
+
+                   -->
+
+                  <p style="padding-left: 20%;">
+                      <a href="etudiants/etudiants.html"><input type='button' id='submit_new_contact' value='Envoyer' /></a>
+                      <input type="reset" value"effacer">
+                  </p>
+
+              </form>
+
+          </div>
+          <!-- Load JS here for greater good =============================-->
+          <script src="js/jquery-1.8.3.min.js"></script>
+          <script src="js/jquery-ui-1.10.3.custom.min.js"></script>
+          <script src="js/jquery.ui.touch-punch.min.js"></script>
+          <script src="js/bootstrap.min.js"></script>
+          <script src="js/bootstrap-select.js"></script>
+          <script src="js/bootstrap-switch.js"></script>
+          <script src="js/flatui-checkbox.js"></script>
+          <script src="js/flatui-radio.js"></script>
+          <script src="js/jquery.tagsinput.js"></script>
+          <script src="js/jquery.placeholder.js"></script>
+          <script src="js/modernizr.custom.86080.js"></script>
+          <script src="js/modernizr.custom.63321.js"></script>
+          <script src="js/jquery.placeholder.min.js"></script>
+</body>
+</html>
+
+	
